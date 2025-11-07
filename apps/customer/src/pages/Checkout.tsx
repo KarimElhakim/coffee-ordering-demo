@@ -2,11 +2,11 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../store/cart';
 import { createOrder, createCheckoutSession } from '@coffee-demo/api-client';
-import { Card, CardContent, CardHeader, CardTitle, Button, Input, Label } from '@coffee-demo/ui';
+import { Card, CardContent, CardHeader, CardTitle, Button } from '@coffee-demo/ui';
 import { Trash2, Plus, Minus } from 'lucide-react';
 
 export function Checkout() {
-  const { items, tableId, clearCart, getTotal, removeItem, updateQuantity, getOptionsKey } = useCart();
+  const { items, tableId, getTotal, removeItem, updateQuantity, getOptionsKey } = useCart();
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 

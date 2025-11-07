@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { supabase, getOrders } from '@coffee-demo/api-client';
-import { Card, CardContent, CardHeader, CardTitle, Select, SelectContent, SelectItem, SelectTrigger, SelectValue, Tabs, TabsList, TabsTrigger, TabsContent } from '@coffee-demo/ui';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line } from 'recharts';
+import { Card, CardContent, CardHeader, CardTitle, Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@coffee-demo/ui';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import type { Database } from '@coffee-demo/api-client';
 
 type Order = Database['public']['Tables']['orders']['Row'] & {

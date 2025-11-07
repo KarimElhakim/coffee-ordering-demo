@@ -1,6 +1,6 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { supabase, getKdsTickets, updateKdsTicketStatus, getStations } from '@coffee-demo/api-client';
-import { Card, CardContent, CardHeader, CardTitle, Button, Tabs, TabsList, TabsTrigger, TabsContent } from '@coffee-demo/ui';
+import { Card, CardContent, CardHeader, CardTitle, Button, Tabs, TabsList, TabsTrigger } from '@coffee-demo/ui';
 import { Play, CheckCircle, ArrowLeft } from 'lucide-react';
 import type { Database } from '@coffee-demo/api-client';
 
@@ -21,7 +21,6 @@ export function KDS() {
   const [stations, setStations] = useState<Database['public']['Tables']['stations']['Row'][]>([]);
   const [selectedStation, setSelectedStation] = useState<string | null>(null);
   const [newTickets, setNewTickets] = useState<Set<string>>(new Set());
-  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
     async function load() {
@@ -51,7 +50,7 @@ export function KDS() {
           schema: 'public',
           table: 'kds_tickets',
         },
-        (payload) => {
+        (payload: any) => {
           setNewTickets((prev) => new Set([...prev, payload.new.id as string]));
           // Visual pulse effect
           setTimeout(() => {

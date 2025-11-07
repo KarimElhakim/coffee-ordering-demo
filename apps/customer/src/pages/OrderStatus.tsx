@@ -32,7 +32,7 @@ export function OrderStatus() {
     async function loadOrder() {
       try {
         const orders = await getOrders();
-        const found = orders.find((o) => o.id === orderId) as Order | undefined;
+        const found = orders.find((o: any) => o.id === orderId) as Order | undefined;
         if (found) {
           setOrder(found);
         }
@@ -58,7 +58,7 @@ export function OrderStatus() {
         },
         async () => {
           const orders = await getOrders();
-          const updated = orders.find((o) => o.id === orderId) as Order | undefined;
+          const updated = orders.find((o: any) => o.id === orderId) as Order | undefined;
           if (updated) setOrder(updated);
         }
       )
@@ -67,7 +67,7 @@ export function OrderStatus() {
     // Poll for updates in demo mode (every 2 seconds)
     pollInterval = setInterval(async () => {
       const orders = await getOrders();
-      const updated = orders.find((o) => o.id === orderId) as Order | undefined;
+      const updated = orders.find((o: any) => o.id === orderId) as Order | undefined;
       if (updated) setOrder(updated);
     }, 2000);
 

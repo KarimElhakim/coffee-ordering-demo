@@ -1,15 +1,18 @@
 // Use demo mode by default - no API keys needed
 import * as demoApi from './demo';
-import type { Database } from './types';
 
+// Export Database type
 export type { Database } from './types';
 
 // Check if we should use real Supabase (only if both keys are provided)
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || '';
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
+const supabaseUrl = (import.meta as any).env?.VITE_SUPABASE_URL || '';
+const supabaseAnonKey = (import.meta as any).env?.VITE_SUPABASE_ANON_KEY || '';
 const useRealSupabase = supabaseUrl && supabaseAnonKey;
 
 let supabase: any;
+
+// Export supabase for use in components
+export { supabase };
 
 // Initialize Supabase client (lazy load for real mode)
 async function initSupabase() {
@@ -288,8 +291,8 @@ export const markOrderPaid = useRealSupabase
       if (itemsError) throw itemsError;
 
       const tickets = items
-        .filter((item) => item.menu_item?.station_id)
-        .map((item) => ({
+        .filter((item: any) => item.menu_item?.station_id)
+        .map((item: any) => ({
           order_id: orderId,
           station_id: item.menu_item.station_id,
           status: 'new' as const,

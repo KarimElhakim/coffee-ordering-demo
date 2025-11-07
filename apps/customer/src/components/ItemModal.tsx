@@ -14,7 +14,7 @@ type Modifier = Database['public']['Tables']['modifiers']['Row'];
 
 interface ItemModalProps {
   item: MenuItem;
-  modifiers: Modifier[];
+  modifiers?: Modifier[];
   onClose: () => void;
   onAdd: () => void;
 }
@@ -38,7 +38,7 @@ const SYRUP_OPTIONS = [
   { value: 'Hazelnut', label: 'Hazelnut', price: 2 },
 ];
 
-export function ItemModal({ item, modifiers, onClose, onAdd }: ItemModalProps) {
+export function ItemModal({ item, onClose, onAdd }: ItemModalProps) {
   const { addItem } = useCart();
   const [size, setSize] = useState('Medium');
   const [milk, setMilk] = useState<string | null>(null);
@@ -47,13 +47,6 @@ export function ItemModal({ item, modifiers, onClose, onAdd }: ItemModalProps) {
   const [note, setNote] = useState('');
 
   const availableModifiers = item.modifiers.map((m) => m.modifier);
-
-  const getModifierOptions = (modifierName: string) => {
-    if (modifierName === 'Size') return SIZE_OPTIONS;
-    if (modifierName === 'Milk') return MILK_OPTIONS;
-    if (modifierName === 'Syrups') return SYRUP_OPTIONS;
-    return [];
-  };
 
   const calculatePrice = () => {
     let total = item.base_price;

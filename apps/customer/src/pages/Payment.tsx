@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getOrders, markOrderPaid } from '@coffee-demo/api-client';
 import { Card, CardContent, CardHeader, CardTitle, Button, Input, Label } from '@coffee-demo/ui';
-import { CreditCard, CheckCircle, X } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 export function Payment() {
   const { orderId } = useParams();

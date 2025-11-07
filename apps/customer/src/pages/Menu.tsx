@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getMenuItems, getModifiers, type Database } from '@coffee-demo/api-client';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, Button } from '@coffee-demo/ui';
-import { useCart } from '../store/cart';
 import { ItemModal } from '../components/ItemModal';
 
 type MenuItem = Database['public']['Tables']['menu_items']['Row'] & {
@@ -81,7 +80,7 @@ export function Menu() {
           item={selectedItem}
           modifiers={modifiers}
           onClose={() => setSelectedItem(null)}
-          onAdd={(item) => {
+          onAdd={() => {
             setSelectedItem(null);
             navigate('/checkout');
           }}

@@ -1,5 +1,4 @@
 // Demo store using localStorage - no API keys needed
-import type { Database } from './types';
 
 // Seed data
 const DEMO_STORE = {

@@ -1,6 +1,5 @@
 // Demo mode API client - works without Supabase or Stripe
 import { DEMO_DATA, getDemoOrders, getDemoKdsTickets, createDemoOrder, markDemoOrderPaid, updateDemoKdsTicket } from './demo-store';
-import type { Database } from './types';
 
 // Mock Supabase client
 export const supabase = {
