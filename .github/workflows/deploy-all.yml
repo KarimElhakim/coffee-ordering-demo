@@ -39,7 +39,34 @@ jobs:
           cache: 'pnpm'
           
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
+        
+      - name: Set environment variables
+        run: |
+          # Set Supabase URL (optional - defaults to empty for demo mode)
+          if [ -n "$SUPABASE_URL" ]; then
+            echo "VITE_SUPABASE_URL=$SUPABASE_URL" >> $GITHUB_ENV
+          else
+            echo "VITE_SUPABASE_URL=" >> $GITHUB_ENV
+          fi
+          
+          # Set Supabase Anon Key (optional - defaults to empty for demo mode)
+          if [ -n "$SUPABASE_ANON_KEY" ]; then
+            echo "VITE_SUPABASE_ANON_KEY=$SUPABASE_ANON_KEY" >> $GITHUB_ENV
+          else
+            echo "VITE_SUPABASE_ANON_KEY=" >> $GITHUB_ENV
+          fi
+          
+          # Set Stripe Key (optional - defaults to empty for demo mode)
+          if [ -n "$STRIPE_KEY" ]; then
+            echo "VITE_STRIPE_PUBLISHABLE_KEY=$STRIPE_KEY" >> $GITHUB_ENV
+          else
+            echo "VITE_STRIPE_PUBLISHABLE_KEY=" >> $GITHUB_ENV
+          fi
+        env:
+          SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+          STRIPE_KEY: ${{ secrets.VITE_STRIPE_PUBLISHABLE_KEY }}
         
       - name: Build all apps
         run: |
@@ -49,9 +76,6 @@ jobs:
           pnpm --filter @coffee-demo/dashboard build
         env:
           GITHUB_PAGES: true
-          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
-          VITE_STRIPE_PUBLISHABLE_KEY: ${{ secrets.VITE_STRIPE_PUBLISHABLE_KEY }}
         
       - name: Organize dist folder for GitHub Pages
         run: |
