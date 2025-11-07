@@ -31,7 +31,8 @@ export function Checkout() {
 
       const { url } = await createCheckoutSession(order.id);
       if (url) {
-        window.location.href = url;
+        // Use hash router navigation for demo mode
+        navigate(url.replace(window.location.origin, ''));
       }
     } catch (error) {
       console.error('Checkout failed:', error);

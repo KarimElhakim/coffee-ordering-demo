@@ -36,10 +36,8 @@ jobs:
       - name: Build customer app
         run: pnpm --filter @coffee-demo/customer build
         env:
-          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
-          VITE_STRIPE_PUBLISHABLE_KEY: ${{ secrets.VITE_STRIPE_PUBLISHABLE_KEY }}
           GITHUB_PAGES: true
+          # Demo mode - no API keys needed!
           
       - name: Setup Pages
         uses: actions/configure-pages@v3

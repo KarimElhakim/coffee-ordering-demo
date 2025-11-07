@@ -36,7 +36,7 @@ export function Dashboard() {
     }
     load();
 
-    // Subscribe to order updates
+    // Subscribe to order updates (or poll in demo mode)
     const channel = supabase
       .channel('dashboard-orders')
       .on(
@@ -52,8 +52,14 @@ export function Dashboard() {
       )
       .subscribe();
 
+    // Poll for updates in demo mode (every 3 seconds)
+    const pollInterval = setInterval(() => {
+      load();
+    }, 3000);
+
     return () => {
       supabase.removeChannel(channel);
+      clearInterval(pollInterval);
     };
   }, []);
 

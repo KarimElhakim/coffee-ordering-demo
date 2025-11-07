@@ -5,6 +5,9 @@ import { Card, CardContent, CardHeader, CardTitle, Button } from '@coffee-demo/u
 import { CheckCircle, Clock, XCircle } from 'lucide-react';
 import type { Database } from '@coffee-demo/api-client';
 
+// Poll for updates in demo mode
+let pollInterval: NodeJS.Timeout | null = null;
+
 type Order = Database['public']['Tables']['orders']['Row'] & {
   items: Array<{
     id: string;
@@ -42,7 +45,7 @@ export function OrderStatus() {
 
     loadOrder();
 
-    // Subscribe to order updates
+    // Subscribe to order updates (or poll in demo mode)
     const channel = supabase
       .channel(`order:${orderId}`)
       .on(
@@ -61,8 +64,16 @@ export function OrderStatus() {
       )
       .subscribe();
 
+    // Poll for updates in demo mode (every 2 seconds)
+    pollInterval = setInterval(async () => {
+      const orders = await getOrders();
+      const updated = orders.find((o) => o.id === orderId) as Order | undefined;
+      if (updated) setOrder(updated);
+    }, 2000);
+
     return () => {
       supabase.removeChannel(channel);
+      if (pollInterval) clearInterval(pollInterval);
     };
   }, [orderId]);
 

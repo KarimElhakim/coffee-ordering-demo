@@ -41,7 +41,7 @@ export function KDS() {
     }
     load();
 
-    // Subscribe to new tickets
+    // Subscribe to new tickets (or poll in demo mode)
     const channel = supabase
       .channel('kds-tickets')
       .on(
@@ -77,8 +77,14 @@ export function KDS() {
       )
       .subscribe();
 
+    // Poll for updates in demo mode (every 2 seconds)
+    const pollInterval = setInterval(() => {
+      load();
+    }, 2000);
+
     return () => {
       supabase.removeChannel(channel);
+      clearInterval(pollInterval);
     };
   }, []);
 
