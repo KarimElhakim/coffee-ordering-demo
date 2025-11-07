@@ -59,7 +59,7 @@ jobs:
       - name: Organize dist folder for GitHub Pages
         run: |
           mkdir -p dist
-          cp -r apps/customer/dist/* dist/ || mkdir -p dist/customer && cp -r apps/customer/dist/* dist/customer/
+          mkdir -p dist/customer && cp -r apps/customer/dist/* dist/customer/
           mkdir -p dist/cashier && cp -r apps/cashier/dist/* dist/cashier/
           mkdir -p dist/kds && cp -r apps/kds/dist/* dist/kds/
           mkdir -p dist/dashboard && cp -r apps/dashboard/dist/* dist/dashboard/
