@@ -1,0 +1,12 @@
+{
+  "name": "@coffee-demo/config",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./tsconfig.json",
+  "files": [
+    "tsconfig.json",
+    "tailwind.config.js",
+    "vite.config.ts"
+  ]
+}
+
