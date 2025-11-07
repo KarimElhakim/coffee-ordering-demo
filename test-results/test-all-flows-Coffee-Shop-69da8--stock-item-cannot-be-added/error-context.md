@@ -1,0 +1,93 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - img [ref=e8]
+        - heading "Karim's Coffee" [level=1] [ref=e12]
+      - button "Cart" [ref=e13] [cursor=pointer]:
+        - img [ref=e15]
+        - generic [ref=e19]: Cart
+  - generic [ref=e20]:
+    - main [ref=e21]:
+      - generic [ref=e23]:
+        - generic [ref=e24]:
+          - img "Coffee shop interior with people" [ref=e25]
+          - generic [ref=e27]:
+            - heading "Welcome to Karim's Coffee" [level=1] [ref=e28]
+            - paragraph [ref=e29]: Discover our handcrafted coffee selection and experience the perfect blend
+        - generic [ref=e30]:
+          - generic [ref=e31]:
+            - heading "Our Menu" [level=2] [ref=e32]
+            - paragraph [ref=e33]: Discover our handcrafted coffee selection
+          - generic [ref=e35]:
+            - tablist [ref=e36]:
+              - tab "Coffee Drinks" [ref=e37] [cursor=pointer]:
+                - img [ref=e38]
+                - generic [ref=e41]: Coffee Drinks
+              - tab "Hot Drinks" [active] [selected] [ref=e42] [cursor=pointer]:
+                - img [ref=e43]
+                - generic [ref=e45]: Hot Drinks
+              - tab "Cold Drinks" [ref=e46] [cursor=pointer]:
+                - img [ref=e47]
+                - generic [ref=e52]: Cold Drinks
+            - tabpanel "Hot Drinks" [ref=e53]:
+              - generic [ref=e54]:
+                - generic [ref=e55] [cursor=pointer]:
+                  - generic [ref=e56]:
+                    - img "Hot Chocolate" [ref=e57]
+                    - generic [ref=e60]: 30 EGP
+                  - generic [ref=e61]:
+                    - generic [ref=e62]:
+                      - heading "Hot Chocolate" [level=3] [ref=e63]
+                      - paragraph [ref=e64]: Hot Station
+                    - button "Add to Cart" [ref=e66]:
+                      - img [ref=e67]
+                      - text: Add to Cart
+                - generic [ref=e68] [cursor=pointer]:
+                  - generic [ref=e69]:
+                    - img "Chai Latte" [ref=e70]
+                    - generic [ref=e73]: 35 EGP
+                  - generic [ref=e74]:
+                    - generic [ref=e75]:
+                      - heading "Chai Latte" [level=3] [ref=e76]
+                      - paragraph [ref=e77]: Hot Station
+                    - button "Add to Cart" [ref=e79]:
+                      - img [ref=e80]
+                      - text: Add to Cart
+                - generic [ref=e81] [cursor=pointer]:
+                  - generic [ref=e82]:
+                    - img "Matcha Latte" [ref=e83]
+                    - generic [ref=e86]: 38 EGP
+                  - generic [ref=e87]:
+                    - generic [ref=e88]:
+                      - heading "Matcha Latte" [level=3] [ref=e89]
+                      - paragraph [ref=e90]: Hot Station
+                    - button "Add to Cart" [ref=e92]:
+                      - img [ref=e93]
+                      - text: Add to Cart
+                - generic [ref=e94] [cursor=pointer]:
+                  - generic [ref=e95]:
+                    - img "Turkish Coffee" [ref=e96]
+                    - generic [ref=e99]: 28 EGP
+                  - generic [ref=e100]:
+                    - generic [ref=e101]:
+                      - heading "Turkish Coffee" [level=3] [ref=e102]
+                      - paragraph [ref=e103]: Hot Station
+                    - button "Add to Cart" [ref=e105]:
+                      - img [ref=e106]
+                      - text: Add to Cart
+    - complementary [ref=e107]:
+      - generic [ref=e108]:
+        - generic [ref=e109]:
+          - img [ref=e111]
+          - heading "Your Cart" [level=2] [ref=e116]
+        - button "Close cart" [ref=e117] [cursor=pointer]:
+          - img [ref=e118]
+      - generic [ref=e122]:
+        - img [ref=e124]
+        - paragraph [ref=e128]: Your cart is empty
+        - paragraph [ref=e129]: Add some delicious items to get started!
+```

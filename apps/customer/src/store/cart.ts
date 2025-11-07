@@ -29,35 +29,66 @@ export const useCart = create<CartStore>()(
       tableId: null,
       setTableId: (tableId) => set({ tableId }),
       addItem: (item) => {
-        const optionsKey = get().getOptionsKey(item.options);
-        const existing = get().items.find(
-          (i) => i.menu_item_id === item.menu_item_id && get().getOptionsKey(i.options) === optionsKey
-        );
-        if (existing) {
-          get().updateQuantity(item.menu_item_id, optionsKey, existing.qty + 1);
-        } else {
-          set((state) => ({ items: [...state.items, { ...item, qty: 1 }] }));
+        try {
+          const optionsKey = get().getOptionsKey(item.options || []);
+          const currentItems = [...get().items];
+          
+          const existingIndex = currentItems.findIndex(
+            (i) => i.menu_item_id === item.menu_item_id && get().getOptionsKey(i.options || []) === optionsKey
+          );
+          
+          let updatedItems: CartItem[];
+          
+          if (existingIndex >= 0) {
+            // Update existing item quantity
+            updatedItems = currentItems.map((i, idx) => 
+              idx === existingIndex ? { ...i, qty: i.qty + 1 } : i
+            );
+          } else {
+            // Add new item
+            const newItem = { ...item, qty: 1 };
+            updatedItems = [...currentItems, newItem];
+          }
+          
+          // Set state immediately
+          set({ items: updatedItems });
+          
+          // Dispatch event for components to update
+          window.dispatchEvent(new CustomEvent('cartUpdated', { detail: { items: updatedItems } }));
+        } catch (error) {
+          console.error('Error adding item to cart:', error);
+          throw error;
         }
       },
       removeItem: (menu_item_id, optionsKey) => {
-        set((state) => ({
-          items: state.items.filter(
+        set((state) => {
+          const newItems = state.items.filter(
             (i) => !(i.menu_item_id === menu_item_id && get().getOptionsKey(i.options) === optionsKey)
-          ),
-        }));
+          );
+          console.log('Item removed, new items:', newItems);
+          setTimeout(() => {
+            window.dispatchEvent(new CustomEvent('cartUpdated', { detail: { items: newItems } }));
+          }, 0);
+          return { items: newItems };
+        });
       },
       updateQuantity: (menu_item_id, optionsKey, qty) => {
         if (qty <= 0) {
           get().removeItem(menu_item_id, optionsKey);
           return;
         }
-        set((state) => ({
-          items: state.items.map((i) =>
+        set((state) => {
+          const newItems = state.items.map((i) =>
             i.menu_item_id === menu_item_id && get().getOptionsKey(i.options) === optionsKey
               ? { ...i, qty }
               : i
-          ),
-        }));
+          );
+          console.log('Quantity updated, new items:', newItems);
+          setTimeout(() => {
+            window.dispatchEvent(new CustomEvent('cartUpdated', { detail: { items: newItems } }));
+          }, 0);
+          return { items: newItems };
+        });
       },
       clearCart: () => set({ items: [] }),
       getTotal: () => {

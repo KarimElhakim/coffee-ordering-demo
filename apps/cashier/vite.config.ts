@@ -26,7 +26,12 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  base: process.env.GITHUB_PAGES ? '/coffee-ordering-demo/cashier/' : '/',
+  base: process.env.GITHUB_PAGES ? '/coffee-ordering-demo/cashier/' : '/cashier/',
   publicDir: 'public',
+  server: {
+    port: 5174,
+    strictPort: true,
+    open: false,
+  },
 });
 

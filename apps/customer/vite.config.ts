@@ -27,7 +27,12 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  base: process.env.GITHUB_PAGES ? '/coffee-ordering-demo/customer/' : '/',
+  base: process.env.GITHUB_PAGES ? '/coffee-ordering-demo/customer/' : '/customer/',
   publicDir: 'public',
+  server: {
+    port: 5173,
+    strictPort: true,
+    open: false,
+  },
 });
 

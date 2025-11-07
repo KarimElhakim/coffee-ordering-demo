@@ -66,35 +66,53 @@ export interface Database {
           created_at?: string;
         };
       };
-      menu_items: {
-        Row: {
-          id: string;
-          store_id: string;
-          name: string;
-          base_price: number;
-          station_id: string;
-          is_active: boolean;
-          created_at: string;
-        };
-        Insert: {
-          id?: string;
-          store_id: string;
-          name: string;
-          base_price: number;
-          station_id: string;
-          is_active?: boolean;
-          created_at?: string;
-        };
-        Update: {
-          id?: string;
-          store_id?: string;
-          name?: string;
-          base_price?: number;
-          station_id?: string;
-          is_active?: boolean;
-          created_at?: string;
-        };
+    menu_items: {
+      Row: {
+        id: string;
+        store_id: string;
+        name: string;
+        base_price: number;
+        station_id: string;
+        is_active: boolean;
+        created_at: string;
+        stock_quantity: number | null;
+        low_stock_threshold: number | null;
+        out_of_stock: boolean | null;
+        track_inventory: boolean | null;
+        last_restocked_at: string | null;
+        updated_at: string | null;
       };
+      Insert: {
+        id?: string;
+        store_id: string;
+        name: string;
+        base_price: number;
+        station_id: string;
+        is_active?: boolean;
+        created_at?: string;
+        stock_quantity?: number | null;
+        low_stock_threshold?: number | null;
+        out_of_stock?: boolean | null;
+        track_inventory?: boolean | null;
+        last_restocked_at?: string | null;
+        updated_at?: string | null;
+      };
+      Update: {
+        id?: string;
+        store_id?: string;
+        name?: string;
+        base_price?: number;
+        station_id?: string;
+        is_active?: boolean;
+        created_at?: string;
+        stock_quantity?: number | null;
+        low_stock_threshold?: number | null;
+        out_of_stock?: boolean | null;
+        track_inventory?: boolean | null;
+        last_restocked_at?: string | null;
+        updated_at?: string | null;
+      };
+    };
       modifiers: {
         Row: {
           id: string;
@@ -135,30 +153,60 @@ export interface Database {
       orders: {
         Row: {
           id: string;
+          order_number: string | null;
           store_id: string;
           table_id: string | null;
           channel: 'table' | 'kiosk' | 'cashier' | 'web';
           status: 'new' | 'paid' | 'in_prep' | 'ready' | 'served' | 'cancelled';
           total_amount: number;
           created_at: string;
+          updated_at: string | null;
+          subtotal: number | null;
+          tax_amount: number | null;
+          discount_amount: number | null;
+          discount_percentage: number | null;
+          employee_id: string | null;
+          terminal_id: string | null;
+          customer_id: string | null;
+          customer_name: string | null;
+          customer_phone: string | null;
+          customer_email: string | null;
+          transaction_id: string | null;
+          receipt_number: string | null;
+          payment_method: string | null;
+          order_notes: string | null;
+          internal_notes: string | null;
+          location: string | null;
+          shift_id: string | null;
+          paid_at: string | null;
+          completed_at: string | null;
+          cancelled_at: string | null;
+          served_at: string | null;
+          cancellation_reason: string | null;
+          preparing_started_at: string | null;
+          ready_at: string | null;
         };
         Insert: {
           id?: string;
+          order_number?: string | null;
           store_id: string;
           table_id?: string | null;
           channel: 'table' | 'kiosk' | 'cashier' | 'web';
           status?: 'new' | 'paid' | 'in_prep' | 'ready' | 'served' | 'cancelled';
           total_amount: number;
           created_at?: string;
+          updated_at?: string | null;
         };
         Update: {
           id?: string;
+          order_number?: string | null;
           store_id?: string;
           table_id?: string | null;
           channel?: 'table' | 'kiosk' | 'cashier' | 'web';
           status?: 'new' | 'paid' | 'in_prep' | 'ready' | 'served' | 'cancelled';
           total_amount?: number;
           created_at?: string;
+          updated_at?: string | null;
         };
       };
       order_items: {

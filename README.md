@@ -2,6 +2,8 @@
 
 A **complete demo** coffee shop ordering system that works **WITHOUT any API keys**! No Supabase, no Stripe setup needed - just deploy and it works!
 
+> **🔧 Deployment Issues?** If your deployed app isn't connecting properly, see [`DEPLOYMENT_FIX.md`](./DEPLOYMENT_FIX.md) for the solution!
+
 ## ✨ Features
 
 - **🎯 Demo Mode by Default** - Works completely offline with localStorage

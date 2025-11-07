@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { useParams, useSearchParams } from 'react-router-dom';
-import { supabase, getOrders } from '@coffee-demo/api-client';
+import { useParams, useSearchParams, useNavigate } from 'react-router-dom';
+import { supabase, getOrders, getItemImage } from '@coffee-demo/api-client';
 import { Card, CardContent, CardHeader, CardTitle, Button } from '@coffee-demo/ui';
-import { CheckCircle, Clock, XCircle } from 'lucide-react';
+import { CheckCircle, Clock, XCircle, ArrowLeft, Coffee, ShoppingBag } from 'lucide-react';
 import type { Database } from '@coffee-demo/api-client';
 
 // Poll for updates in demo mode
@@ -22,6 +22,7 @@ type Order = Database['public']['Tables']['orders']['Row'] & {
 export function OrderStatus() {
   const { orderId } = useParams();
   const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
   const [order, setOrder] = useState<Order | null>(null);
   const [loading, setLoading] = useState(true);
   const success = searchParams.get('success') === 'true';
@@ -78,14 +79,26 @@ export function OrderStatus() {
   }, [orderId]);
 
   if (loading) {
-    return <div className="text-center py-12">Loading order...</div>;
+    return (
+      <div className="text-center py-12">
+        <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-amber-600"></div>
+        <p className="mt-4 text-amber-700 dark:text-amber-400">Loading order...</p>
+      </div>
+    );
   }
 
   if (!order) {
     return (
       <div className="text-center py-12">
-        <h2 className="text-2xl font-bold mb-4">Order not found</h2>
-        <Button onClick={() => window.location.href = '/'}>Back to Menu</Button>
+        <ShoppingBag className="h-16 w-16 text-amber-400 mx-auto mb-4" />
+        <h2 className="text-3xl font-bold mb-4 text-amber-900 dark:text-amber-100">Order not found</h2>
+        <Button 
+          onClick={() => navigate('/')}
+          className="bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800"
+        >
+          <ArrowLeft className="h-4 w-4 mr-2" />
+          Back to Menu
+        </Button>
       </div>
     );
   }
@@ -127,13 +140,15 @@ export function OrderStatus() {
   return (
     <div className="max-w-2xl mx-auto">
       {success && (
-        <Card className="mb-6 border-green-500 bg-green-50 dark:bg-green-950">
+        <Card className="mb-6 border-green-500 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950 dark:to-emerald-950 shadow-xl animate-fade-in">
           <CardContent className="pt-6">
             <div className="flex items-center gap-4">
-              <CheckCircle className="h-6 w-6 text-green-500" />
+              <div className="p-3 bg-green-500 rounded-full">
+                <CheckCircle className="h-6 w-6 text-white" />
+              </div>
               <div>
-                <h3 className="font-semibold">Payment Successful!</h3>
-                <p className="text-sm text-muted-foreground">
+                <h3 className="font-bold text-lg text-green-700 dark:text-green-400">Payment Successful!</h3>
+                <p className="text-sm text-green-700/70 dark:text-green-400/70">
                   Your order has been received and is being prepared.
                 </p>
               </div>
@@ -141,52 +156,86 @@ export function OrderStatus() {
           </CardContent>
         </Card>
       )}
-      <Card>
+      <Card className="border-amber-200 dark:border-amber-800 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm shadow-xl">
         <CardHeader>
           <div className="flex items-center justify-between">
-            <CardTitle>Order #{order.id.slice(0, 8)}</CardTitle>
-            <div className="flex items-center gap-2">
+            <CardTitle className="text-2xl font-bold text-amber-900 dark:text-amber-100 flex items-center gap-2">
+              <Coffee className="h-6 w-6 text-amber-600" />
+              Order {order.order_number || `#${order.id.slice(0, 8)}`}
+            </CardTitle>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-100 dark:bg-amber-900/30">
               {getStatusIcon()}
-              <span className="font-semibold">{getStatusText()}</span>
+              <span className="font-semibold text-amber-900 dark:text-amber-100">{getStatusText()}</span>
             </div>
           </div>
+          <p className="text-sm text-amber-700/70 dark:text-amber-400/70 mt-2">
+            Placed on {new Date(order.created_at).toLocaleString()}
+          </p>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
             {order.items.map((item) => (
-              <div key={item.id} className="border-b pb-4 last:border-0">
-                <div className="flex justify-between items-start mb-2">
-                  <div>
-                    <h4 className="font-semibold">{item.menu_item.name}</h4>
-                    {item.options.length > 0 && (
-                      <div className="text-sm text-muted-foreground mt-1">
-                        {item.options.map((opt) => (
-                          <div key={`${opt.key}-${opt.value}`}>
-                            {opt.key}: {opt.value}
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                    {item.note && (
-                      <p className="text-sm text-muted-foreground mt-1 italic">
-                        Note: {item.note}
-                      </p>
-                    )}
+              <div key={item.id} className="border border-amber-200 dark:border-amber-800 rounded-lg p-4 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-slate-700 dark:to-slate-800 hover:shadow-md transition-shadow">
+                <div className="flex gap-4">
+                  <div className="w-20 h-20 rounded-lg overflow-hidden bg-gradient-to-br from-amber-100 to-orange-100 dark:from-slate-700 dark:to-slate-800 flex-shrink-0 shadow-lg">
+                    <img 
+                      src={getItemImage(item.menu_item.name)} 
+                      alt={item.menu_item.name}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = 'https://via.placeholder.com/200x200/f59e0b/ffffff?text=' + encodeURIComponent(item.menu_item.name.substring(0, 2));
+                      }}
+                    />
                   </div>
-                  <div className="text-right">
-                    <div className="font-semibold">Qty: {item.qty}</div>
-                    <div className="text-sm text-muted-foreground">
-                      {(item.price_each * item.qty).toFixed(2)} EGP
+                  <div className="flex-1 min-w-0">
+                    <div className="flex justify-between items-start mb-2">
+                      <div className="flex-1 min-w-0">
+                        <h4 className="font-bold text-lg text-amber-900 dark:text-amber-100">{item.menu_item.name}</h4>
+                        {item.options.length > 0 && (
+                          <div className="flex flex-wrap gap-1 mt-2">
+                            {item.options.map((opt) => (
+                              <span 
+                                key={`${opt.key}-${opt.value}`}
+                                className="text-xs px-2 py-1 bg-amber-200 dark:bg-amber-900/30 text-amber-800 dark:text-amber-300 rounded-full font-medium"
+                              >
+                                {opt.key}: {opt.value}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                        {item.note && (
+                          <p className="text-xs text-amber-700/70 dark:text-amber-400/70 mt-2 italic border-l-2 border-amber-300 dark:border-amber-700 pl-2">
+                            Note: {item.note}
+                          </p>
+                        )}
+                      </div>
+                      <div className="text-right ml-4">
+                        <div className="font-bold text-amber-900 dark:text-amber-100">x{item.qty}</div>
+                        <div className="text-sm font-semibold text-amber-700 dark:text-amber-400">
+                          {(item.price_each * item.qty).toFixed(2)} EGP
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             ))}
-            <div className="border-t pt-4 mt-4">
+            <div className="border-t border-amber-200 dark:border-amber-800 pt-4 mt-4">
               <div className="flex justify-between items-center">
-                <span className="text-lg font-semibold">Total</span>
-                <span className="text-2xl font-bold">{order.total_amount.toFixed(2)} EGP</span>
+                <span className="text-xl font-semibold text-amber-900 dark:text-amber-100">Total</span>
+                <span className="text-3xl font-bold bg-gradient-to-r from-amber-700 to-amber-900 dark:from-amber-400 dark:to-amber-600 bg-clip-text text-transparent">
+                  {order.total_amount.toFixed(2)} EGP
+                </span>
               </div>
+            </div>
+            <div className="pt-4">
+              <Button 
+                onClick={() => navigate('/')}
+                className="w-full bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800"
+              >
+                <ArrowLeft className="h-4 w-4 mr-2" />
+                Back to Menu
+              </Button>
             </div>
           </div>
         </CardContent>

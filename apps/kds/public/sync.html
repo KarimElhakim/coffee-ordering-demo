@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Sync - Create Test Order</title>
+  <style>
+    body {
+      font-family: system-ui;
+      padding: 40px;
+      background: #1a1a1a;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .box {
+      background: #2a2a2a;
+      border-radius: 16px;
+      padding: 40px;
+      max-width: 600px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      text-align: center;
+    }
+    h1 { color: #4ade80; margin: 0 0 20px 0; }
+    button {
+      background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+      color: #000;
+      padding: 16px 32px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: bold;
+      margin: 10px;
+      font-size: 16px;
+      transition: transform 0.2s;
+    }
+    button:hover { transform: scale(1.05); }
+    button:active { transform: scale(0.95); }
+    .status { margin: 20px 0; padding: 20px; background: #1a1a1a; border-radius: 8px; }
+    .success { color: #4ade80; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>🍳 KDS Data Sync</h1>
+    <p style="color: #9ca3af; margin-bottom: 30px;">
+      This page shares the same origin as KDS (localhost:5175).
+      Create test orders here and they'll appear in KDS immediately!
+    </p>
+    
+    <button onclick="createOrder()">✨ Create Test Order in KDS</button>
+    <button onclick="location.reload()">🔄 Refresh</button>
+    
+    <div class="status" id="status">
+      <p>Click "Create Test Order" to add data to KDS</p>
+    </div>
+  </div>
+
+  <script>
+    function createOrder() {
+      const timestamp = Date.now();
+      const orderId = `order-sync-${timestamp}`;
+      const orderNumber = `ORD-${String(Math.floor(Math.random() * 100000)).padStart(6, '0')}`;
+      
+      // Create order
+      const order = {
+        id: orderId,
+        order_number: orderNumber,
+        store_id: '1',
+        table_id: null,
+        channel: 'cashier',
+        status: 'new',
+        total_amount: 85.00,
+        customer_name: 'Sync Test Customer',
+        customer_phone: '01999999999',
+        customer_email: 'test@sync.com',
+        location: 'test-sync',
+        created_at: new Date().toISOString(),
+        subtotal: 75.00,
+        tax_amount: 10.50,
+      };
+      
+      // Create items
+      const items = [
+        {
+          id: `item-${orderId}-0`,
+          order_id: orderId,
+          menu_item_id: 'item-cappuccino',
+          qty: 2,
+          price_each: 35,
+          note: 'Extra hot',
+          menu_item: { name: 'Cappuccino' },
+          options: [
+            { key: 'Size', value: 'Large', price_delta: 10 },
+            { key: 'Milk', value: 'Oat Milk', price_delta: 3 }
+          ]
+        },
+        {
+          id: `item-${orderId}-1`,
+          order_id: orderId,
+          menu_item_id: 'item-iced-latte',
+          qty: 1,
+          price_each: 40,
+          note: '',
+          menu_item: { name: 'Iced Latte' },
+          options: [
+            { key: 'Size', value: 'Medium', price_delta: 5 }
+          ]
+        }
+      ];
+      
+      // Create tickets (one for Bar, one for Cold)
+      const ticket1 = {
+        id: `ticket-${timestamp}-1`,
+        order_id: orderId,
+        station_id: 'station-bar',
+        status: 'new',
+        bumped_by: null,
+        created_at: new Date().toISOString(),
+      };
+      
+      const ticket2 = {
+        id: `ticket-${timestamp}-2`,
+        order_id: orderId,
+        station_id: 'station-cold',
+        status: 'new',
+        bumped_by: null,
+        created_at: new Date().toISOString(),
+      };
+      
+      // Save everything
+      const orders = JSON.parse(localStorage.getItem('demo-orders') || '[]');
+      orders.push(order);
+      localStorage.setItem('demo-orders', JSON.stringify(orders));
+      localStorage.setItem('demo-orders-shared', JSON.stringify(orders));
+      
+      const tickets = JSON.parse(localStorage.getItem('demo-kds-tickets') || '[]');
+      tickets.push(ticket1, ticket2);
+      localStorage.setItem('demo-kds-tickets', JSON.stringify(tickets));
+      localStorage.setItem('demo-kds-tickets-shared', JSON.stringify(tickets));
+      
+      localStorage.setItem(`demo-order-items-${orderId}`, JSON.stringify(items));
+      
+      document.getElementById('status').innerHTML = `
+        <p class="success">✅ Test Order Created!</p>
+        <p><strong>Order:</strong> ${orderNumber}</p>
+        <p><strong>Items:</strong> 2x Cappuccino (Large, Oat Milk) + 1x Iced Latte</p>
+        <p><strong>Tickets:</strong> 2 (Bar station + Cold station)</p>
+        <p style="margin-top: 20px; color: #fbbf24;">
+          <strong>Now go to KDS main tab and refresh (Ctrl+R)</strong><br>
+          Or just wait 3 seconds for auto-polling!
+        </p>
+      `;
+      
+      checkData();
+    }
+    
+    function checkData() {
+      const orders = JSON.parse(localStorage.getItem('demo-orders') || '[]');
+      const tickets = JSON.parse(localStorage.getItem('demo-kds-tickets') || '[]');
+      const sharedOrders = JSON.parse(localStorage.getItem('demo-orders-shared') || '[]');
+      const sharedTickets = JSON.parse(localStorage.getItem('demo-kds-tickets-shared') || '[]');
+      
+      let totalItems = 0;
+      [...orders, ...sharedOrders].forEach(order => {
+        const items = JSON.parse(localStorage.getItem(`demo-order-items-${order.id}`) || '[]');
+        totalItems += items.length;
+      });
+      
+      document.getElementById('orderCount').textContent = orders.length + sharedOrders.length;
+      document.getElementById('ticketCount').textContent = tickets.length + sharedTickets.length;
+      document.getElementById('itemCount').textContent = totalItems;
+    }
+    
+    function clearAll() {
+      if (confirm('⚠️ This will clear ALL orders and tickets. Continue?')) {
+        localStorage.clear();
+        alert('✅ All data cleared!');
+        location.reload();
+      }
+    }
+    
+    window.onload = checkData;
+  </script>
+</body>
+</html>
+
