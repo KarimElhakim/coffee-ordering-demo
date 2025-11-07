@@ -39,6 +39,12 @@ jobs:
           GITHUB_PAGES: true
           # Demo mode - no API keys needed!
           
+      - name: Verify build output
+        run: |
+          ls -la apps/customer/dist/
+          test -f apps/customer/dist/index.html || exit 1
+          test -f apps/customer/dist/404.html || exit 1
+          
       - name: Setup Pages
         uses: actions/configure-pages@v4
         
