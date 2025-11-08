@@ -44,17 +44,15 @@ jobs:
       - name: Build all apps
         run: |
           # Build all apps in demo mode (using localStorage)
-          # To enable Supabase/Stripe: Configure secrets in repository settings
           pnpm --filter @coffee-demo/customer build
           pnpm --filter @coffee-demo/cashier build
           pnpm --filter @coffee-demo/kds build
           pnpm --filter @coffee-demo/dashboard build
         env:
           GITHUB_PAGES: true
-          # Empty values = demo mode (uses localStorage instead of Supabase)
-          VITE_SUPABASE_URL: ''
-          VITE_SUPABASE_ANON_KEY: ''
-          VITE_STRIPE_PUBLISHABLE_KEY: ''
+          # Demo mode - uses localStorage with built-in menu data
+          VITE_USE_DEMO_MODE: 'true'
+          VITE_API_URL: ''
         
       - name: Organize dist folder for GitHub Pages
         run: |
