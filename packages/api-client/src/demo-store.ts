@@ -88,6 +88,10 @@ const DEMO_MENU_ITEMS = [
     base_price: 38,
     station_id: 'station-bar',
     is_active: true,
+    stock_quantity: 35,
+    low_stock_threshold: 10,
+    out_of_stock: false,
+    track_inventory: true,
   },
   {
     id: 'item-mocha',
@@ -96,6 +100,10 @@ const DEMO_MENU_ITEMS = [
     base_price: 42,
     station_id: 'station-bar',
     is_active: true,
+    stock_quantity: 30,
+    low_stock_threshold: 10,
+    out_of_stock: false,
+    track_inventory: true,
   },
   // Hot Station
   {
@@ -105,6 +113,10 @@ const DEMO_MENU_ITEMS = [
     base_price: 30,
     station_id: 'station-hot',
     is_active: true,
+    stock_quantity: 50,
+    low_stock_threshold: 10,
+    out_of_stock: false,
+    track_inventory: true,
   },
   {
     id: 'item-chai-latte',
@@ -137,6 +149,10 @@ const DEMO_MENU_ITEMS = [
     base_price: 28,
     station_id: 'station-hot',
     is_active: true,
+    stock_quantity: 25,
+    low_stock_threshold: 10,
+    out_of_stock: false,
+    track_inventory: true,
   },
   // Cold Station
   {
@@ -146,6 +162,10 @@ const DEMO_MENU_ITEMS = [
     base_price: 40,
     station_id: 'station-cold',
     is_active: true,
+    stock_quantity: 45,
+    low_stock_threshold: 10,
+    out_of_stock: false,
+    track_inventory: true,
   },
   {
     id: 'item-iced-americano',
@@ -154,6 +174,10 @@ const DEMO_MENU_ITEMS = [
     base_price: 32,
     station_id: 'station-cold',
     is_active: true,
+    stock_quantity: 40,
+    low_stock_threshold: 10,
+    out_of_stock: false,
+    track_inventory: true,
   },
   {
     id: 'item-cold-brew',
@@ -162,6 +186,10 @@ const DEMO_MENU_ITEMS = [
     base_price: 35,
     station_id: 'station-cold',
     is_active: true,
+    stock_quantity: 30,
+    low_stock_threshold: 10,
+    out_of_stock: false,
+    track_inventory: true,
   },
   {
     id: 'item-frappuccino',
@@ -170,6 +198,10 @@ const DEMO_MENU_ITEMS = [
     base_price: 45,
     station_id: 'station-cold',
     is_active: true,
+    stock_quantity: 35,
+    low_stock_threshold: 10,
+    out_of_stock: false,
+    track_inventory: true,
   },
   {
     id: 'item-iced-mocha',
@@ -178,6 +210,10 @@ const DEMO_MENU_ITEMS = [
     base_price: 44,
     station_id: 'station-cold',
     is_active: true,
+    stock_quantity: 28,
+    low_stock_threshold: 10,
+    out_of_stock: false,
+    track_inventory: true,
   },
   {
     id: 'item-smoothie',
@@ -186,6 +222,10 @@ const DEMO_MENU_ITEMS = [
     base_price: 40,
     station_id: 'station-cold',
     is_active: true,
+    stock_quantity: 32,
+    low_stock_threshold: 10,
+    out_of_stock: false,
+    track_inventory: true,
   },
 ];
 
