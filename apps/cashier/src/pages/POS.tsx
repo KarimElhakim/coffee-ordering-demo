@@ -244,10 +244,13 @@ export function POS() {
           </div>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-          {filteredItems.map((item) => (
+          {filteredItems.map((item) => {
+            const isOutOfStock = Boolean(item.out_of_stock || (item.track_inventory && (item.stock_quantity || 0) === 0));
+            const isLowStock = !isOutOfStock && Boolean(item.track_inventory && (item.stock_quantity || 0) <= (item.low_stock_threshold || 10) && (item.stock_quantity || 0) > 0);
+            return (
             <Card 
               key={item.id} 
-              className="cursor-pointer hover:shadow-2xl transition-all duration-200 border-[3px] border-gray-200 dark:border-gray-700 hover:scale-105 active:scale-95 hover:border-gray-400 dark:hover:border-gray-600 bg-white dark:bg-gray-900 overflow-hidden group rounded-3xl"
+              className={`${isOutOfStock ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer hover:scale-105 active:scale-95 hover:border-gray-400 dark:hover:border-gray-600'} hover:shadow-2xl transition-all duration-200 border-[3px] ${isOutOfStock ? 'border-red-300 dark:border-red-700' : isLowStock ? 'border-yellow-300 dark:border-yellow-700' : 'border-gray-200 dark:border-gray-700'} bg-white dark:bg-gray-900 overflow-hidden group rounded-3xl`}
             >
               <div className="relative w-full h-[200px] overflow-hidden rounded-t-3xl flex items-center justify-center">
                 <img 
@@ -268,15 +271,26 @@ export function POS() {
               </CardHeader>
               <CardContent className="pt-0 px-3 pb-3">
                 <Button 
-                  className="w-full bg-gray-900 hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-100 text-white dark:text-gray-900 font-semibold shadow-lg text-xs py-2 rounded-xl transition-all duration-200 hover:scale-105 active:scale-95 hover:shadow-xl flex items-center justify-center" 
-                  onClick={() => setSelectedItem(item)}
+                  className={`w-full ${isOutOfStock ? 'bg-red-500 hover:bg-red-600' : 'bg-gray-900 hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-100'} text-white ${isOutOfStock ? '' : 'dark:text-gray-900'} font-semibold shadow-lg text-xs py-2 rounded-xl transition-all duration-200 ${!isOutOfStock ? 'hover:scale-105 active:scale-95 hover:shadow-xl' : ''} flex items-center justify-center`}
+                  onClick={() => !isOutOfStock && setSelectedItem(item)}
+                  disabled={isOutOfStock}
                 >
-                  <Plus className="h-3 w-3 mr-1" />
-                  <span>Add</span>
+                  {isOutOfStock ? (
+                    <>
+                      <X className="h-3 w-3 mr-1" />
+                      <span>Out of Stock</span>
+                    </>
+                  ) : (
+                    <>
+                      <Plus className="h-3 w-3 mr-1" />
+                      <span>Add</span>
+                    </>
+                  )}
                 </Button>
               </CardContent>
             </Card>
-          ))}
+            );
+          })}
         </div>
       </div>
       <div className="lg:col-span-1">

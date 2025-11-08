@@ -76,6 +76,10 @@ const DEMO_MENU_ITEMS = [
     base_price: 32,
     station_id: 'station-bar',
     is_active: true,
+    stock_quantity: 0,
+    low_stock_threshold: 10,
+    out_of_stock: true,
+    track_inventory: true,
   },
   {
     id: 'item-flat-white',
@@ -109,6 +113,10 @@ const DEMO_MENU_ITEMS = [
     base_price: 35,
     station_id: 'station-hot',
     is_active: true,
+    stock_quantity: 0,
+    low_stock_threshold: 10,
+    out_of_stock: true,
+    track_inventory: true,
   },
   {
     id: 'item-matcha-latte',
@@ -117,6 +125,10 @@ const DEMO_MENU_ITEMS = [
     base_price: 38,
     station_id: 'station-hot',
     is_active: true,
+    stock_quantity: 0,
+    low_stock_threshold: 10,
+    out_of_stock: true,
+    track_inventory: true,
   },
   {
     id: 'item-turkish-coffee',
