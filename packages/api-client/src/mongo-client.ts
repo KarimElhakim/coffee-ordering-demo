@@ -1,7 +1,7 @@
 // MongoDB API Client - connects to the Express/MongoDB backend
 import { io, Socket } from 'socket.io-client';
 
-const API_BASE_URL = import.meta.env?.VITE_API_URL || 'http://localhost:3001';
+const API_BASE_URL = (import.meta as any).env?.VITE_API_URL || 'http://localhost:3001';
 
 // Socket.io connection for real-time updates
 let socket: Socket | null = null;
@@ -32,7 +32,7 @@ export function getSocket() {
 
 // Mock supabase client for compatibility
 export const supabase = {
-  channel: (channelName: string) => {
+  channel: (_channelName: string) => {
     const socket = getSocket();
     const listeners: any[] = [];
     
