@@ -396,8 +396,16 @@ export function createDemoOrder(orderData: {
     updated_at: new Date().toISOString(),
   };
 
+  // Check if this order ID already exists (prevent duplicates)
+  const existingOrderIndex = storedOrders.findIndex((o: any) => o.id === orderId);
+  if (existingOrderIndex >= 0) {
+    console.warn('⚠️ Order already exists, not creating duplicate:', orderId);
+    return storedOrders[existingOrderIndex];
+  }
+  
   storedOrders.push(order);
   localStorage.setItem('demo-orders', JSON.stringify(storedOrders));
+  console.log('✅ Order created and saved:', orderId, orderNumber);
 
   // Store order items with all details and timestamps
   const orderItems = orderData.items.map((item, idx) => {

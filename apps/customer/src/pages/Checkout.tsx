@@ -8,11 +8,13 @@ import { Trash2, Plus, Minus, ShoppingBag, CreditCard, ArrowLeft } from 'lucide-
 export function Checkout() {
   const { items, tableId, getTotal, removeItem, updateQuantity, getOptionsKey } = useCart();
   const [loading, setLoading] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
 
   const handleCheckout = async () => {
-    if (items.length === 0) return;
+    if (items.length === 0 || isSubmitting) return;
 
+    setIsSubmitting(true);
     setLoading(true);
     try {
       // Calculate financial breakdown
@@ -48,6 +50,7 @@ export function Checkout() {
     } catch (error) {
       console.error('Checkout failed:', error);
       alert('Failed to create order. Please try again.');
+      setIsSubmitting(false);
     } finally {
       setLoading(false);
     }
@@ -178,7 +181,7 @@ export function Checkout() {
           <Button
             className="w-full bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white font-semibold shadow-lg text-lg py-6"
             onClick={handleCheckout}
-            disabled={loading}
+            disabled={loading || isSubmitting}
           >
             {loading ? (
               <>

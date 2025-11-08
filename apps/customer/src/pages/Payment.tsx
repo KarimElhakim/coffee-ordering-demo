@@ -13,6 +13,7 @@ export function Payment() {
   const [cvc, setCvc] = useState('');
   const [name, setName] = useState('');
   const [processing, setProcessing] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
 
   useEffect(() => {
@@ -28,11 +29,14 @@ export function Payment() {
   }, [orderId]);
 
   const handlePayment = async () => {
-    if (!order || !cardNumber || !expiry || !cvc || !name) {
-      alert('Please fill in all payment details');
+    if (!order || !cardNumber || !expiry || !cvc || !name || isSubmitting) {
+      if (!isSubmitting) {
+        alert('Please fill in all payment details');
+      }
       return;
     }
 
+    setIsSubmitting(true);
     setProcessing(true);
 
     // Simulate payment processing
@@ -51,6 +55,7 @@ export function Payment() {
       console.error('Payment failed:', error);
       alert('Payment failed. Please try again.');
       setProcessing(false);
+      setIsSubmitting(false);
     }
   };
 
@@ -225,7 +230,7 @@ export function Payment() {
                 <Button
                   className="w-full bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white font-semibold shadow-lg text-lg py-6"
                   onClick={handlePayment}
-                  disabled={processing || !cardNumber || !expiry || !cvc || !name}
+                  disabled={processing || isSubmitting || !cardNumber || !expiry || !cvc || !name}
                 >
                   {processing ? (
                     <>
