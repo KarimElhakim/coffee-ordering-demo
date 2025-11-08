@@ -515,29 +515,8 @@ export function markDemoOrderPaid(orderId: string, paymentMethod: 'cash' | 'card
   payments.push(payment);
   localStorage.setItem(`demo-order-payments-${orderId}`, JSON.stringify(payments));
 
-  // Create KDS tickets
-  const orderItems = JSON.parse(localStorage.getItem(`demo-order-items-${orderId}`) || '[]');
-  const tickets = orderItems.map((item: any, idx: number) => {
-    const menuItem = DEMO_MENU_ITEMS.find((m) => m.id === item.menu_item_id);
-    if (!menuItem) return null;
-    return {
-      id: `ticket-${Date.now()}-${idx}-${Math.random().toString(36).substr(2, 9)}`,
-      order_id: orderId,
-      station_id: menuItem.station_id,
-      status: 'new' as const,
-      bumped_by: null,
-      created_at: new Date().toISOString(),
-      order: {
-        ...order,
-        items: orderItems,
-      },
-      station: DEMO_STATIONS.find((s) => s.id === menuItem.station_id),
-    };
-  }).filter(Boolean);
-
-  const existingTickets = getDemoKdsTickets();
-  existingTickets.push(...tickets);
-  localStorage.setItem('demo-kds-tickets', JSON.stringify(existingTickets));
+  // NOTE: KDS tickets are already created in createDemoOrder()
+  // Do NOT create them again here to avoid duplicates!
 
   return { order, payment };
 }

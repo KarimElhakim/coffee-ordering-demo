@@ -23,8 +23,8 @@ export function broadcastMessage(message: SyncMessage) {
     console.log('📡 Broadcast sent:', message.type);
   }
   
-  // Also store in shared storage (use a master copy)
-  syncToSharedStorage(message);
+  // NOTE: Shared storage sync DISABLED to prevent duplicates
+  // Each app now maintains its own local storage only
 }
 
 // Listen for messages from other tabs
@@ -36,17 +36,8 @@ export function setupSyncListener(callback: (message: SyncMessage) => void) {
     };
   }
   
-  // Also listen for storage events (fallback)
-  window.addEventListener('storage', (e) => {
-    if (e.key === 'demo-sync-message' && e.newValue) {
-      try {
-        const message = JSON.parse(e.newValue);
-        callback(message);
-      } catch (error) {
-        // Ignore parse errors
-      }
-    }
-  });
+  // NOTE: Storage event listener DISABLED to prevent duplicate order creation
+  // Each app now manages its own localStorage independently
 }
 
 // Sync data to shared storage
