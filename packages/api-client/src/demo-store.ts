@@ -214,27 +214,22 @@ initStorage();
 
 // Helper functions
 export function getDemoOrders() {
-  // Use local storage - but check shared key for cross-port access
+  // Use local storage only - deduplicate any issues
   let orders = JSON.parse(localStorage.getItem('demo-orders') || '[]');
   
-  // Also check shared storage (written by other ports via BroadcastChannel)
-  try {
-    const sharedOrders = JSON.parse(localStorage.getItem('demo-orders-shared') || '[]');
-    if (sharedOrders.length > 0) {
-      // Merge and deduplicate
-      const allOrders = [...orders, ...sharedOrders];
-      orders = allOrders.filter((order, index, self) =>
-        index === self.findIndex((o: any) => o.id === order.id)
-      );
-      // Sync back to local
-      localStorage.setItem('demo-orders', JSON.stringify(orders));
-    }
-  } catch (error) {
-    console.warn('Could not read shared orders');
+  // Deduplicate orders by ID
+  const uniqueOrders = orders.filter((order: any, index: number, self: any[]) =>
+    index === self.findIndex((o: any) => o.id === order.id)
+  );
+  
+  // If deduplication found duplicates, save the cleaned version
+  if (uniqueOrders.length !== orders.length) {
+    console.log(`🧹 Cleaned ${orders.length - uniqueOrders.length} duplicate orders`);
+    localStorage.setItem('demo-orders', JSON.stringify(uniqueOrders));
   }
   
-  console.log('📦 getDemoOrders returning:', orders.length, 'orders');
-  return orders.map((order: any) => ({
+  console.log('📦 getDemoOrders returning:', uniqueOrders.length, 'orders');
+  return uniqueOrders.map((order: any) => ({
     ...order,
     items: JSON.parse(localStorage.getItem(`demo-order-items-${order.id}`) || '[]'),
     payments: JSON.parse(localStorage.getItem(`demo-order-payments-${order.id}`) || '[]'),
@@ -242,27 +237,22 @@ export function getDemoOrders() {
 }
 
 export function getDemoKdsTickets() {
-  // Use local storage - but check shared key for cross-port access
+  // Use local storage only - deduplicate any issues
   let tickets = JSON.parse(localStorage.getItem('demo-kds-tickets') || '[]');
   
-  // Also check shared storage (written by other ports via BroadcastChannel)
-  try {
-    const sharedTickets = JSON.parse(localStorage.getItem('demo-kds-tickets-shared') || '[]');
-    if (sharedTickets.length > 0) {
-      // Merge and deduplicate
-      const allTickets = [...tickets, ...sharedTickets];
-      tickets = allTickets.filter((ticket, index, self) =>
-        index === self.findIndex((t: any) => t.id === ticket.id)
-      );
-      // Sync back to local
-      localStorage.setItem('demo-kds-tickets', JSON.stringify(tickets));
-    }
-  } catch (error) {
-    console.warn('Could not read shared tickets');
+  // Deduplicate tickets by ID
+  const uniqueTickets = tickets.filter((ticket: any, index: number, self: any[]) =>
+    index === self.findIndex((t: any) => t.id === ticket.id)
+  );
+  
+  // If deduplication found duplicates, save the cleaned version
+  if (uniqueTickets.length !== tickets.length) {
+    console.log(`🧹 Cleaned ${tickets.length - uniqueTickets.length} duplicate tickets`);
+    localStorage.setItem('demo-kds-tickets', JSON.stringify(uniqueTickets));
   }
   
-  console.log('📦 getDemoKdsTickets returning:', tickets.length, 'tickets');
-  return tickets;
+  console.log('📦 getDemoKdsTickets returning:', uniqueTickets.length, 'tickets');
+  return uniqueTickets;
 }
 
 export function createDemoOrder(orderData: {
@@ -446,26 +436,8 @@ export function createDemoOrder(orderData: {
   localStorage.setItem('demo-kds-tickets', JSON.stringify(existingTickets));
   console.log('✅ Total KDS tickets now:', existingTickets.length);
   
-  // Save to shared storage for cross-port access
+  // Broadcast to other tabs for cross-tab sync
   try {
-    // Save order to shared storage
-    const sharedOrders = JSON.parse(localStorage.getItem('demo-orders-shared') || '[]');
-    sharedOrders.push(order);
-    localStorage.setItem('demo-orders-shared', JSON.stringify(sharedOrders));
-    console.log('✅ Saved order to shared storage');
-    
-    // Save tickets to shared storage
-    const sharedTickets = JSON.parse(localStorage.getItem('demo-kds-tickets-shared') || '[]');
-    Object.keys(itemsByStation).forEach(stationId => {
-      const ticketForStation = existingTickets.find((t: any) => t.station_id === stationId && t.order_id === orderId);
-      if (ticketForStation) {
-        sharedTickets.push(ticketForStation);
-        console.log('✅ Saved ticket to shared storage:', ticketForStation.id);
-      }
-    });
-    localStorage.setItem('demo-kds-tickets-shared', JSON.stringify(sharedTickets));
-    
-    // Broadcast to other tabs
     broadcastMessage({
       type: 'order-created',
       payload: order,
