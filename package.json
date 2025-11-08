@@ -5,15 +5,17 @@
   "type": "module",
   "scripts": {
     "dev": "pnpm --filter './apps/*' dev",
+    "dev:api": "pnpm --filter './packages/api-server' dev",
+    "dev:all": "concurrently \"pnpm dev:api\" \"pnpm dev\"",
     "build": "pnpm --filter './apps/*' build",
+    "build:api": "pnpm --filter './packages/api-server' build",
     "lint": "pnpm --filter './apps/*' lint",
-    "seed": "pnpm --filter './packages/api-client' seed",
-    "db:reset": "supabase db reset",
-    "db:push": "supabase db push",
-    "functions:deploy": "supabase functions deploy"
+    "seed": "pnpm --filter './packages/api-server' seed",
+    "seed:old": "pnpm --filter './packages/api-client' seed"
   },
   "devDependencies": {
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "concurrently": "^8.2.2"
   },
   "engines": {
     "node": ">=18",

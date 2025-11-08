@@ -12,6 +12,9 @@ build/
 .env
 .env.local
 .env.*.local
+packages/api-server/.env
+packages/api-server/CREDENTIALS.txt
+packages/api-server/atlas-credentials.txt
 
 # IDE
 .vscode/
@@ -40,4 +43,9 @@ coverage/
 # Misc
 .cache/
 .temp/
+
+# MongoDB Atlas
+atlas-dashboard.png
+*.pkl
+*.h5
 
