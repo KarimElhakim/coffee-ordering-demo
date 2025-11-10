@@ -97,9 +97,9 @@ export function Menu() {
             return (
               <Card 
                 key={item.id} 
-                className={`w-full max-w-[420px] h-[490px] ${isOutOfStock ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer hover:shadow-2xl'} transition-all duration-300 border-[3px] ${isOutOfStock ? 'border-red-300 dark:border-red-700' : 'border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500'} bg-white dark:bg-gray-900 overflow-hidden group rounded-3xl flex flex-col ${isAdded ? 'ring-2 ring-gray-500 animate-pulse' : ''}`}
+                className={`w-full max-w-[420px] h-[420px] md:h-[490px] ${isOutOfStock ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer hover:shadow-2xl'} transition-all duration-300 border-2 md:border-[3px] ${isOutOfStock ? 'border-red-300 dark:border-red-700' : 'border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500'} bg-white dark:bg-gray-900 overflow-hidden group rounded-2xl md:rounded-3xl flex flex-col ${isAdded ? 'ring-2 ring-gray-500 animate-pulse' : ''}`}
               >
-                <div className="relative w-full h-[320px] overflow-hidden rounded-t-3xl flex items-center justify-center">
+                <div className="relative w-full h-[260px] md:h-[320px] overflow-hidden rounded-t-2xl md:rounded-t-3xl flex items-center justify-center flex-shrink-0">
                   <img 
                     src={getItemImage(item.name)} 
                     alt={item.name}
@@ -108,27 +108,27 @@ export function Menu() {
                       (e.target as HTMLImageElement).src = 'https://via.placeholder.com/400x400/000000/ffffff?text=' + encodeURIComponent(item.name);
                     }}
                   />
-                  <div className="absolute top-3 right-3 bg-white/95 dark:bg-gray-900/95 rounded-full px-3 py-1.5 shadow-lg">
-                    <span className="text-sm font-bold text-gray-900 dark:text-white">From {item.base_price.toFixed(0)} EGP</span>
+                  <div className="absolute top-2 md:top-3 right-2 md:right-3 bg-white/95 dark:bg-gray-900/95 rounded-full px-2 md:px-3 py-1 md:py-1.5 shadow-lg">
+                    <span className="text-xs md:text-sm font-bold text-gray-900 dark:text-white">{item.base_price.toFixed(0)} EGP</span>
                   </div>
                   {itemInCart && (
-                    <div className="absolute top-3 left-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full p-2 shadow-lg">
-                      <ShoppingCart className="h-4 w-4" />
+                    <div className="absolute top-2 md:top-3 left-2 md:left-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full p-1.5 md:p-2 shadow-lg">
+                      <ShoppingCart className="h-3 w-3 md:h-4 md:w-4" />
                     </div>
                   )}
                 </div>
-                <div className="p-5 flex flex-col flex-1">
-                  <CardHeader className="pb-3 pt-0 px-0">
-                    <CardTitle className="text-xl font-bold text-gray-900 dark:text-white leading-tight">
+                <div className="p-3 md:p-5 flex flex-col flex-1">
+                  <CardHeader className="pb-2 md:pb-3 pt-0 px-0">
+                    <CardTitle className="text-base md:text-lg lg:text-xl font-bold text-gray-900 dark:text-white leading-tight line-clamp-2">
                       {item.name}
                     </CardTitle>
-                    <CardDescription className="text-sm text-gray-600 dark:text-gray-400 mt-1.5">
+                    <CardDescription className="text-xs md:text-sm text-gray-600 dark:text-gray-400 mt-1 md:mt-1.5">
                       Single or Double Shot
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="pt-0 pb-0 px-0 mt-auto">
                     <Button
-                      className={`w-full font-semibold shadow-lg transition-all duration-200 rounded-xl h-12 text-base hover:scale-105 active:scale-95 hover:shadow-xl ${
+                      className={`w-full font-semibold shadow-lg transition-all duration-200 rounded-lg md:rounded-xl h-10 md:h-12 text-sm md:text-base hover:scale-105 active:scale-95 hover:shadow-xl ${
                         itemInCart 
                           ? 'bg-gray-700 hover:bg-gray-800 text-white' 
                           : 'bg-gray-900 hover:bg-gray-800 text-white dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100'
@@ -166,9 +166,9 @@ export function Menu() {
           return (
             <Card 
               key={item.id} 
-              className={`w-full max-w-[420px] h-[490px] ${isOutOfStock ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer hover:shadow-2xl'} transition-all duration-300 border-[3px] ${isOutOfStock ? 'border-red-300 dark:border-red-700' : isLowStock ? 'border-yellow-300 dark:border-yellow-700' : 'border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500'} bg-white dark:bg-gray-900 overflow-hidden group rounded-3xl flex flex-col ${isAdded ? 'ring-2 ring-gray-500 animate-pulse' : ''}`}
+              className={`w-full max-w-[420px] h-[420px] md:h-[490px] ${isOutOfStock ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer hover:shadow-2xl'} transition-all duration-300 border-2 md:border-[3px] ${isOutOfStock ? 'border-red-300 dark:border-red-700' : isLowStock ? 'border-yellow-300 dark:border-yellow-700' : 'border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500'} bg-white dark:bg-gray-900 overflow-hidden group rounded-2xl md:rounded-3xl flex flex-col ${isAdded ? 'ring-2 ring-gray-500 animate-pulse' : ''}`}
             >
-              <div className="relative w-full h-[320px] overflow-hidden rounded-t-3xl flex items-center justify-center">
+              <div className="relative w-full h-[260px] md:h-[320px] overflow-hidden rounded-t-2xl md:rounded-t-3xl flex items-center justify-center flex-shrink-0">
                 <img 
                   src={getItemImage(item.name, item)} 
                   alt={item.name}
@@ -177,27 +177,27 @@ export function Menu() {
                     (e.target as HTMLImageElement).src = 'https://via.placeholder.com/400x400/000000/ffffff?text=' + encodeURIComponent(item.name);
                   }}
                 />
-                <div className="absolute top-3 right-3 bg-white/95 dark:bg-gray-900/95 rounded-full px-3 py-1.5 shadow-lg">
-                  <span className="text-sm font-bold text-gray-900 dark:text-white">{item.base_price.toFixed(0)} EGP</span>
+                <div className="absolute top-2 md:top-3 right-2 md:right-3 bg-white/95 dark:bg-gray-900/95 rounded-full px-2 md:px-3 py-1 md:py-1.5 shadow-lg">
+                  <span className="text-xs md:text-sm font-bold text-gray-900 dark:text-white">{item.base_price.toFixed(0)} EGP</span>
                 </div>
                 {itemInCart && (
-                  <div className="absolute top-3 left-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full p-2 shadow-lg">
-                    <ShoppingCart className="h-4 w-4" />
+                  <div className="absolute top-2 md:top-3 left-2 md:left-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full p-1.5 md:p-2 shadow-lg">
+                    <ShoppingCart className="h-3 w-3 md:h-4 md:w-4" />
                   </div>
                 )}
               </div>
-              <div className="p-5 flex flex-col flex-1">
-                <CardHeader className="pb-3 pt-0 px-0">
-                  <CardTitle className="text-xl font-bold text-gray-900 dark:text-white leading-tight">
+              <div className="p-3 md:p-5 flex flex-col flex-1">
+                <CardHeader className="pb-2 md:pb-3 pt-0 px-0">
+                  <CardTitle className="text-base md:text-lg lg:text-xl font-bold text-gray-900 dark:text-white leading-tight line-clamp-2">
                     {item.name}
                   </CardTitle>
-                  <CardDescription className="text-sm text-gray-600 dark:text-gray-400 mt-1.5">
+                  <CardDescription className="text-xs md:text-sm text-gray-600 dark:text-gray-400 mt-1 md:mt-1.5 truncate">
                     {item.station?.name} Station
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="pt-0 pb-0 px-0 mt-auto">
                   <Button
-                    className={`w-full font-semibold shadow-lg transition-all duration-200 rounded-xl h-12 text-base hover:scale-105 active:scale-95 hover:shadow-xl ${
+                    className={`w-full font-semibold shadow-lg transition-all duration-200 rounded-lg md:rounded-xl h-10 md:h-12 text-sm md:text-base hover:scale-105 active:scale-95 hover:shadow-xl ${
                       isOutOfStock 
                         ? 'bg-gray-400 dark:bg-gray-600 cursor-not-allowed'
                         : itemInCart 
@@ -217,17 +217,17 @@ export function Menu() {
                   >
                     {isOutOfStock ? (
                       <>
-                        <PackageX className="h-5 w-5 mr-2" />
+                        <PackageX className="h-4 w-4 md:h-5 md:w-5 mr-1.5 md:mr-2" />
                         Out of Stock
                       </>
                     ) : itemInCart ? (
                       <>
-                        <ShoppingCart className="h-5 w-5 mr-2" />
+                        <ShoppingCart className="h-4 w-4 md:h-5 md:w-5 mr-1.5 md:mr-2" />
                         In Cart ({itemInCart.qty})
                       </>
                     ) : (
                       <>
-                        <Plus className="h-5 w-5 mr-2" />
+                        <Plus className="h-4 w-4 md:h-5 md:w-5 mr-1.5 md:mr-2" />
                         Add to Cart
                       </>
                     )}
@@ -244,26 +244,26 @@ export function Menu() {
   return (
     <div className="w-full flex flex-col items-center justify-center min-h-[calc(100vh-8rem)] overflow-x-hidden">
       {/* Animated Starbucks-Style Hero Banner */}
-      <div className="relative w-full h-[450px] sm:h-[550px] lg:h-[650px] overflow-hidden mb-12">
+      <div className="relative w-full h-[350px] md:h-[450px] lg:h-[550px] overflow-hidden mb-6 md:mb-12">
         {/* Background with gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-800 via-emerald-700 to-emerald-900" />
         
-        {/* Animated coffee beans pattern */}
+        {/* Animated coffee beans pattern - smaller on mobile */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 w-32 h-32 rounded-full bg-white animate-pulse" style={{ animationDuration: '3s' }} />
-          <div className="absolute top-40 right-20 w-24 h-24 rounded-full bg-white animate-pulse" style={{ animationDuration: '4s', animationDelay: '0.5s' }} />
-          <div className="absolute bottom-20 left-1/4 w-28 h-28 rounded-full bg-white animate-pulse" style={{ animationDuration: '3.5s', animationDelay: '1s' }} />
-          <div className="absolute bottom-32 right-1/3 w-20 h-20 rounded-full bg-white animate-pulse" style={{ animationDuration: '4.5s', animationDelay: '1.5s' }} />
+          <div className="absolute top-5 md:top-10 left-5 md:left-10 w-16 md:w-32 h-16 md:h-32 rounded-full bg-white animate-pulse" style={{ animationDuration: '3s' }} />
+          <div className="absolute top-20 md:top-40 right-10 md:right-20 w-12 md:w-24 h-12 md:h-24 rounded-full bg-white animate-pulse" style={{ animationDuration: '4s', animationDelay: '0.5s' }} />
+          <div className="absolute bottom-10 md:bottom-20 left-1/4 w-14 md:w-28 h-14 md:h-28 rounded-full bg-white animate-pulse" style={{ animationDuration: '3.5s', animationDelay: '1s' }} />
+          <div className="absolute bottom-16 md:bottom-32 right-1/3 w-10 md:w-20 h-10 md:h-20 rounded-full bg-white animate-pulse" style={{ animationDuration: '4.5s', animationDelay: '1.5s' }} />
         </div>
 
         {/* Starbucks-style curved decoration */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white dark:from-gray-950 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-16 md:h-32 bg-gradient-to-t from-white dark:from-gray-950 to-transparent" />
         
         {/* Content */}
-        <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-4">
+        <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-3">
           {/* Animated main title */}
-          <div className="mb-4 md:mb-6 animate-fade-in-down px-4 md:px-0">
-            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-2 tracking-tight" 
+          <div className="mb-3 md:mb-6 animate-fade-in-down">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-1 md:mb-2 tracking-tight leading-tight" 
                 style={{ 
                   fontFamily: "'Inter', 'Segoe UI', sans-serif",
                   textShadow: '0 4px 20px rgba(0,0,0,0.5), 0 0 40px rgba(255,255,255,0.2)'
@@ -272,7 +272,7 @@ export function Menu() {
               {' '}
               <span className="inline-block animate-fade-in-up" style={{ animationDelay: '0.3s' }}>to</span>
             </h1>
-            <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white animate-fade-in-up"
+            <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white animate-fade-in-up leading-tight"
                 style={{ 
                   fontFamily: "'Inter', 'Segoe UI', sans-serif",
                   textShadow: '0 4px 30px rgba(0,0,0,0.6), 0 0 60px rgba(255,255,255,0.3)',
@@ -284,41 +284,41 @@ export function Menu() {
           </div>
           
           {/* Animated subtitle */}
-          <p className="text-base sm:text-xl md:text-2xl lg:text-3xl text-white font-medium max-w-3xl mb-6 md:mb-8 animate-fade-in-up leading-relaxed px-4 md:px-0"
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-medium max-w-3xl mb-4 md:mb-8 animate-fade-in-up leading-relaxed"
              style={{ 
                animationDelay: '0.7s',
                textShadow: '0 2px 15px rgba(0,0,0,0.5)'
              }}>
             Experience the <span className="font-bold text-yellow-300">authentic Starbucks</span> menu
-            <br />
-            <span className="text-lg sm:text-xl text-emerald-100">Handcrafted beverages • Fresh daily • Made with love</span>
+            <br className="hidden sm:block" />
+            <span className="text-xs sm:text-sm md:text-base text-emerald-100">Handcrafted beverages • Fresh daily • Made with love</span>
           </p>
 
           {/* Animated badge */}
           <div className="animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
-            <div className="inline-flex items-center gap-2 bg-white/95 backdrop-blur-sm rounded-full px-6 py-3 shadow-2xl">
-              <Coffee className="h-5 w-5 text-emerald-700" />
-              <span className="text-emerald-800 font-bold text-lg">99 Premium Beverages</span>
+            <div className="inline-flex items-center gap-1.5 md:gap-2 bg-white/95 backdrop-blur-sm rounded-full px-4 md:px-6 py-2 md:py-3 shadow-2xl">
+              <Coffee className="h-4 w-4 md:h-5 md:w-5 text-emerald-700" />
+              <span className="text-emerald-800 font-bold text-sm md:text-base lg:text-lg">99 Premium Beverages</span>
             </div>
           </div>
         </div>
 
-        {/* Decorative circles */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }} />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s', animationDelay: '1s' }} />
+        {/* Decorative circles - smaller on mobile */}
+        <div className="absolute top-0 right-0 w-48 md:w-96 h-48 md:h-96 bg-yellow-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }} />
+        <div className="absolute bottom-0 left-0 w-48 md:w-96 h-48 md:h-96 bg-emerald-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s', animationDelay: '1s' }} />
       </div>
 
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden">
-        <div className="mb-8 text-center">
-          <h2 className="text-4xl font-bold mb-2 text-gray-900 dark:text-white">
+      <div className="w-full max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 overflow-x-hidden">
+        <div className="mb-4 md:mb-8 text-center">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-1 md:mb-2 text-gray-900 dark:text-white">
             Our Menu
           </h2>
-          <p className="text-gray-600 dark:text-gray-400">Discover our handcrafted coffee selection</p>
+          <p className="text-sm md:text-base text-gray-600 dark:text-gray-400">Discover our handcrafted coffee selection</p>
         </div>
         
-        <div className="flex justify-center mb-8 overflow-x-hidden">
-          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full max-w-4xl overflow-x-hidden">
-            <TabsList className={`grid w-full bg-gray-100 dark:bg-gray-800 rounded-lg p-1 h-auto overflow-x-auto`} style={{ gridTemplateColumns: `repeat(${availableCategories.length}, minmax(120px, 1fr))` }}>
+        <div className="mb-4 md:mb-8 overflow-x-auto -mx-2 px-2">
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+            <TabsList className="inline-flex w-auto min-w-full bg-gray-100 dark:bg-gray-800 rounded-lg p-1 gap-1">
               {availableCategories.map((category) => {
                 const icon = 
                   category.includes('Hot Coffee') ? <Flame className="h-4 w-4" /> :
@@ -336,19 +336,19 @@ export function Menu() {
                   <TabsTrigger 
                     key={category}
                     value={category} 
-                    className="data-[state=active]:bg-gray-900 data-[state=active]:text-white data-[state=active]:z-10 data-[state=inactive]:text-gray-600 dark:data-[state=inactive]:text-gray-400 rounded-md font-semibold transition-all duration-200 flex items-center justify-center gap-2 data-[state=inactive]:hover:bg-gray-200 dark:data-[state=inactive]:hover:bg-gray-700 data-[state=inactive]:hover:scale-[1.02] active:scale-95 data-[state=inactive]:hover:text-gray-900 dark:data-[state=inactive]:hover:text-white relative px-3 py-2"
+                    className="data-[state=active]:bg-gray-900 data-[state=active]:text-white data-[state=active]:z-10 data-[state=inactive]:text-gray-600 dark:data-[state=inactive]:text-gray-400 rounded-md font-semibold transition-all duration-200 flex items-center justify-center gap-1.5 md:gap-2 data-[state=inactive]:hover:bg-gray-200 dark:data-[state=inactive]:hover:bg-gray-700 data-[state=inactive]:hover:scale-[1.02] active:scale-95 data-[state=inactive]:hover:text-gray-900 dark:data-[state=inactive]:hover:text-white relative px-2 md:px-3 py-1.5 md:py-2 whitespace-nowrap text-xs md:text-sm flex-shrink-0"
                   >
                     {icon}
-                    <span className="text-sm">{displayName}</span>
+                    <span>{displayName}</span>
                   </TabsTrigger>
                 );
               })}
             </TabsList>
 
             {availableCategories.map((category) => (
-              <TabsContent key={category} value={category} className="mt-6 overflow-x-hidden">
+              <TabsContent key={category} value={category} className="mt-4 md:mt-6 overflow-x-hidden">
                 {groupedByCategory[category] ? renderMenuItems(groupedByCategory[category]) : (
-                  <div className="text-center py-12 text-gray-600 dark:text-gray-400">No {category} drinks available</div>
+                  <div className="text-center py-8 md:py-12 text-sm md:text-base text-gray-600 dark:text-gray-400">No {category} drinks available</div>
                 )}
               </TabsContent>
             ))}
