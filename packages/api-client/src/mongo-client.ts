@@ -120,6 +120,10 @@ export const getStations = async (storeId: string = '1') => {
   return await fetchAPI(`/api/stations?store_id=${storeId}`);
 };
 
+export const getTables = async (storeId: string = '1') => {
+  return await fetchAPI(`/api/stores/${storeId}/tables`);
+};
+
 export const createOrder = async (orderData: {
   store_id: string;
   table_id?: string | null;
@@ -207,7 +211,12 @@ export const updateOrderStatus = async (
 export const markOrderPaid = async (
   orderId: string,
   paymentMethod: 'cash' | 'card_present_demo',
-  amount: number
+  amount: number,
+  paymentData?: {
+    payment_method?: string;
+    order_type?: 'dine-in' | 'takeaway';
+    table_id?: string | null;
+  }
 ) => {
   return await fetchAPI('/api/payments', {
     method: 'POST',
@@ -215,6 +224,7 @@ export const markOrderPaid = async (
       order_id: orderId,
       provider: paymentMethod,
       amount,
+      ...paymentData,
     }),
   });
 };

@@ -21,6 +21,8 @@ export const supabase = {
 // Demo API functions
 export const getStore = async () => DEMO_DATA.store;
 
+export const getTables = async () => DEMO_DATA.tables;
+
 export const getMenuItems = async () => {
   return DEMO_DATA.menuItems.map((item) => ({
     ...item,
@@ -192,9 +194,14 @@ export const updateOrderStatus = async (
 export const markOrderPaid = async (
   orderId: string,
   paymentMethod: 'cash' | 'card_present_demo',
-  amount: number
+  amount: number,
+  paymentData?: {
+    payment_method?: string;
+    order_type?: 'dine-in' | 'takeaway';
+    table_id?: string | null;
+  }
 ) => {
-  return markDemoOrderPaid(orderId, paymentMethod, amount);
+  return markDemoOrderPaid(orderId, paymentMethod, amount, paymentData);
 };
 
 // Mock checkout session - returns a demo payment page URL

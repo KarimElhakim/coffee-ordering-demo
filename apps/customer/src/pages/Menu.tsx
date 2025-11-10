@@ -244,25 +244,69 @@ export function Menu() {
 
   return (
     <div className="w-full flex flex-col items-center justify-center min-h-[calc(100vh-8rem)] overflow-x-hidden">
-      {/* Hero Section */}
-      <div className="relative w-full h-[400px] sm:h-[500px] lg:h-[600px] overflow-hidden mb-12">
-        <img 
-          src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2060&q=80"
-          alt="Coffee shop interior with people"
-          className="absolute inset-0 w-full h-full object-cover"
-          onError={(e) => {
-            (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80';
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-900/70 via-gray-800/60 to-gray-900/80 dark:from-gray-900/80 dark:via-gray-800/70 dark:to-gray-900/90 backdrop-blur-[1px]" />
-        <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-4">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 drop-shadow-2xl">
-            Welcome to Karim's Coffee
-          </h1>
-          <p className="text-lg sm:text-xl lg:text-2xl text-gray-100 max-w-2xl drop-shadow-lg">
-            Discover our handcrafted coffee selection and experience the perfect blend
-          </p>
+      {/* Animated Starbucks-Style Hero Banner */}
+      <div className="relative w-full h-[450px] sm:h-[550px] lg:h-[650px] overflow-hidden mb-12">
+        {/* Background with gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-800 via-emerald-700 to-emerald-900" />
+        
+        {/* Animated coffee beans pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 left-10 w-32 h-32 rounded-full bg-white animate-pulse" style={{ animationDuration: '3s' }} />
+          <div className="absolute top-40 right-20 w-24 h-24 rounded-full bg-white animate-pulse" style={{ animationDuration: '4s', animationDelay: '0.5s' }} />
+          <div className="absolute bottom-20 left-1/4 w-28 h-28 rounded-full bg-white animate-pulse" style={{ animationDuration: '3.5s', animationDelay: '1s' }} />
+          <div className="absolute bottom-32 right-1/3 w-20 h-20 rounded-full bg-white animate-pulse" style={{ animationDuration: '4.5s', animationDelay: '1.5s' }} />
         </div>
+
+        {/* Starbucks-style curved decoration */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white dark:from-gray-950 to-transparent" />
+        
+        {/* Content */}
+        <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-4">
+          {/* Animated main title */}
+          <div className="mb-6 animate-fade-in-down">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white mb-2 tracking-tight" 
+                style={{ 
+                  fontFamily: "'Inter', 'Segoe UI', sans-serif",
+                  textShadow: '0 4px 20px rgba(0,0,0,0.5), 0 0 40px rgba(255,255,255,0.2)'
+                }}>
+              <span className="inline-block animate-fade-in-up" style={{ animationDelay: '0.1s' }}>Welcome</span>
+              {' '}
+              <span className="inline-block animate-fade-in-up" style={{ animationDelay: '0.3s' }}>to</span>
+            </h1>
+            <h2 className="text-6xl sm:text-7xl lg:text-8xl font-black text-white animate-fade-in-up"
+                style={{ 
+                  fontFamily: "'Inter', 'Segoe UI', sans-serif",
+                  textShadow: '0 4px 30px rgba(0,0,0,0.6), 0 0 60px rgba(255,255,255,0.3)',
+                  animationDelay: '0.5s',
+                  letterSpacing: '-0.02em'
+                }}>
+              Karim's <span className="text-yellow-300">Coffee</span>
+            </h2>
+          </div>
+          
+          {/* Animated subtitle */}
+          <p className="text-xl sm:text-2xl lg:text-3xl text-white font-medium max-w-3xl mb-8 animate-fade-in-up leading-relaxed"
+             style={{ 
+               animationDelay: '0.7s',
+               textShadow: '0 2px 15px rgba(0,0,0,0.5)'
+             }}>
+            Experience the <span className="font-bold text-yellow-300">authentic Starbucks</span> menu
+            <br />
+            <span className="text-lg sm:text-xl text-emerald-100">Handcrafted beverages • Fresh daily • Made with love</span>
+          </p>
+
+          {/* Animated badge */}
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
+            <div className="inline-flex items-center gap-2 bg-white/95 backdrop-blur-sm rounded-full px-6 py-3 shadow-2xl">
+              <Coffee className="h-5 w-5 text-emerald-700" />
+              <span className="text-emerald-800 font-bold text-lg">99 Premium Beverages</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Decorative circles */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }} />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s', animationDelay: '1s' }} />
       </div>
 
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden">

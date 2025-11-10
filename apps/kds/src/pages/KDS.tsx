@@ -180,6 +180,23 @@ export function KDS() {
                 {ticket.station.name}
               </div>
             </div>
+
+            {/* Table / Takeaway Badge */}
+            {((ticket as any).order_type || (ticket as any).table_id) && (
+              <div className="flex items-center gap-2">
+                {(ticket as any).order_type === 'takeaway' ? (
+                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold shadow-md">
+                    <Package className="h-5 w-5" />
+                    <span>📦 TAKEAWAY</span>
+                  </div>
+                ) : (ticket as any).table_id ? (
+                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold shadow-md">
+                    <MapPin className="h-5 w-5" />
+                    <span>🍽️ Table {(ticket as any).table_id}</span>
+                  </div>
+                ) : null}
+              </div>
+            )}
             
             {/* Meta Information */}
             <div className="flex items-center justify-between pt-2 border-t border-gray-200 dark:border-gray-700">

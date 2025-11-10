@@ -28,6 +28,7 @@ export { supabase };
 
 // Export API functions based on mode
 export const getStore = useDemoMode ? demoApi.getStore : mongoApi.getStore;
+export const getTables = useDemoMode ? demoApi.getTables : mongoApi.getTables;
 export const getMenuItems = useDemoMode ? demoApi.getMenuItems : mongoApi.getMenuItems;
 export const getModifiers = useDemoMode ? demoApi.getModifiers : mongoApi.getModifiers;
 export const getStations = useDemoMode ? demoApi.getStations : mongoApi.getStations;

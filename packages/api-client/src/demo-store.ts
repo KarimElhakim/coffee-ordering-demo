@@ -312,14 +312,27 @@ export function createDemoOrder(orderData: {
   return order;
 }
 
-export function markDemoOrderPaid(orderId: string, paymentMethod: 'cash' | 'card_present_demo' | 'stripe', amount: number) {
+export function markDemoOrderPaid(
+  orderId: string, 
+  paymentMethod: 'cash' | 'card_present_demo' | 'stripe', 
+  amount: number,
+  paymentData?: {
+    payment_method?: string;
+    order_type?: 'dine-in' | 'takeaway';
+    table_id?: string | null;
+  }
+) {
   const orders = getDemoOrders();
   const order = orders.find((o: any) => o.id === orderId);
   if (!order) throw new Error('Order not found');
 
-  // Update order status and timestamp
+  // Update order with payment and table info
   order.status = 'paid';
   order.updated_at = new Date().toISOString();
+  order.payment_method = paymentData?.payment_method || paymentMethod;
+  order.order_type = paymentData?.order_type || 'dine-in';
+  order.table_id = paymentData?.table_id || order.table_id;
+  
   localStorage.setItem('demo-orders', JSON.stringify(orders));
 
   // Create payment
@@ -330,6 +343,9 @@ export function markDemoOrderPaid(orderId: string, paymentMethod: 'cash' | 'card
     status: 'succeeded' as const,
     amount,
     ext_ref: `demo-${Date.now()}`,
+    payment_method: paymentData?.payment_method || paymentMethod,
+    order_type: paymentData?.order_type || 'dine-in',
+    table_id: paymentData?.table_id || null,
     created_at: new Date().toISOString(),
   };
 
@@ -337,8 +353,19 @@ export function markDemoOrderPaid(orderId: string, paymentMethod: 'cash' | 'card
   payments.push(payment);
   localStorage.setItem(`demo-order-payments-${orderId}`, JSON.stringify(payments));
 
-  // NOTE: KDS tickets are already created in createDemoOrder()
-  // Do NOT create them again here to avoid duplicates!
+  // Update KDS tickets with table/takeaway info
+  const tickets = JSON.parse(localStorage.getItem('demo-kds-tickets') || '[]');
+  const updatedTickets = tickets.map((ticket: any) => {
+    if (ticket.order_id === orderId) {
+      return {
+        ...ticket,
+        order_type: paymentData?.order_type || 'dine-in',
+        table_id: paymentData?.table_id || null,
+      };
+    }
+    return ticket;
+  });
+  localStorage.setItem('demo-kds-tickets', JSON.stringify(updatedTickets));
 
   return { order, payment };
 }
