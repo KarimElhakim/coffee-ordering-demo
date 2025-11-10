@@ -1,5 +1,68 @@
 # Changelog
 
+## Version 3.0.1 - UX Enhancement Release
+
+### Author & Publisher
+- **Author**: Karim Elhakim <karimal1896@gmail.com>
+- **Publisher**: Karim Elhakim <karimal1896@gmail.com>
+
+### Major Improvements
+
+#### 1. Checkout Page Redesign
+- **Theme**: Complete redesign to match payment page black & white aesthetic
+- **Animations**: Added fade-in effects, scale transitions for cards
+- **Layout**: Larger item images (132x132), enhanced spacing and borders
+- **Buttons**: Optimized with proper black/white theming and hover effects
+- **Summary**: Improved total calculation display with VAT breakdown
+
+#### 2. Cart Store Enhancement
+- **Feature**: Extended CartItem interface to include image data
+- **Fields Added**: `image_url`, `local_image_path`, `category`
+- **Impact**: Cart sidebar and all cart views now display correct Starbucks product images
+
+#### 3. Item Modal Improvements
+- **Image Display**: Increased height to 288px (h-72) with `object-contain` for full-size images
+- **Border**: Added prominent 4px border for better framing
+- **Background**: White/dark-gray background ensures images display properly
+- **No Cropping**: Images now show complete product without cropping
+
+#### 4. Milk Options - Starbucks-Style Dropdown
+- **UI**: Replaced button grid with professional dropdown menu
+- **Design**: Styled to match Starbucks ordering interface
+- **Border**: Bold 3px borders for visual consistency
+- **Options**: Clean dropdown with "No Milk" default option and pricing display
+
+#### 5. Cashier POS Image Fixes
+- **Order Cart**: Fixed item images in cart to use full item data
+- **Display**: Added border styling for consistency
+
+#### 6. KDS Optimization
+- **Buttons**: Reduced padding from py-6 to py-4
+- **Text**: Reduced from text-base to text-sm
+- **Icons**: Reduced from h-5/w-5 to h-4/w-4
+- **Impact**: More compact, professional appearance
+
+#### 7. Package Metadata
+- **Email**: Added karimal1896@gmail.com to all package.json files
+- **Version**: Bumped to 3.0.1 across all packages
+- **Format**: Proper author format with email in angle brackets
+
+### Technical Changes
+
+#### Updated Files
+1. `apps/customer/src/pages/Checkout.tsx` - Complete black & white redesign
+2. `apps/customer/src/store/cart.ts` - Extended CartItem interface with image fields
+3. `apps/customer/src/components/ItemModal.tsx` - Full-size images + Starbucks dropdown
+4. `apps/customer/src/components/CartSidebar.tsx` - Already correctly passing item data
+5. `apps/cashier/src/pages/POS.tsx` - Fixed order cart item images
+6. `apps/kds/src/pages/KDS.tsx` - Optimized button and label sizes
+7. All `package.json` files - Added email, bumped to v3.0.1
+
+### Build Status
+All applications build successfully without errors or warnings.
+
+---
+
 ## Version 3.0.0 - Production Release
 
 ### Author & Publisher

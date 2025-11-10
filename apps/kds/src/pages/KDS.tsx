@@ -280,10 +280,10 @@ export function KDS() {
           <div className="flex gap-3 mt-5 pt-4 border-t-2 border-gray-200 dark:border-gray-700">
             {ticket.status === 'new' && (
               <Button
-                className="flex-1 bg-gray-900 hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-100 text-white dark:text-gray-900 font-bold rounded-xl shadow-lg transition-all duration-200 hover:scale-105 active:scale-95 py-6 text-base"
+                className="flex-1 bg-gray-900 hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-100 text-white dark:text-gray-900 font-bold rounded-xl shadow-lg transition-all duration-200 hover:scale-105 active:scale-95 py-4 text-sm"
                 onClick={() => handleStatusChange(ticket, 'prep')}
               >
-                <Play className="h-5 w-5 mr-2" />
+                <Play className="h-4 w-4 mr-2" />
                 Start Prep
               </Button>
             )}
@@ -291,17 +291,17 @@ export function KDS() {
               <>
                 <Button
                   variant="outline"
-                  className="flex-1 border-2 border-gray-300 dark:border-gray-700 rounded-xl hover:border-gray-400 dark:hover:border-gray-600 font-bold py-6 text-base"
+                  className="flex-1 border-2 border-gray-300 dark:border-gray-700 rounded-xl hover:border-gray-400 dark:hover:border-gray-600 font-bold py-4 text-sm"
                   onClick={() => handleStatusChange(ticket, 'new')}
                 >
-                  <ArrowLeft className="h-5 w-5 mr-2" />
+                  <ArrowLeft className="h-4 w-4 mr-2" />
                   Back
                 </Button>
                 <Button
-                  className="flex-1 bg-gray-900 hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-100 text-white dark:text-gray-900 font-bold rounded-xl shadow-lg transition-all duration-200 hover:scale-105 active:scale-95 py-6 text-base"
+                  className="flex-1 bg-gray-900 hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-100 text-white dark:text-gray-900 font-bold rounded-xl shadow-lg transition-all duration-200 hover:scale-105 active:scale-95 py-4 text-sm"
                   onClick={() => handleStatusChange(ticket, 'ready')}
                 >
-                  <CheckCircle className="h-5 w-5 mr-2" />
+                  <CheckCircle className="h-4 w-4 mr-2" />
                   Ready
                 </Button>
               </>

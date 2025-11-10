@@ -415,9 +415,9 @@ export function POS() {
                   return (
                     <div key={index} className="border-[3px] border-gray-200 dark:border-gray-700 rounded-xl p-4 bg-white dark:bg-gray-800 hover:shadow-md transition-all duration-200">
                       <div className="flex gap-4">
-                                   <div className="w-14 h-14 rounded-lg overflow-hidden flex-shrink-0 flex items-center justify-center">
+                                   <div className="w-14 h-14 rounded-lg overflow-hidden flex-shrink-0 flex items-center justify-center border-2 border-gray-900 dark:border-white">
                                      <img
-                                       src={getItemImage(item.name)}
+                                       src={getItemImage(item.name, item)}
                                        alt={item.name}
                                        className="w-full h-full object-cover"
                                        onError={(e) => {

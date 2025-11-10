@@ -8,6 +8,10 @@ export interface CartItem {
   qty: number;
   options: Array<{ key: string; value: string; price_delta: number }>;
   note?: string;
+  // Image data for proper display
+  image_url?: string;
+  local_image_path?: string;
+  category?: string;
 }
 
 interface CartStore {
