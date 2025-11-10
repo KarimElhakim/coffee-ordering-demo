@@ -183,9 +183,9 @@ export function InventoryManagement() {
                 >
                   <div className="flex items-center gap-4">
                     {/* Item Image */}
-                    <div className="w-16 h-16 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700 flex-shrink-0">
+                    <div className="w-16 h-16 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700 flex-shrink-0 border-2 border-gray-900 dark:border-white">
                       <img
-                        src={getItemImage(item.name)}
+                        src={getItemImage(item.name, item)}
                         alt={item.name}
                         className="w-full h-full object-cover"
                         onError={(e) => {

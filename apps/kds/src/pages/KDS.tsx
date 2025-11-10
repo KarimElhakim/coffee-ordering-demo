@@ -230,9 +230,9 @@ export function KDS() {
                   className="border-2 border-gray-200 dark:border-gray-700 rounded-xl p-4 bg-white dark:bg-gray-800 hover:border-gray-400 dark:hover:border-gray-600 transition-all duration-200 shadow-sm"
                 >
                   <div className="flex gap-4 items-center">
-                    <div className="w-16 h-16 rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-700 flex-shrink-0 shadow-md">
+                    <div className="w-16 h-16 rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-700 flex-shrink-0 shadow-md border-2 border-gray-900 dark:border-white">
                       <img 
-                        src={getItemImage(item.menu_item?.name || 'Coffee')} 
+                        src={getItemImage(item.menu_item?.name || 'Coffee', item.menu_item)} 
                         alt={item.menu_item?.name || 'Item'}
                         className="w-full h-full object-cover"
                         onError={(e) => {

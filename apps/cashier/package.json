@@ -1,6 +1,9 @@
 {
   "name": "@coffee-demo/cashier",
-  "version": "1.0.0",
+  "version": "3.0.0",
+  "description": "Point of sale system for cashiers",
+  "author": "Karim Elhakim",
+  "publisher": "Karim Elhakim",
   "private": true,
   "type": "module",
   "scripts": {

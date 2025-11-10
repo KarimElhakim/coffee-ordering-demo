@@ -1,6 +1,9 @@
 {
   "name": "coffee-ordering-demo",
-  "version": "1.0.0",
+  "version": "3.0.0",
+  "description": "Professional coffee ordering system with real Starbucks menu integration",
+  "author": "Karim Elhakim",
+  "publisher": "Karim Elhakim",
   "private": true,
   "type": "module",
   "scripts": {

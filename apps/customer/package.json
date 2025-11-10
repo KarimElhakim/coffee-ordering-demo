@@ -1,6 +1,9 @@
 {
   "name": "@coffee-demo/customer",
-  "version": "1.0.0",
+  "version": "3.0.0",
+  "description": "Customer ordering interface with Starbucks menu",
+  "author": "Karim Elhakim",
+  "publisher": "Karim Elhakim",
   "private": true,
   "type": "module",
   "scripts": {

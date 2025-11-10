@@ -177,13 +177,13 @@ export function OrderStatus() {
             {order.items.map((item) => (
               <div key={item.id} className="border border-amber-200 dark:border-amber-800 rounded-lg p-4 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-slate-700 dark:to-slate-800 hover:shadow-md transition-shadow">
                 <div className="flex gap-4">
-                  <div className="w-20 h-20 rounded-lg overflow-hidden bg-gradient-to-br from-amber-100 to-orange-100 dark:from-slate-700 dark:to-slate-800 flex-shrink-0 shadow-lg">
+                  <div className="w-20 h-20 rounded-lg overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 flex-shrink-0 shadow-lg border-2 border-gray-900 dark:border-white">
                     <img 
-                      src={getItemImage(item.menu_item.name)} 
+                      src={getItemImage(item.menu_item.name, item.menu_item)} 
                       alt={item.menu_item.name}
                       className="w-full h-full object-cover"
                       onError={(e) => {
-                        (e.target as HTMLImageElement).src = 'https://via.placeholder.com/200x200/f59e0b/ffffff?text=' + encodeURIComponent(item.menu_item.name.substring(0, 2));
+                        (e.target as HTMLImageElement).src = 'https://via.placeholder.com/200x200/000000/ffffff?text=' + encodeURIComponent(item.menu_item.name.substring(0, 2));
                       }}
                     />
                   </div>

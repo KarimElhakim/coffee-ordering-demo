@@ -1,6 +1,9 @@
 {
   "name": "@coffee-demo/kds",
-  "version": "1.0.0",
+  "version": "3.0.0",
+  "description": "Kitchen Display System for order management",
+  "author": "Karim Elhakim",
+  "publisher": "Karim Elhakim",
   "private": true,
   "type": "module",
   "scripts": {

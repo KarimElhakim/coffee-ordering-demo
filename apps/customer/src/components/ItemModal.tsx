@@ -191,7 +191,7 @@ export function ItemModal({ item, onClose, onAdd }: ItemModalProps) {
           {/* Item Image */}
           <div className="relative w-full h-48 rounded-xl overflow-hidden mx-auto mb-6 shadow-lg">
             <img 
-              src={getItemImage(item.name)} 
+              src={getItemImage(item.name, item)} 
               alt={item.name}
               className="w-full h-full object-cover"
               onError={(e) => {

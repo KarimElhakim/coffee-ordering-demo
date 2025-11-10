@@ -92,13 +92,13 @@ export function Checkout() {
               className="border-amber-200 dark:border-amber-800 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm hover:shadow-xl transition-all duration-300 overflow-hidden group"
             >
               <div className="flex gap-4 p-4">
-                <div className="w-24 h-24 rounded-xl overflow-hidden bg-gradient-to-br from-amber-100 to-orange-100 dark:from-slate-700 dark:to-slate-800 flex-shrink-0 shadow-lg">
+                <div className="w-24 h-24 rounded-xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 flex-shrink-0 shadow-lg border-2 border-gray-900 dark:border-white">
                   <img 
-                    src={getItemImage(item.name)} 
+                    src={getItemImage(item.name, item)} 
                     alt={item.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     onError={(e) => {
-                      (e.target as HTMLImageElement).src = 'https://via.placeholder.com/200x200/f59e0b/ffffff?text=' + encodeURIComponent(item.name.substring(0, 2));
+                      (e.target as HTMLImageElement).src = 'https://via.placeholder.com/200x200/000000/ffffff?text=' + encodeURIComponent(item.name.substring(0, 2));
                     }}
                   />
                 </div>
