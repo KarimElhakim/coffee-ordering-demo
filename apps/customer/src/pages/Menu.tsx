@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { getMenuItems, getModifiers, getItemImage, type Database } from '@coffee-demo/api-client';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, Button, Tabs, TabsList, TabsTrigger, TabsContent } from '@coffee-demo/ui';
 import { ItemModal } from '../components/ItemModal';
+import { ChatBot } from '../components/ChatBot';
 import { Coffee, Snowflake, Flame, Plus, ShoppingCart, PackageX } from 'lucide-react';
 import { useCart } from '../store/cart';
 
@@ -367,6 +368,8 @@ export function Menu() {
           }}
         />
       )}
+
+      <ChatBot />
     </div>
   );
 }

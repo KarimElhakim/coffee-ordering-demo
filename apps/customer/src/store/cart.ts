@@ -17,12 +17,15 @@ export interface CartItem {
 interface CartStore {
   items: CartItem[];
   tableId: string | null;
+  gameDiscount: number;
   setTableId: (tableId: string | null) => void;
+  setGameDiscount: (discount: number) => void;
   addItem: (item: Omit<CartItem, 'qty'>) => void;
   removeItem: (menu_item_id: string, optionsKey: string) => void;
   updateQuantity: (menu_item_id: string, optionsKey: string, qty: number) => void;
   clearCart: () => void;
   getTotal: () => number;
+  getDiscountedTotal: () => { subtotal: number; discount: number; total: number };
   getOptionsKey: (options: CartItem['options']) => string;
 }
 
@@ -31,7 +34,9 @@ export const useCart = create<CartStore>()(
     (set, get) => ({
       items: [],
       tableId: null,
+      gameDiscount: 0,
       setTableId: (tableId) => set({ tableId }),
+      setGameDiscount: (discount) => set({ gameDiscount: discount }),
       addItem: (item) => {
         try {
           const optionsKey = get().getOptionsKey(item.options || []);
@@ -94,12 +99,37 @@ export const useCart = create<CartStore>()(
           return { items: newItems };
         });
       },
-      clearCart: () => set({ items: [] }),
+      clearCart: () => set({ items: [], gameDiscount: 0 }),
       getTotal: () => {
         return get().items.reduce((total, item) => {
           const itemTotal = item.base_price + item.options.reduce((sum, opt) => sum + opt.price_delta, 0);
           return total + itemTotal * item.qty;
         }, 0);
+      },
+      getDiscountedTotal: () => {
+        const items = get().items;
+        const discount = get().gameDiscount;
+        const subtotal = get().getTotal();
+        
+        if (discount > 0 && items.length > 0) {
+          // Find lowest priced item
+          const lowestPriceItem = items.reduce((lowest, item) => {
+            const itemPrice = item.base_price + item.options.reduce((sum, opt) => sum + opt.price_delta, 0);
+            const lowestPrice = lowest.base_price + lowest.options.reduce((sum, opt) => sum + opt.price_delta, 0);
+            return itemPrice < lowestPrice ? item : lowest;
+          });
+          
+          const lowestPrice = lowestPriceItem.base_price + lowestPriceItem.options.reduce((sum, opt) => sum + opt.price_delta, 0);
+          const discountAmount = lowestPrice * lowestPriceItem.qty * discount;
+          
+          return {
+            subtotal,
+            discount: discountAmount,
+            total: subtotal - discountAmount,
+          };
+        }
+        
+        return { subtotal, discount: 0, total: subtotal };
       },
       getOptionsKey: (options) => {
         return JSON.stringify(options.sort((a, b) => a.key.localeCompare(b.key)));

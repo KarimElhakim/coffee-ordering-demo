@@ -6,10 +6,11 @@ import { Card, CardContent, CardHeader, CardTitle, Button } from '@coffee-demo/u
 import { Trash2, Plus, Minus, ShoppingBag, CreditCard, ArrowLeft, Sparkles } from 'lucide-react';
 
 export function Checkout() {
-  const { items, tableId, getTotal, removeItem, updateQuantity, getOptionsKey } = useCart();
+  const { items, tableId, getTotal, getDiscountedTotal, removeItem, updateQuantity, getOptionsKey } = useCart();
   const [loading, setLoading] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
+  const { subtotal, discount, total } = getDiscountedTotal();
 
   const handleCheckout = async () => {
     if (items.length === 0 || isSubmitting) return;
@@ -206,15 +207,28 @@ export function Checkout() {
             <div className="flex justify-between items-center mb-6 pb-6 border-b-2 border-gray-200 dark:border-gray-800">
               <span className="text-xl font-bold text-gray-700 dark:text-gray-300">Subtotal</span>
               <span className="text-2xl font-black text-black dark:text-white">
-                {getTotal().toFixed(2)} EGP
+                {subtotal.toFixed(2)} EGP
               </span>
             </div>
+
+            {/* Game Discount */}
+            {discount > 0 && (
+              <div className="flex justify-between items-center mb-6 pb-6 border-b-2 border-green-200 dark:border-green-800 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950 dark:to-emerald-950 -mx-4 px-4 py-4 animate-pulse">
+                <span className="text-xl font-bold text-green-700 dark:text-green-300 flex items-center gap-2">
+                  <Sparkles className="h-5 w-5" />
+                  Game Discount (5%)
+                </span>
+                <span className="text-2xl font-black text-green-600 dark:text-green-400">
+                  -{discount.toFixed(2)} EGP
+                </span>
+              </div>
+            )}
 
             {/* Tax */}
             <div className="flex justify-between items-center mb-6 pb-6 border-b-2 border-gray-200 dark:border-gray-800">
               <span className="text-xl font-bold text-gray-700 dark:text-gray-300">VAT (14%)</span>
               <span className="text-2xl font-black text-black dark:text-white">
-                {(getTotal() * 0.14).toFixed(2)} EGP
+                {(total * 0.14).toFixed(2)} EGP
               </span>
             </div>
 
@@ -222,7 +236,7 @@ export function Checkout() {
             <div className="flex justify-between items-center mb-10 p-6 bg-black dark:bg-white rounded-2xl">
               <span className="text-3xl font-black text-white dark:text-black">TOTAL</span>
               <span className="text-4xl font-black text-white dark:text-black">
-                {(getTotal() * 1.14).toFixed(2)} EGP
+                {(total * 1.14).toFixed(2)} EGP
               </span>
             </div>
 

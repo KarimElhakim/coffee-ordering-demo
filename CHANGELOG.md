@@ -1,5 +1,81 @@
 # Changelog
 
+## Version 3.1.0 - Interactive Chatbot Feature
+
+### Major New Feature: AI Coffee Assistant
+
+#### 1. Animated Floating Chatbot Button
+- Coffee mascot icon with bouncing animation
+- Pulsing ring effect for attention
+- Rotating encouragement text every 10 seconds
+- Professional black and white design
+- Fixed position at bottom left
+
+#### 2. Chat Messenger Interface
+- Full chat UI with message history
+- Bot and user messages with distinct styling
+- Auto-scroll to latest messages
+- Smooth animations and transitions
+- Professional header with close button
+
+#### 3. Drink Recommendation System
+- Interactive questionnaire based on mood
+- Four mood categories: Energized, Relaxed, Sweet, Cold
+- Smart recommendations based on user preferences
+- One-click add to cart from chat
+- Alternative suggestions available
+
+#### 4. Mini-Games with Rewards
+**Three interactive games:**
+
+**Reaction Tap:**
+- Test your reaction speed
+- Tap target in under 500ms to win
+- 30-second time limit
+- Visual feedback and animations
+
+**Coffee Wordle:**
+- Guess 5-letter coffee-related words
+- Color-coded letter feedback
+- 60-second time limit
+- Words: MOCHA, LATTE, STEAM, BEANS, ROAST, CREAM
+
+**Cup Shuffle:**
+- Classic shell game with coffee cups
+- Track the coffee bean
+- 8 shuffle moves
+- 45-second time limit
+
+#### 5. Discount System
+- Win any game to earn 5% discount
+- Applied to lowest priced item in cart
+- One-time per session
+- Discount clears when session ends
+- Visible indicator in chat and checkout
+- Automatic application at checkout
+
+### Technical Implementation
+
+**New Files:**
+1. `apps/customer/src/components/ChatBot.tsx` - Complete chatbot system (560 lines)
+
+**Modified Files:**
+1. `apps/customer/src/store/cart.ts` - Added discount tracking and calculation
+2. `apps/customer/src/pages/Menu.tsx` - Integrated chatbot component
+3. `apps/customer/src/pages/Checkout.tsx` - Display and apply discount
+
+**Features:**
+- Session storage for game state persistence
+- Prevents multiple plays per session
+- Smart discount calculation on lowest item
+- Clean state management with Zustand
+- Responsive design for all screen sizes
+
+### Build Status
+Customer app built successfully with all features integrated.
+
+---
+
 ## Version 3.0.4 - Image & UX Enhancement Release
 
 ### Major Improvements
