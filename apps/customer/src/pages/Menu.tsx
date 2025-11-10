@@ -107,7 +107,6 @@ export function Menu() {
                       (e.target as HTMLImageElement).src = 'https://via.placeholder.com/400x400/000000/ffffff?text=' + encodeURIComponent(item.name);
                     }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/20 to-white dark:via-gray-900/20 dark:to-gray-900"></div>
                   <div className="absolute top-3 right-3 bg-white/95 dark:bg-gray-900/95 rounded-full px-3 py-1.5 shadow-lg">
                     <span className="text-sm font-bold text-gray-900 dark:text-white">From {item.base_price.toFixed(0)} EGP</span>
                   </div>
@@ -174,10 +173,9 @@ export function Menu() {
                   alt={item.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   onError={(e) => {
-                    (e.target as HTMLImageElement).src = 'https://via.placeholder.com/400x400/f59e0b/ffffff?text=' + encodeURIComponent(item.name);
+                    (e.target as HTMLImageElement).src = 'https://via.placeholder.com/400x400/000000/ffffff?text=' + encodeURIComponent(item.name);
                   }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/20 to-white dark:via-gray-900/20 dark:to-gray-900"></div>
                 <div className="absolute top-3 right-3 bg-white/95 dark:bg-gray-900/95 rounded-full px-3 py-1.5 shadow-lg">
                   <span className="text-sm font-bold text-gray-900 dark:text-white">{item.base_price.toFixed(0)} EGP</span>
                 </div>

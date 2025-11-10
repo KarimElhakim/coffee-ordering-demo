@@ -242,9 +242,28 @@ export function KDS() {
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex justify-between items-start mb-2">
-                        <p className="font-bold text-lg text-gray-900 dark:text-white leading-tight">
-                          {item.menu_item?.name || 'Unknown Item'}
-                        </p>
+                        <div className="flex-1 min-w-0">
+                          <p className="font-bold text-lg text-gray-900 dark:text-white leading-tight">
+                            {item.menu_item?.name || 'Unknown Item'}
+                          </p>
+                          {/* Hot/Cold Category Badge */}
+                          {item.menu_item?.category && (
+                            <div className="mt-1 flex gap-2">
+                              {item.menu_item.category.toLowerCase().includes('hot') && (
+                                <span className="inline-flex items-center px-2 py-1 rounded-md bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 text-xs font-bold border border-red-300 dark:border-red-700">
+                                  🔥 HOT
+                                </span>
+                              )}
+                              {(item.menu_item.category.toLowerCase().includes('cold') || 
+                                item.menu_item.category.toLowerCase().includes('iced') || 
+                                item.menu_item.category.toLowerCase().includes('frappuccino')) && (
+                                <span className="inline-flex items-center px-2 py-1 rounded-md bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-xs font-bold border border-blue-300 dark:border-blue-700">
+                                  ❄️ COLD
+                                </span>
+                              )}
+                            </div>
+                          )}
+                        </div>
                         <div className="flex-shrink-0 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full w-9 h-9 flex items-center justify-center ml-2 shadow-md">
                           <p className="font-bold text-base">×{item.qty}</p>
                         </div>

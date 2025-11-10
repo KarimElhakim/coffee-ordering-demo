@@ -1,5 +1,55 @@
 # Changelog
 
+## Version 3.0.4 - Image & UX Enhancement Release
+
+### Major Improvements
+
+#### 1. Modal Images - Natural Blending
+- Removed harsh borders from add to cart modal images
+- Images now blend naturally into gradient background
+- No more white space around images
+- Drop shadow for depth without borders
+- Applied to both customer and cashier modals
+
+#### 2. Customer Menu - Clean Images
+- Removed white gradient overlay from menu card images
+- Images now display clean like cashier cards
+- Better visual consistency across apps
+- Product images stand out more clearly
+
+#### 3. Cashier Cards - Better Spacing
+- Changed from fixed height to min-height for flexibility
+- Reduced image height from 200px to 180px for better proportions
+- Added min-height to card title for consistent layout
+- Names now display fully without being cut off
+- Better spacing and padding throughout
+
+#### 4. Cashier Payment - Correct Images
+- Fixed order summary to display actual product images
+- Passes full item object to getItemImage function
+- Added border styling for consistency
+- No more generic placeholder images
+
+#### 5. KDS - Hot/Cold Color Coding
+- Added visual badges for hot items in red
+- Added visual badges for cold items in blue
+- Automatically detects from category field
+- Supports Hot Coffee, Cold Coffee, Iced, Frappuccino
+- Icons for visual clarity (fire/snowflake emojis)
+
+### Technical Changes
+1. `apps/customer/src/components/ItemModal.tsx` - Gradient background blend
+2. `apps/cashier/src/components/ItemModal.tsx` - Gradient background blend
+3. `apps/customer/src/pages/Menu.tsx` - Removed white gradient overlay
+4. `apps/cashier/src/pages/POS.tsx` - Improved card spacing and layout
+5. `apps/cashier/src/pages/Payment.tsx` - Fixed image passing to getItemImage
+6. `apps/kds/src/pages/KDS.tsx` - Added hot/cold color-coded badges
+
+### Build Status
+All applications built successfully with no errors.
+
+---
+
 ## Version 3.0.3 - UI Polish Release
 
 ### UI/UX Improvements

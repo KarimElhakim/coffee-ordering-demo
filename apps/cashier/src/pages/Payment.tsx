@@ -201,9 +201,9 @@ export function Payment() {
                 <div className="space-y-3 mb-4 max-h-64 overflow-y-auto">
                   {order.items.map((item: any, index: number) => (
                     <div key={index} className="flex gap-3 p-3 border-2 border-gray-200 dark:border-gray-700 rounded-xl">
-                      <div className="w-16 h-16 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-800 flex-shrink-0">
+                      <div className="w-16 h-16 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-800 flex-shrink-0 border-2 border-gray-900 dark:border-white">
                         <img
-                          src={getItemImage(item.menu_item?.name || 'Coffee')}
+                          src={getItemImage(item.menu_item?.name || 'Coffee', item.menu_item)}
                           alt={item.menu_item?.name || 'Item'}
                           className="w-full h-full object-cover"
                           onError={(e) => {

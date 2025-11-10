@@ -192,12 +192,12 @@ export function ItemModal({ item, onClose, onAdd }: ItemModalProps) {
           <DialogDescription className="text-base text-gray-600 dark:text-gray-400 mb-4">
             Customize your order and add to cart
           </DialogDescription>
-          {/* Item Image - Auto-fit */}
-          <div className="relative w-full max-w-md h-64 rounded-2xl overflow-hidden mx-auto mb-6 shadow-2xl border-4 border-gray-900 dark:border-white bg-white dark:bg-gray-900 flex items-center justify-center">
+          {/* Item Image - Blended */}
+          <div className="relative w-full h-64 mx-auto mb-6 flex items-center justify-center bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
             <img 
               src={getItemImage(item.name, item)} 
               alt={item.name}
-              className="max-w-full max-h-full object-contain"
+              className="max-w-full max-h-full object-contain drop-shadow-2xl"
               onError={(e) => {
                 (e.target as HTMLImageElement).src = 'https://via.placeholder.com/400x400/000000/ffffff?text=' + encodeURIComponent(item.name);
               }}
