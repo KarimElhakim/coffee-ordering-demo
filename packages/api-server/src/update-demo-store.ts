@@ -94,8 +94,9 @@ async function updateDemoStore() {
   console.log(`  Out of Stock: ${outOfStock} items (for testing)\n`);
 
   // Generate TypeScript code
+  const timestamp = new Date().toISOString();
   const tsCode = `// AUTO-GENERATED FROM STARBUCKS SCRAPER - DO NOT EDIT MANUALLY
-// Generated: ${new Date().toISOString()}
+// Generated: ${timestamp}
 // Source: Scraped from Starbucks.com
 
 export const DEMO_MENU_ITEMS = ${JSON.stringify(demoItems, null, 2)};
@@ -105,8 +106,8 @@ export const DEMO_STORES = [
     _id: '1',
     id: '1',
     name: 'Demo Coffee Shop',
-    created_at: new Date().toISOString(),
-    updated_at: new Date().toISOString()
+    created_at: '${timestamp}',
+    updated_at: '${timestamp}'
   }
 ];
 
@@ -116,24 +117,24 @@ export const DEMO_STATIONS = [
     id: 'station-bar',
     store_id: '1',
     name: 'Bar',
-    created_at: new Date().toISOString(),
-    updated_at: new Date().toISOString()
+    created_at: '${timestamp}',
+    updated_at: '${timestamp}'
   },
   {
     _id: 'station-hot',
     id: 'station-hot',
     store_id: '1',
     name: 'Hot',
-    created_at: new Date().toISOString(),
-    updated_at: new Date().toISOString()
+    created_at: '${timestamp}',
+    updated_at: '${timestamp}'
   },
   {
     _id: 'station-cold',
     id: 'station-cold',
     store_id: '1',
     name: 'Cold',
-    created_at: new Date().toISOString(),
-    updated_at: new Date().toISOString()
+    created_at: '${timestamp}',
+    updated_at: '${timestamp}'
   }
 ];
 `;
