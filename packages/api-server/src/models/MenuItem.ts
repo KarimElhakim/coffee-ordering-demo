@@ -13,6 +13,22 @@ const menuItemSchema = new mongoose.Schema({
   out_of_stock: { type: Boolean, default: false },
   track_inventory: { type: Boolean, default: true },
   last_restocked_at: { type: Date },
+  // Starbucks integration fields
+  description: { type: String },
+  category: { type: String },
+  image_url: { type: String },
+  local_image_path: { type: String },
+  calories: { type: Number },
+  nutrition_info: {
+    calories: { type: Number },
+    sugar_g: { type: Number },
+    fat_g: { type: Number }
+  },
+  available_sizes: [{ type: String }],
+  customizations: { type: mongoose.Schema.Types.Mixed },
+  starbucks_stars: { type: Number },
+  scraped_from_starbucks: { type: Boolean },
+  starbucks_url: { type: String },
   updated_at: { type: Date, default: Date.now },
   created_at: { type: Date, default: Date.now }
 });

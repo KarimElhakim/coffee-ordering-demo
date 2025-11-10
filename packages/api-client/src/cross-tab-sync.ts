@@ -40,41 +40,8 @@ export function setupSyncListener(callback: (message: SyncMessage) => void) {
   // Each app now manages its own localStorage independently
 }
 
-// Sync data to shared storage
-function syncToSharedStorage(message: SyncMessage) {
-  const timestamp = Date.now();
-  
-  switch (message.type) {
-    case 'order-created':
-    case 'order-updated':
-      // Store orders in a shared key
-      const orders = JSON.parse(localStorage.getItem('demo-orders-shared') || '[]');
-      const existingIndex = orders.findIndex((o: any) => o.id === message.payload.id);
-      if (existingIndex >= 0) {
-        orders[existingIndex] = message.payload;
-      } else {
-        orders.push(message.payload);
-      }
-      localStorage.setItem('demo-orders-shared', JSON.stringify(orders));
-      break;
-      
-    case 'ticket-created':
-    case 'ticket-updated':
-      // Store tickets in a shared key
-      const tickets = JSON.parse(localStorage.getItem('demo-kds-tickets-shared') || '[]');
-      const ticketIndex = tickets.findIndex((t: any) => t.id === message.payload.id);
-      if (ticketIndex >= 0) {
-        tickets[ticketIndex] = message.payload;
-      } else {
-        tickets.push(message.payload);
-      }
-      localStorage.setItem('demo-kds-tickets-shared', JSON.stringify(tickets));
-      break;
-  }
-  
-  // Store message for storage event listener
-  localStorage.setItem('demo-sync-message', JSON.stringify({ ...message, timestamp }));
-}
+// NOTE: syncToSharedStorage function removed - each app now manages its own localStorage
+// independently to prevent duplicate order issues. Cross-tab sync is disabled.
 
 // Get shared data
 export function getSharedOrders() {

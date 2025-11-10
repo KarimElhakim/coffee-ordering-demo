@@ -21,7 +21,24 @@ const ITEM_IMAGES: Record<string, string> = {
   'Fruit Smoothie': 'https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=800&h=800&fit=crop&q=90',
 };
 
-export function getItemImage(itemName: string): string {
-  return ITEM_IMAGES[itemName] || 'https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?w=800&h=800&fit=crop&q=90';
+export function getItemImage(itemName: string, item?: any): string {
+  // Priority 1: Use Starbucks CDN image URL from the item data
+  if (item?.image_url) {
+    return item.image_url;
+  }
+  
+  // Priority 2: Use local served image from scraper
+  if (item?.local_image_path) {
+    const apiUrl = (import.meta as any).env?.VITE_API_URL || 'http://localhost:3001';
+    return `${apiUrl}${item.local_image_path}`;
+  }
+  
+  // Priority 3: Fall back to hardcoded Unsplash images
+  if (ITEM_IMAGES[itemName]) {
+    return ITEM_IMAGES[itemName];
+  }
+  
+  // Priority 4: Default placeholder
+  return 'https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?w=800&h=800&fit=crop&q=90';
 }
 
