@@ -21,8 +21,38 @@ const DEMO_MODIFIERS = [
   { id: 'mod-toppings', store_id: '1', name: 'Toppings', type: 'multi' as const },
 ];
 
+// Data version - increment when menu changes to force refresh
+const DEMO_DATA_VERSION = '2.0-starbucks-menu';
+
 // Initialize localStorage
 function initStorage() {
+  const currentVersion = localStorage.getItem('demo-data-version');
+  
+  // If version changed, clear all demo data to force refresh with new Starbucks menu
+  if (currentVersion !== DEMO_DATA_VERSION) {
+    console.log('🔄 New menu version detected - refreshing data...');
+    console.log(`  Old version: ${currentVersion || 'none'}`);
+    console.log(`  New version: ${DEMO_DATA_VERSION}`);
+    
+    // Clear all demo data
+    localStorage.removeItem('demo-orders');
+    localStorage.removeItem('demo-payments');
+    localStorage.removeItem('demo-kds-tickets');
+    
+    // Clear order items and payments
+    const keys = Object.keys(localStorage);
+    keys.forEach(key => {
+      if (key.startsWith('demo-order-items-') || key.startsWith('demo-order-payments-')) {
+        localStorage.removeItem(key);
+      }
+    });
+    
+    // Set new version
+    localStorage.setItem('demo-data-version', DEMO_DATA_VERSION);
+    console.log('✅ Demo data refreshed with new Starbucks menu!');
+  }
+  
+  // Initialize if doesn't exist
   if (!localStorage.getItem('demo-orders')) {
     localStorage.setItem('demo-orders', JSON.stringify([]));
   }
