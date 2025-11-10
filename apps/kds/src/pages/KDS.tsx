@@ -227,10 +227,10 @@ export function KDS() {
               ticket.order.items.map((item: any) => (
                 <div 
                   key={item.id} 
-                  className="border-2 border-gray-200 dark:border-gray-700 rounded-xl p-4 bg-white dark:bg-gray-800 hover:border-gray-400 dark:hover:border-gray-600 transition-all duration-200 shadow-sm"
+                  className="border-2 border-gray-200 dark:border-gray-700 rounded-xl p-3 bg-white dark:bg-gray-800 hover:border-gray-400 dark:hover:border-gray-600 transition-all duration-200 shadow-sm"
                 >
-                  <div className="flex gap-4 items-center">
-                    <div className="w-16 h-16 rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-700 flex-shrink-0 shadow-md border-2 border-gray-900 dark:border-white">
+                  <div className="flex gap-3 items-start">
+                    <div className="w-14 h-14 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700 flex-shrink-0 shadow-md border-2 border-gray-900 dark:border-white">
                       <img 
                         src={getItemImage(item.menu_item?.name || 'Coffee', item.menu_item)} 
                         alt={item.menu_item?.name || 'Item'}
@@ -241,20 +241,20 @@ export function KDS() {
                       />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <div className="flex justify-between items-center mb-2">
-                        <p className="font-bold text-xl text-gray-900 dark:text-white">
+                      <div className="flex justify-between items-start mb-2">
+                        <p className="font-bold text-lg text-gray-900 dark:text-white leading-tight">
                           {item.menu_item?.name || 'Unknown Item'}
                         </p>
-                        <div className="flex-shrink-0 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full w-10 h-10 flex items-center justify-center ml-3 shadow-md">
-                          <p className="font-bold text-lg">×{item.qty}</p>
+                        <div className="flex-shrink-0 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full w-9 h-9 flex items-center justify-center ml-2 shadow-md">
+                          <p className="font-bold text-base">×{item.qty}</p>
                         </div>
                       </div>
                       {item.options && item.options.length > 0 && (
-                        <div className="flex flex-wrap gap-2 mt-2">
+                        <div className="flex flex-wrap gap-1.5 mt-1.5">
                           {item.options.map((opt: any, idx: number) => (
                             <span 
                               key={idx} 
-                              className="text-sm px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded-lg font-semibold border border-gray-300 dark:border-gray-600"
+                              className="text-xs px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded-md font-semibold border border-gray-300 dark:border-gray-600"
                             >
                               {opt.key}: {opt.value}
                             </span>
@@ -262,7 +262,7 @@ export function KDS() {
                         </div>
                       )}
                       {item.note && (
-                        <p className="text-sm text-gray-800 dark:text-gray-200 mt-2 pl-3 border-l-[3px] border-gray-400 dark:border-gray-500 italic font-medium">
+                        <p className="text-xs text-gray-800 dark:text-gray-200 mt-2 pl-2 border-l-2 border-gray-400 dark:border-gray-500 italic font-medium">
                           "{item.note}"
                         </p>
                       )}

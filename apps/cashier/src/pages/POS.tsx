@@ -253,9 +253,9 @@ export function POS() {
             return (
             <Card 
               key={item.id} 
-              className={`${isOutOfStock ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer hover:scale-105 active:scale-95 hover:border-gray-400 dark:hover:border-gray-600'} hover:shadow-2xl transition-all duration-200 border-[3px] ${isOutOfStock ? 'border-red-300 dark:border-red-700' : isLowStock ? 'border-yellow-300 dark:border-yellow-700' : 'border-gray-200 dark:border-gray-700'} bg-white dark:bg-gray-900 overflow-hidden group rounded-3xl`}
+              className={`h-[290px] flex flex-col ${isOutOfStock ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer hover:scale-105 active:scale-95 hover:border-gray-400 dark:hover:border-gray-600'} hover:shadow-2xl transition-all duration-200 border-[3px] ${isOutOfStock ? 'border-red-300 dark:border-red-700' : isLowStock ? 'border-yellow-300 dark:border-yellow-700' : 'border-gray-200 dark:border-gray-700'} bg-white dark:bg-gray-900 overflow-hidden group rounded-3xl`}
             >
-              <div className="relative w-full h-[200px] overflow-hidden rounded-t-3xl flex items-center justify-center">
+              <div className="relative w-full h-[200px] overflow-hidden rounded-t-3xl flex items-center justify-center flex-shrink-0">
                 <img 
                   src={getItemImage(item.name, item)} 
                   alt={item.name}
@@ -264,15 +264,14 @@ export function POS() {
                     (e.target as HTMLImageElement).src = 'https://via.placeholder.com/400x400/000000/ffffff?text=' + encodeURIComponent(item.name);
                   }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/20 to-white dark:via-gray-900/20 dark:to-gray-900"></div>
                 <div className="absolute top-3 right-3 bg-white/95 dark:bg-gray-900/95 rounded-full px-2 py-1 shadow-lg">
                   <span className="text-xs font-bold text-gray-900 dark:text-white">{item.base_price.toFixed(0)} EGP</span>
                 </div>
               </div>
-              <CardHeader className="pb-2 pt-3 px-3">
+              <CardHeader className="pb-2 pt-3 px-3 flex-1">
                 <CardTitle className="text-sm font-bold text-gray-900 dark:text-white line-clamp-2">{item.name}</CardTitle>
               </CardHeader>
-              <CardContent className="pt-0 px-3 pb-3">
+              <CardContent className="pt-0 px-3 pb-3 mt-auto">
                 <Button 
                   className={`w-full ${isOutOfStock ? 'bg-red-500 hover:bg-red-600' : 'bg-gray-900 hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-100'} text-white ${isOutOfStock ? '' : 'dark:text-gray-900'} font-semibold shadow-lg text-xs py-2 rounded-xl transition-all duration-200 ${!isOutOfStock ? 'hover:scale-105 active:scale-95 hover:shadow-xl' : ''} flex items-center justify-center`}
                   onClick={() => !isOutOfStock && setSelectedItem(item)}

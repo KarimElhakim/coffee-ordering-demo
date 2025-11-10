@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams, useSearchParams, useNavigate } from 'react-router-dom';
 import { supabase, getOrders, getItemImage } from '@coffee-demo/api-client';
 import { Card, CardContent, CardHeader, CardTitle, Button } from '@coffee-demo/ui';
-import { CheckCircle, Clock, XCircle, ArrowLeft, Coffee, ShoppingBag } from 'lucide-react';
+import { CheckCircle, Clock, XCircle, ArrowLeft, Coffee, ShoppingBag, Sparkles } from 'lucide-react';
 import type { Database } from '@coffee-demo/api-client';
 
 // Poll for updates in demo mode
@@ -80,25 +80,31 @@ export function OrderStatus() {
 
   if (loading) {
     return (
-      <div className="text-center py-12">
-        <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-amber-600"></div>
-        <p className="mt-4 text-amber-700 dark:text-amber-400">Loading order...</p>
+      <div className="min-h-screen bg-white dark:bg-black flex items-center justify-center">
+        <div className="text-center">
+          <div className="inline-block animate-spin rounded-full h-16 w-16 border-b-4 border-black dark:border-white mb-4"></div>
+          <p className="text-xl font-bold text-black dark:text-white">Loading order...</p>
+        </div>
       </div>
     );
   }
 
   if (!order) {
     return (
-      <div className="text-center py-12">
-        <ShoppingBag className="h-16 w-16 text-amber-400 mx-auto mb-4" />
-        <h2 className="text-3xl font-bold mb-4 text-amber-900 dark:text-amber-100">Order not found</h2>
-        <Button 
-          onClick={() => navigate('/')}
-          className="bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800"
-        >
-          <ArrowLeft className="h-4 w-4 mr-2" />
-          Back to Menu
-        </Button>
+      <div className="min-h-screen bg-white dark:bg-black flex items-center justify-center p-4">
+        <Card className="max-w-md w-full border-4 border-black dark:border-white shadow-2xl">
+          <CardContent className="pt-16 pb-16 text-center">
+            <ShoppingBag className="h-24 w-24 text-black dark:text-white mx-auto mb-6" />
+            <h2 className="text-4xl font-black mb-4 text-black dark:text-white">Order not found</h2>
+            <Button 
+              onClick={() => navigate('/')}
+              className="bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 font-bold text-lg px-8 py-6 mt-4"
+            >
+              <ArrowLeft className="h-5 w-5 mr-2" />
+              Back to Menu
+            </Button>
+          </CardContent>
+        </Card>
       </div>
     );
   }
@@ -108,13 +114,13 @@ export function OrderStatus() {
       case 'paid':
       case 'in_prep':
       case 'ready':
-        return <Clock className="h-8 w-8 text-yellow-500" />;
+        return <Clock className="h-6 w-6" />;
       case 'served':
-        return <CheckCircle className="h-8 w-8 text-green-500" />;
+        return <CheckCircle className="h-6 w-6" />;
       case 'cancelled':
-        return <XCircle className="h-8 w-8 text-red-500" />;
+        return <XCircle className="h-6 w-6" />;
       default:
-        return <Clock className="h-8 w-8 text-gray-500" />;
+        return <Clock className="h-6 w-6" />;
     }
   };
 
@@ -138,109 +144,113 @@ export function OrderStatus() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto">
-      {success && (
-        <Card className="mb-6 border-green-500 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950 dark:to-emerald-950 shadow-xl animate-fade-in">
-          <CardContent className="pt-6">
-            <div className="flex items-center gap-4">
-              <div className="p-3 bg-green-500 rounded-full">
-                <CheckCircle className="h-6 w-6 text-white" />
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-black dark:via-gray-950 dark:to-black py-8 px-4 animate-fade-in">
+      <div className="max-w-3xl mx-auto">
+        {success && (
+          <Card className="mb-8 border-4 border-black dark:border-white bg-white dark:bg-black shadow-2xl animate-fade-in-down">
+            <CardContent className="pt-8 pb-8">
+              <div className="flex items-center gap-6">
+                <div className="p-4 bg-black dark:bg-white rounded-full animate-bounce">
+                  <CheckCircle className="h-10 w-10 text-white dark:text-black" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-black text-3xl text-black dark:text-white mb-2">Payment Successful!</h3>
+                  <p className="text-lg text-gray-700 dark:text-gray-300 font-medium">
+                    Your order has been received and is being prepared
+                  </p>
+                </div>
               </div>
-              <div>
-                <h3 className="font-bold text-lg text-green-700 dark:text-green-400">Payment Successful!</h3>
-                <p className="text-sm text-green-700/70 dark:text-green-400/70">
-                  Your order has been received and is being prepared.
-                </p>
+            </CardContent>
+          </Card>
+        )}
+        
+        <Card className="border-4 border-black dark:border-white bg-white dark:bg-black shadow-2xl animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+          <CardHeader className="bg-black dark:bg-white pb-6 pt-6">
+            <div className="flex items-center justify-between flex-wrap gap-4">
+              <CardTitle className="text-3xl font-black text-white dark:text-black flex items-center gap-3">
+                <Coffee className="h-8 w-8" />
+                Order {order.order_number || `#${order.id.slice(0, 8)}`}
+              </CardTitle>
+              <div className="flex items-center gap-3 px-5 py-3 rounded-xl bg-white dark:bg-black text-black dark:text-white border-2 border-white dark:border-black">
+                {getStatusIcon()}
+                <span className="font-bold text-lg">{getStatusText()}</span>
               </div>
             </div>
-          </CardContent>
-        </Card>
-      )}
-      <Card className="border-amber-200 dark:border-amber-800 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm shadow-xl">
-        <CardHeader>
-          <div className="flex items-center justify-between">
-            <CardTitle className="text-2xl font-bold text-amber-900 dark:text-amber-100 flex items-center gap-2">
-              <Coffee className="h-6 w-6 text-amber-600" />
-              Order {order.order_number || `#${order.id.slice(0, 8)}`}
-            </CardTitle>
-            <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-100 dark:bg-amber-900/30">
-              {getStatusIcon()}
-              <span className="font-semibold text-amber-900 dark:text-amber-100">{getStatusText()}</span>
-            </div>
-          </div>
-          <p className="text-sm text-amber-700/70 dark:text-amber-400/70 mt-2">
-            Placed on {new Date(order.created_at).toLocaleString()}
-          </p>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-4">
-            {order.items.map((item) => (
-              <div key={item.id} className="border border-amber-200 dark:border-amber-800 rounded-lg p-4 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-slate-700 dark:to-slate-800 hover:shadow-md transition-shadow">
-                <div className="flex gap-4">
-                  <div className="w-20 h-20 rounded-lg overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 flex-shrink-0 shadow-lg border-2 border-gray-900 dark:border-white">
-                    <img 
-                      src={getItemImage(item.menu_item.name, item.menu_item)} 
-                      alt={item.menu_item.name}
-                      className="w-full h-full object-cover"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).src = 'https://via.placeholder.com/200x200/000000/ffffff?text=' + encodeURIComponent(item.menu_item.name.substring(0, 2));
-                      }}
-                    />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex justify-between items-start mb-2">
-                      <div className="flex-1 min-w-0">
-                        <h4 className="font-bold text-lg text-amber-900 dark:text-amber-100">{item.menu_item.name}</h4>
-                        {item.options.length > 0 && (
-                          <div className="flex flex-wrap gap-1 mt-2">
-                            {item.options.map((opt) => (
-                              <span 
-                                key={`${opt.key}-${opt.value}`}
-                                className="text-xs px-2 py-1 bg-amber-200 dark:bg-amber-900/30 text-amber-800 dark:text-amber-300 rounded-full font-medium"
-                              >
-                                {opt.key}: {opt.value}
-                              </span>
-                            ))}
+            <p className="text-base text-gray-300 dark:text-gray-700 mt-3 font-medium">
+              Placed on {new Date(order.created_at).toLocaleString()}
+            </p>
+          </CardHeader>
+          <CardContent className="pt-8 pb-8">
+            <div className="space-y-5">
+              {order.items.map((item) => (
+                <div key={item.id} className="border-3 border-gray-200 dark:border-gray-800 rounded-2xl p-5 bg-gray-50 dark:bg-gray-900 hover:shadow-lg transition-all hover:scale-[1.02]">
+                  <div className="flex gap-5">
+                    <div className="w-24 h-24 rounded-xl overflow-hidden bg-white dark:bg-black flex-shrink-0 shadow-lg border-2 border-gray-900 dark:border-white">
+                      <img 
+                        src={getItemImage(item.menu_item.name, item.menu_item)} 
+                        alt={item.menu_item.name}
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).src = 'https://via.placeholder.com/200x200/000000/ffffff?text=' + encodeURIComponent(item.menu_item.name.substring(0, 2));
+                        }}
+                      />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex justify-between items-start mb-3">
+                        <div className="flex-1 min-w-0">
+                          <h4 className="font-black text-xl text-black dark:text-white">{item.menu_item.name}</h4>
+                          {item.options.length > 0 && (
+                            <div className="flex flex-wrap gap-2 mt-2">
+                              {item.options.map((opt) => (
+                                <span 
+                                  key={`${opt.key}-${opt.value}`}
+                                  className="text-sm px-3 py-1 bg-gray-200 dark:bg-gray-800 text-black dark:text-white rounded-lg font-bold border-2 border-gray-900 dark:border-white"
+                                >
+                                  {opt.key}: {opt.value}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                          {item.note && (
+                            <p className="text-sm text-gray-700 dark:text-gray-300 mt-3 font-semibold border-l-4 border-black dark:border-white pl-3 bg-white dark:bg-black py-2 rounded-r-lg">
+                              Note: {item.note}
+                            </p>
+                          )}
+                        </div>
+                        <div className="text-right ml-4">
+                          <div className="font-black text-2xl text-black dark:text-white">x{item.qty}</div>
+                          <div className="text-lg font-bold text-gray-700 dark:text-gray-300 mt-1">
+                            {(item.price_each * item.qty).toFixed(2)} EGP
                           </div>
-                        )}
-                        {item.note && (
-                          <p className="text-xs text-amber-700/70 dark:text-amber-400/70 mt-2 italic border-l-2 border-amber-300 dark:border-amber-700 pl-2">
-                            Note: {item.note}
-                          </p>
-                        )}
-                      </div>
-                      <div className="text-right ml-4">
-                        <div className="font-bold text-amber-900 dark:text-amber-100">x{item.qty}</div>
-                        <div className="text-sm font-semibold text-amber-700 dark:text-amber-400">
-                          {(item.price_each * item.qty).toFixed(2)} EGP
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+              ))}
+              
+              <div className="border-t-4 border-black dark:border-white pt-6 mt-6">
+                <div className="flex justify-between items-center p-6 bg-black dark:bg-white rounded-2xl">
+                  <span className="text-3xl font-black text-white dark:text-black">TOTAL</span>
+                  <span className="text-4xl font-black text-white dark:text-black">
+                    {order.total_amount.toFixed(2)} EGP
+                  </span>
+                </div>
               </div>
-            ))}
-            <div className="border-t border-amber-200 dark:border-amber-800 pt-4 mt-4">
-              <div className="flex justify-between items-center">
-                <span className="text-xl font-semibold text-amber-900 dark:text-amber-100">Total</span>
-                <span className="text-3xl font-bold bg-gradient-to-r from-amber-700 to-amber-900 dark:from-amber-400 dark:to-amber-600 bg-clip-text text-transparent">
-                  {order.total_amount.toFixed(2)} EGP
-                </span>
+              
+              <div className="pt-4">
+                <Button 
+                  onClick={() => navigate('/')}
+                  className="w-full bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 font-bold text-lg py-5 rounded-xl shadow-2xl hover:scale-105 transition-all"
+                >
+                  <Sparkles className="h-5 w-5 mr-2 animate-pulse" />
+                  Order More Items
+                </Button>
               </div>
             </div>
-            <div className="pt-4">
-              <Button 
-                onClick={() => navigate('/')}
-                className="w-full bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800"
-              >
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                Back to Menu
-              </Button>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 }
-

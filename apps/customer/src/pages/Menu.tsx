@@ -96,7 +96,7 @@ export function Menu() {
             return (
               <Card 
                 key={item.id} 
-                className={`w-full max-w-[420px] ${isOutOfStock ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer hover:shadow-2xl'} transition-all duration-300 border-[3px] ${isOutOfStock ? 'border-red-300 dark:border-red-700' : 'border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500'} bg-white dark:bg-gray-900 overflow-hidden group rounded-3xl flex flex-col ${isAdded ? 'ring-2 ring-gray-500 animate-pulse' : ''}`}
+                className={`w-full max-w-[420px] h-[490px] ${isOutOfStock ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer hover:shadow-2xl'} transition-all duration-300 border-[3px] ${isOutOfStock ? 'border-red-300 dark:border-red-700' : 'border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500'} bg-white dark:bg-gray-900 overflow-hidden group rounded-3xl flex flex-col ${isAdded ? 'ring-2 ring-gray-500 animate-pulse' : ''}`}
               >
                 <div className="relative w-full h-[320px] overflow-hidden rounded-t-3xl flex items-center justify-center">
                   <img 
@@ -117,7 +117,7 @@ export function Menu() {
                     </div>
                   )}
                 </div>
-                <div className="p-5 flex flex-col flex-shrink-0">
+                <div className="p-5 flex flex-col flex-1">
                   <CardHeader className="pb-3 pt-0 px-0">
                     <CardTitle className="text-xl font-bold text-gray-900 dark:text-white leading-tight">
                       {item.name}
@@ -126,7 +126,7 @@ export function Menu() {
                       Single or Double Shot
                     </CardDescription>
                   </CardHeader>
-                  <CardContent className="pt-0 pb-0 px-0">
+                  <CardContent className="pt-0 pb-0 px-0 mt-auto">
                     <Button
                       className={`w-full font-semibold shadow-lg transition-all duration-200 rounded-xl h-12 text-base hover:scale-105 active:scale-95 hover:shadow-xl ${
                         itemInCart 
@@ -166,7 +166,7 @@ export function Menu() {
           return (
             <Card 
               key={item.id} 
-              className={`w-full max-w-[420px] ${isOutOfStock ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer hover:shadow-2xl'} transition-all duration-300 border-[3px] ${isOutOfStock ? 'border-red-300 dark:border-red-700' : isLowStock ? 'border-yellow-300 dark:border-yellow-700' : 'border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500'} bg-white dark:bg-gray-900 overflow-hidden group rounded-3xl flex flex-col ${isAdded ? 'ring-2 ring-gray-500 animate-pulse' : ''}`}
+              className={`w-full max-w-[420px] h-[490px] ${isOutOfStock ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer hover:shadow-2xl'} transition-all duration-300 border-[3px] ${isOutOfStock ? 'border-red-300 dark:border-red-700' : isLowStock ? 'border-yellow-300 dark:border-yellow-700' : 'border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500'} bg-white dark:bg-gray-900 overflow-hidden group rounded-3xl flex flex-col ${isAdded ? 'ring-2 ring-gray-500 animate-pulse' : ''}`}
             >
               <div className="relative w-full h-[320px] overflow-hidden rounded-t-3xl flex items-center justify-center">
                 <img 
@@ -187,7 +187,7 @@ export function Menu() {
                   </div>
                 )}
               </div>
-              <div className="p-5 flex flex-col flex-shrink-0">
+              <div className="p-5 flex flex-col flex-1">
                 <CardHeader className="pb-3 pt-0 px-0">
                   <CardTitle className="text-xl font-bold text-gray-900 dark:text-white leading-tight">
                     {item.name}
@@ -196,7 +196,7 @@ export function Menu() {
                     {item.station?.name} Station
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="pt-0 pb-0 px-0">
+                <CardContent className="pt-0 pb-0 px-0 mt-auto">
                   <Button
                     className={`w-full font-semibold shadow-lg transition-all duration-200 rounded-xl h-12 text-base hover:scale-105 active:scale-95 hover:shadow-xl ${
                       isOutOfStock 
