@@ -87,7 +87,7 @@ export function Menu() {
 
   const renderMenuItems = (stationItems: MenuItem[]) => {
     return (
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center w-full overflow-x-hidden">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 justify-items-center w-full overflow-x-hidden px-2 md:px-0">
         {stationItems.map((item) => {
           // Special handling for Espresso
           if (item.name === 'Espresso') {
@@ -262,8 +262,8 @@ export function Menu() {
         {/* Content */}
         <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-4">
           {/* Animated main title */}
-          <div className="mb-6 animate-fade-in-down">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white mb-2 tracking-tight" 
+          <div className="mb-4 md:mb-6 animate-fade-in-down px-4 md:px-0">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-2 tracking-tight" 
                 style={{ 
                   fontFamily: "'Inter', 'Segoe UI', sans-serif",
                   textShadow: '0 4px 20px rgba(0,0,0,0.5), 0 0 40px rgba(255,255,255,0.2)'
@@ -272,7 +272,7 @@ export function Menu() {
               {' '}
               <span className="inline-block animate-fade-in-up" style={{ animationDelay: '0.3s' }}>to</span>
             </h1>
-            <h2 className="text-6xl sm:text-7xl lg:text-8xl font-black text-white animate-fade-in-up"
+            <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white animate-fade-in-up"
                 style={{ 
                   fontFamily: "'Inter', 'Segoe UI', sans-serif",
                   textShadow: '0 4px 30px rgba(0,0,0,0.6), 0 0 60px rgba(255,255,255,0.3)',
@@ -284,7 +284,7 @@ export function Menu() {
           </div>
           
           {/* Animated subtitle */}
-          <p className="text-xl sm:text-2xl lg:text-3xl text-white font-medium max-w-3xl mb-8 animate-fade-in-up leading-relaxed"
+          <p className="text-base sm:text-xl md:text-2xl lg:text-3xl text-white font-medium max-w-3xl mb-6 md:mb-8 animate-fade-in-up leading-relaxed px-4 md:px-0"
              style={{ 
                animationDelay: '0.7s',
                textShadow: '0 2px 15px rgba(0,0,0,0.5)'

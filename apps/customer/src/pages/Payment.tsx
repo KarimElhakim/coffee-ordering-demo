@@ -261,41 +261,41 @@ export function Payment() {
 
   // Main Payment Screen
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-black dark:via-gray-950 dark:to-black py-8 px-4 animate-fade-in">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-black dark:via-gray-950 dark:to-black py-4 md:py-8 px-3 md:px-4 animate-fade-in">
       <div className="max-w-5xl mx-auto">
         {/* Header with Animation */}
-        <div className="text-center mb-10 animate-fade-in-down">
-          <h1 className="text-6xl font-black mb-4 text-gray-900 dark:text-white tracking-tight">
+        <div className="text-center mb-6 md:mb-10 animate-fade-in-down">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black mb-3 md:mb-4 text-gray-900 dark:text-white tracking-tight">
             Complete <span className="bg-gradient-to-r from-gray-700 to-black dark:from-white dark:to-gray-300 bg-clip-text text-transparent">Your Order</span>
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-400 font-medium">Secure payment in just a few steps</p>
+          <p className="text-base md:text-xl text-gray-600 dark:text-gray-400 font-medium px-4 md:px-0">Secure payment in just a few steps</p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-2 gap-4 md:gap-8">
           {/* Left: Order Summary */}
-          <Card className="border-4 border-black dark:border-white shadow-2xl bg-white dark:bg-black h-fit animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-            <CardHeader className="bg-black dark:bg-white pb-6 pt-6">
-              <CardTitle className="text-3xl font-black flex items-center gap-3 text-white dark:text-black">
-                <ShoppingBag className="h-8 w-8" />
+          <Card className="border-2 md:border-4 border-black dark:border-white shadow-xl md:shadow-2xl bg-white dark:bg-black h-fit animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+            <CardHeader className="bg-black dark:bg-white pb-4 md:pb-6 pt-4 md:pt-6">
+              <CardTitle className="text-xl md:text-2xl lg:text-3xl font-black flex items-center gap-2 md:gap-3 text-white dark:text-black">
+                <ShoppingBag className="h-6 w-6 md:h-8 md:w-8" />
                 Your Order
               </CardTitle>
             </CardHeader>
-            <CardContent className="pt-8 pb-8">
-              <div className="space-y-5 mb-8">
+            <CardContent className="pt-4 md:pt-8 pb-4 md:pb-8">
+              <div className="space-y-3 md:space-y-5 mb-6 md:mb-8">
                 {order.items.map((item: any) => (
-                  <div key={item.id} className="flex gap-5 p-5 bg-gray-50 dark:bg-gray-900 rounded-2xl border-2 border-gray-900 dark:border-white hover:scale-105 transition-transform">
+                  <div key={item.id} className="flex gap-3 md:gap-5 p-3 md:p-5 bg-gray-50 dark:bg-gray-900 rounded-xl md:rounded-2xl border-2 border-gray-900 dark:border-white hover:scale-105 transition-transform">
                     <img 
                       src={getItemImage(item.menu_item.name, item.menu_item)}
                       alt={item.menu_item.name}
-                      className="w-24 h-24 object-cover rounded-xl shadow-lg border-2 border-black dark:border-white"
+                      className="w-16 h-16 md:w-24 md:h-24 object-cover rounded-lg md:rounded-xl shadow-lg border-2 border-black dark:border-white flex-shrink-0"
                       onError={(e) => {
                         (e.target as HTMLImageElement).src = 'https://via.placeholder.com/100x100/000000/ffffff?text=Coffee';
                       }}
                     />
                     <div className="flex-1 min-w-0">
-                      <h4 className="font-black text-lg text-black dark:text-white truncate mb-2">{item.menu_item.name}</h4>
-                      <p className="text-base text-gray-600 dark:text-gray-400 font-semibold">Quantity: {item.qty}</p>
-                      <p className="font-black text-xl text-black dark:text-white mt-2">
+                      <h4 className="font-black text-base md:text-lg text-black dark:text-white truncate mb-1 md:mb-2">{item.menu_item.name}</h4>
+                      <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 font-semibold">Quantity: {item.qty}</p>
+                      <p className="font-black text-lg md:text-xl text-black dark:text-white mt-1 md:mt-2">
                         {(item.price_each * item.qty).toFixed(2)} EGP
                       </p>
                     </div>

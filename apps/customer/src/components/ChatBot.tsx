@@ -289,21 +289,21 @@ export function ChatBot() {
     };
 
     return (
-      <div className="p-6 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950 dark:to-pink-950 rounded-2xl border-4 border-black dark:border-white">
-        <h3 className="text-2xl font-black text-center mb-4 text-black dark:text-white">
+      <div className="p-3 md:p-6 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950 dark:to-pink-950 rounded-xl md:rounded-2xl border-2 md:border-4 border-black dark:border-white">
+        <h3 className="text-xl md:text-2xl font-black text-center mb-3 md:mb-4 text-black dark:text-white">
           Reaction Tap
         </h3>
-        <p className="text-center text-sm mb-4 font-semibold text-gray-700 dark:text-gray-300">
+        <p className="text-center text-xs md:text-sm mb-3 md:mb-4 font-semibold text-gray-700 dark:text-gray-300">
           Tap the target when it appears in under 500ms!
         </p>
-        <div className="text-center mb-4">
-          <span className="text-3xl font-black text-black dark:text-white">
+        <div className="text-center mb-3 md:mb-4">
+          <span className="text-2xl md:text-3xl font-black text-black dark:text-white">
             {timeLeft}s
           </span>
         </div>
         <div
           onClick={handleTap}
-          className={`w-full h-64 rounded-xl flex items-center justify-center cursor-pointer transition-all ${
+          className={`w-full h-48 md:h-64 rounded-xl flex items-center justify-center cursor-pointer transition-all ${
             waiting
               ? 'bg-gray-200 dark:bg-gray-800'
               : showTarget
@@ -312,20 +312,20 @@ export function ChatBot() {
           }`}
         >
           {waiting && (
-            <p className="text-xl font-bold text-gray-600 dark:text-gray-400">
+            <p className="text-base md:text-xl font-bold text-gray-600 dark:text-gray-400">
               Wait for it...
             </p>
           )}
           {showTarget && !reactionTime && (
-            <Target className="h-24 w-24 text-white dark:text-black animate-bounce" />
+            <Target className="h-16 w-16 md:h-24 md:w-24 text-white dark:text-black animate-bounce" />
           )}
           {reactionTime && (
             <div className="text-center">
-              <p className="text-4xl font-black text-white dark:text-black mb-2">
+              <p className="text-3xl md:text-4xl font-black text-white dark:text-black mb-2">
                 {reactionTime}ms
               </p>
-              <p className="text-lg font-bold text-white dark:text-black">
-                {reactionTime < 500 ? '🎉 You Win!' : '😔 Too slow!'}
+              <p className="text-base md:text-lg font-bold text-white dark:text-black">
+                {reactionTime < 500 ? 'You Win!' : 'Too slow!'}
               </p>
             </div>
           )}
@@ -382,21 +382,21 @@ export function ChatBot() {
     };
 
     return (
-      <div className="p-6 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950 dark:to-orange-950 rounded-2xl border-4 border-black dark:border-white">
-        <h3 className="text-2xl font-black text-center mb-2 text-black dark:text-white">
+      <div className="p-3 md:p-6 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950 dark:to-orange-950 rounded-xl md:rounded-2xl border-2 md:border-4 border-black dark:border-white">
+        <h3 className="text-xl md:text-2xl font-black text-center mb-2 text-black dark:text-white">
           Coffee Wordle
         </h3>
-        <p className="text-center text-xs mb-4 font-semibold text-gray-700 dark:text-gray-300">
+        <p className="text-center text-xs mb-3 md:mb-4 font-semibold text-gray-700 dark:text-gray-300">
           Guess the 5-letter coffee word! Time: {timeLeft}s
         </p>
         
-        <div className="space-y-2 mb-4">
+        <div className="space-y-1.5 md:space-y-2 mb-3 md:mb-4">
           {guesses.map((guess, gIdx) => (
-            <div key={gIdx} className="flex gap-2 justify-center">
+            <div key={gIdx} className="flex gap-1 md:gap-2 justify-center">
               {guess.split('').map((letter, lIdx) => (
                 <div
                   key={lIdx}
-                  className={`w-12 h-12 flex items-center justify-center text-2xl font-black rounded-lg border-4 ${getLetterColor(letter, lIdx, guess)}`}
+                  className={`w-10 h-10 md:w-12 md:h-12 flex items-center justify-center text-xl md:text-2xl font-black rounded-md md:rounded-lg border-2 md:border-4 ${getLetterColor(letter, lIdx, guess)}`}
                 >
                   {letter}
                 </div>
@@ -404,11 +404,11 @@ export function ChatBot() {
             </div>
           ))}
           {guesses.length < 6 && !gameOver && (
-            <div className="flex gap-2 justify-center">
+            <div className="flex gap-1 md:gap-2 justify-center">
               {Array.from({ length: 5 }).map((_, i) => (
                 <div
                   key={i}
-                  className="w-12 h-12 flex items-center justify-center text-2xl font-black rounded-lg border-4 border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900"
+                  className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center text-xl md:text-2xl font-black rounded-md md:rounded-lg border-2 md:border-4 border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900"
                 >
                   {currentGuess[i] || ''}
                 </div>
@@ -424,15 +424,15 @@ export function ChatBot() {
               onChange={(e) => setCurrentGuess(e.target.value.toUpperCase().slice(0, 5))}
               onKeyPress={(e) => e.key === 'Enter' && handleSubmit()}
               placeholder="Type word..."
-              className="flex-1 text-center font-black text-lg border-4 border-black dark:border-white"
+              className="flex-1 text-center font-black text-base md:text-lg border-2 md:border-4 border-black dark:border-white"
               maxLength={5}
             />
             <Button
               onClick={handleSubmit}
               disabled={currentGuess.length !== 5}
-              className="bg-black dark:bg-white text-white dark:text-black font-black"
+              className="bg-black dark:bg-white text-white dark:text-black font-black px-3 md:px-4"
             >
-              <Send className="h-5 w-5" />
+              <Send className="h-4 w-4 md:h-5 md:w-5" />
             </Button>
           </div>
         )}
@@ -498,22 +498,22 @@ export function ChatBot() {
     };
 
     return (
-      <div className="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950 dark:to-cyan-950 rounded-2xl border-4 border-black dark:border-white">
-        <h3 className="text-2xl font-black text-center mb-2 text-black dark:text-white">
+      <div className="p-3 md:p-6 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950 dark:to-cyan-950 rounded-xl md:rounded-2xl border-2 md:border-4 border-black dark:border-white">
+        <h3 className="text-xl md:text-2xl font-black text-center mb-2 text-black dark:text-white">
           Cup Shuffle
         </h3>
-        <p className="text-center text-xs mb-4 font-semibold text-gray-700 dark:text-gray-300">
+        <p className="text-center text-xs mb-3 md:mb-4 font-semibold text-gray-700 dark:text-gray-300">
           Find the cup with the coffee bean! Time: {timeLeft}s
         </p>
 
         {!gameStarted && (
-          <div className="flex gap-4 justify-center mb-6">
+          <div className="flex gap-2 md:gap-4 justify-center mb-4 md:mb-6">
             {[0, 1, 2].map((i) => (
               <div key={i} className="relative">
-                <Coffee className="h-24 w-24 text-amber-700 dark:text-amber-400" />
+                <Coffee className="h-16 w-16 md:h-24 md:w-24 text-amber-700 dark:text-amber-400" />
                 {i === ballPosition && (
                   <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    <div className="w-6 h-6 bg-amber-800 dark:bg-amber-600 rounded-full animate-bounce" />
+                    <div className="w-4 h-4 md:w-6 md:h-6 bg-amber-800 dark:bg-amber-600 rounded-full animate-bounce" />
                   </div>
                 )}
               </div>
@@ -522,7 +522,7 @@ export function ChatBot() {
         )}
 
         {gameStarted && (
-          <div className={`flex gap-4 justify-center mb-6 ${shuffling ? 'animate-pulse' : ''}`}>
+          <div className={`flex gap-2 md:gap-4 justify-center mb-4 md:mb-6 ${shuffling ? 'animate-pulse' : ''}`}>
             {cups.map((cup, i) => {
               const hasBall = cup === ballPosition && selectedCup !== null;
               const isSelected = selectedCup === i;
@@ -536,7 +536,7 @@ export function ChatBot() {
                     isSelected ? 'scale-110' : ''
                   }`}
                 >
-                  <Coffee className={`h-24 w-24 ${
+                  <Coffee className={`h-16 w-16 md:h-24 md:w-24 ${
                     isSelected && hasBall
                       ? 'text-green-600 dark:text-green-400'
                       : isSelected && !hasBall
@@ -545,7 +545,7 @@ export function ChatBot() {
                   }`} />
                   {selectedCup !== null && hasBall && (
                     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                      <div className="w-6 h-6 bg-amber-800 dark:bg-amber-600 rounded-full" />
+                      <div className="w-4 h-4 md:w-6 md:h-6 bg-amber-800 dark:bg-amber-600 rounded-full" />
                     </div>
                   )}
                 </button>
@@ -557,9 +557,9 @@ export function ChatBot() {
         {!gameStarted && (
           <Button
             onClick={startGame}
-            className="w-full bg-black dark:bg-white text-white dark:text-black font-black text-lg py-6 hover:scale-105 transition-all"
+            className="w-full bg-black dark:bg-white text-white dark:text-black font-black text-base md:text-lg py-4 md:py-6 hover:scale-105 transition-all"
           >
-            <Zap className="h-5 w-5 mr-2" />
+            <Zap className="h-4 w-4 md:h-5 md:w-5 mr-2" />
             Start Game
           </Button>
         )}
@@ -569,7 +569,7 @@ export function ChatBot() {
 
   if (!isOpen) {
     return (
-      <div className="fixed bottom-6 left-6 z-50 animate-fade-in">
+      <div className="fixed bottom-4 left-4 md:bottom-6 md:left-6 z-50 animate-fade-in">
         <button
           onClick={handleOpen}
           className="relative group"
@@ -578,12 +578,12 @@ export function ChatBot() {
           <div className="absolute inset-0 bg-black dark:bg-white rounded-full animate-ping opacity-20"></div>
           
           {/* Main button */}
-          <div className="relative w-20 h-20 bg-gradient-to-br from-gray-900 to-black dark:from-white dark:to-gray-200 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-all duration-300 border-4 border-white dark:border-black">
-            <Coffee className="h-10 w-10 text-white dark:text-black animate-bounce" />
+          <div className="relative w-14 h-14 md:w-20 md:h-20 bg-gradient-to-br from-gray-900 to-black dark:from-white dark:to-gray-200 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-all duration-300 border-2 md:border-4 border-white dark:border-black">
+            <Coffee className="h-7 w-7 md:h-10 md:w-10 text-white dark:text-black animate-bounce" />
           </div>
           
-          {/* Rotating text bubble */}
-          <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 bg-black dark:bg-white text-white dark:text-black px-4 py-2 rounded-2xl shadow-xl whitespace-nowrap animate-bounce border-2 border-white dark:border-black">
+          {/* Rotating text bubble - hidden on mobile */}
+          <div className="hidden md:block absolute -top-16 left-1/2 transform -translate-x-1/2 bg-black dark:bg-white text-white dark:text-black px-4 py-2 rounded-2xl shadow-xl whitespace-nowrap animate-bounce border-2 border-white dark:border-black">
             <p className="text-sm font-bold">
               {ENCOURAGEMENTS[currentEncouragement]}
             </p>
@@ -595,29 +595,29 @@ export function ChatBot() {
   }
 
   return (
-    <div className="fixed bottom-6 left-6 z-50 w-[420px] h-[600px] animate-fade-in-up">
-      <Card className="w-full h-full flex flex-col border-4 border-black dark:border-white shadow-2xl bg-white dark:bg-gray-900">
+    <div className="fixed inset-4 md:bottom-6 md:left-6 md:right-auto md:top-auto md:w-[420px] md:h-[600px] z-50 animate-fade-in-up">
+      <Card className="w-full h-full flex flex-col border-2 md:border-4 border-black dark:border-white shadow-2xl bg-white dark:bg-gray-900">
         {/* Header */}
-        <div className="bg-black dark:bg-white p-4 flex items-center justify-between border-b-4 border-black dark:border-white">
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-white dark:bg-black rounded-full flex items-center justify-center">
-              <Coffee className="h-7 w-7 text-black dark:text-white" />
+        <div className="bg-black dark:bg-white p-3 md:p-4 flex items-center justify-between border-b-2 md:border-b-4 border-black dark:border-white flex-shrink-0">
+          <div className="flex items-center gap-2 md:gap-3">
+            <div className="w-10 h-10 md:w-12 md:h-12 bg-white dark:bg-black rounded-full flex items-center justify-center">
+              <Coffee className="h-5 w-5 md:h-7 md:w-7 text-black dark:text-white" />
             </div>
             <div>
-              <h3 className="font-black text-lg text-white dark:text-black">Coffee Assistant</h3>
-              <p className="text-xs text-gray-300 dark:text-gray-700 font-semibold">Always here to help</p>
+              <h3 className="font-black text-base md:text-lg text-white dark:text-black">Coffee Assistant</h3>
+              <p className="text-xs text-gray-300 dark:text-gray-700 font-semibold hidden md:block">Always here to help</p>
             </div>
           </div>
           <button
             onClick={() => setIsOpen(false)}
-            className="text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 p-2 rounded-full transition-all hover:scale-110"
+            className="text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 p-1.5 md:p-2 rounded-full transition-all hover:scale-110"
           >
-            <X className="h-6 w-6" />
+            <X className="h-5 w-5 md:h-6 md:w-6" />
           </button>
         </div>
 
         {/* Messages or Game */}
-        <div className="flex-1 overflow-y-auto p-4 bg-gray-50 dark:bg-gray-950">
+        <div className="flex-1 overflow-y-auto p-2 md:p-4 bg-gray-50 dark:bg-gray-950 min-h-0">
           {gameMode ? (
             <div>
               {gameMode === 'reaction' && <ReactionGame />}
@@ -625,30 +625,30 @@ export function ChatBot() {
               {gameMode === 'shuffle' && <CupShuffleGame />}
             </div>
           ) : (
-            <div className="space-y-4">
+            <div className="space-y-3 md:space-y-4">
               {messages.map((message) => (
                 <div
                   key={message.id}
                   className={`flex ${message.isBot ? 'justify-start' : 'justify-end'}`}
                 >
-                  <div className="max-w-[80%]">
+                  <div className="max-w-[85%] md:max-w-[80%]">
                     <div
-                      className={`p-4 rounded-2xl ${
+                      className={`p-3 md:p-4 rounded-xl md:rounded-2xl ${
                         message.isBot
-                          ? 'bg-white dark:bg-gray-800 text-black dark:text-white border-3 border-gray-900 dark:border-white shadow-lg'
+                          ? 'bg-white dark:bg-gray-800 text-black dark:text-white border-2 md:border-3 border-gray-900 dark:border-white shadow-lg'
                           : 'bg-black dark:bg-white text-white dark:text-black shadow-lg'
                       }`}
                     >
-                      <p className="text-sm font-semibold">{message.text}</p>
+                      <p className="text-xs md:text-sm font-semibold">{message.text}</p>
                     </div>
                     
                     {message.options && (
-                      <div className="mt-3 space-y-2">
+                      <div className="mt-2 md:mt-3 space-y-1.5 md:space-y-2">
                         {message.options.map((option, idx) => (
                           <button
                             key={idx}
                             onClick={() => handleOptionClick(option.action, { text: option.text, ...option.data })}
-                            className="w-full text-left px-4 py-3 bg-gray-100 dark:bg-gray-800 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black rounded-xl font-bold text-sm transition-all hover:scale-105 border-2 border-gray-900 dark:border-white"
+                            className="w-full text-left px-3 md:px-4 py-2 md:py-3 bg-gray-100 dark:bg-gray-800 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black rounded-lg md:rounded-xl font-bold text-xs md:text-sm transition-all hover:scale-105 border-2 border-gray-900 dark:border-white active:scale-95"
                           >
                             {option.text}
                           </button>
@@ -665,9 +665,9 @@ export function ChatBot() {
 
         {/* Discount indicator */}
         {hasWonDiscount && !gameMode && (
-          <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-3 text-center font-black text-sm animate-pulse border-t-4 border-black dark:border-white">
-            <Trophy className="h-5 w-5 inline mr-2" />
-            5% Discount Active on Lowest Item!
+          <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 md:px-4 py-2 md:py-3 text-center font-black text-xs md:text-sm animate-pulse border-t-2 md:border-t-4 border-black dark:border-white flex-shrink-0">
+            <Trophy className="h-4 w-4 md:h-5 md:w-5 inline mr-2" />
+            5% Discount Active!
           </div>
         )}
       </Card>

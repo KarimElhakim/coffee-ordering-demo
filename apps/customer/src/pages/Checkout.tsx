@@ -81,33 +81,33 @@ export function Checkout() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-black dark:via-gray-950 dark:to-black py-8 px-4 animate-fade-in">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-black dark:via-gray-950 dark:to-black py-4 md:py-8 px-3 md:px-4 animate-fade-in">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
-        <div className="mb-10 animate-fade-in-down">
-          <h2 className="text-6xl font-black mb-4 text-black dark:text-white tracking-tight flex items-center gap-4">
-            <ShoppingBag className="h-14 w-14" />
+        <div className="mb-6 md:mb-10 animate-fade-in-down">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-black mb-3 md:mb-4 text-black dark:text-white tracking-tight flex items-center gap-2 md:gap-4">
+            <ShoppingBag className="h-8 w-8 md:h-12 lg:h-14 md:w-12 lg:w-14" />
             Checkout
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 font-medium ml-1">
+          <p className="text-base md:text-xl text-gray-600 dark:text-gray-400 font-medium ml-0 md:ml-1">
             Review your order before proceeding
           </p>
         </div>
 
         {/* Cart Items */}
-        <div className="space-y-6 mb-10">
+        <div className="space-y-4 md:space-y-6 mb-6 md:mb-10">
           {items.map((item, idx) => {
             const itemPrice = item.base_price + item.options.reduce((sum, opt) => sum + opt.price_delta, 0);
             const optionsKey = getOptionsKey(item.options);
             return (
               <Card 
                 key={`${item.menu_item_id}-${idx}`}
-                className="border-4 border-black dark:border-white bg-white dark:bg-black shadow-2xl hover:scale-[1.02] transition-all duration-300 overflow-hidden group animate-fade-in-up"
+                className="border-2 md:border-4 border-black dark:border-white bg-white dark:bg-black shadow-xl md:shadow-2xl hover:scale-[1.02] transition-all duration-300 overflow-hidden group animate-fade-in-up"
                 style={{ animationDelay: `${idx * 0.1}s` }}
               >
-                <div className="flex gap-6 p-6">
+                <div className="flex gap-3 md:gap-6 p-3 md:p-6">
                   {/* Item Image */}
-                  <div className="w-32 h-32 rounded-2xl overflow-hidden bg-gray-100 dark:bg-gray-900 flex-shrink-0 shadow-xl border-3 border-gray-900 dark:border-white">
+                  <div className="w-20 h-20 md:w-32 md:h-32 rounded-xl md:rounded-2xl overflow-hidden bg-gray-100 dark:bg-gray-900 flex-shrink-0 shadow-lg md:shadow-xl border-2 md:border-3 border-gray-900 dark:border-white">
                     <img 
                       src={getItemImage(item.name, item)} 
                       alt={item.name}
@@ -120,19 +120,19 @@ export function Checkout() {
 
                   {/* Item Details */}
                   <div className="flex-1 min-w-0">
-                    <div className="flex justify-between items-start mb-4">
+                    <div className="flex justify-between items-start mb-3 md:mb-4">
                       <div className="flex-1 min-w-0">
-                        <CardTitle className="text-2xl font-black text-black dark:text-white mb-3">
+                        <CardTitle className="text-lg md:text-xl lg:text-2xl font-black text-black dark:text-white mb-2 md:mb-3 leading-tight">
                           {item.name}
                         </CardTitle>
                         
                         {/* Options */}
                         {item.options.length > 0 && (
-                          <div className="flex flex-wrap gap-2 mt-3">
+                          <div className="flex flex-wrap gap-1.5 md:gap-2 mt-2 md:mt-3">
                             {item.options.map((opt) => (
                               <span 
                                 key={`${opt.key}-${opt.value}`} 
-                                className="text-sm px-4 py-2 bg-gray-100 dark:bg-gray-900 text-black dark:text-white rounded-xl font-bold border-2 border-gray-900 dark:border-white"
+                                className="text-xs md:text-sm px-2 md:px-4 py-1 md:py-2 bg-gray-100 dark:bg-gray-900 text-black dark:text-white rounded-lg md:rounded-xl font-bold border-2 border-gray-900 dark:border-white"
                               >
                                 {opt.key}: {opt.value}
                                 {opt.price_delta > 0 && ` (+${opt.price_delta} EGP)`}
@@ -143,7 +143,7 @@ export function Checkout() {
 
                         {/* Note */}
                         {item.note && (
-                          <p className="text-sm text-gray-700 dark:text-gray-300 mt-3 font-semibold border-l-4 border-black dark:border-white pl-4 bg-gray-50 dark:bg-gray-900 py-2 rounded-r-lg">
+                          <p className="text-xs md:text-sm text-gray-700 dark:text-gray-300 mt-2 md:mt-3 font-semibold border-l-3 md:border-l-4 border-black dark:border-white pl-2 md:pl-4 bg-gray-50 dark:bg-gray-900 py-1.5 md:py-2 rounded-r-lg">
                             Note: {item.note}
                           </p>
                         )}
@@ -154,36 +154,36 @@ export function Checkout() {
                         variant="ghost"
                         size="icon"
                         onClick={() => removeItem(item.menu_item_id, optionsKey)}
-                        className="text-red-600 hover:text-white hover:bg-red-600 dark:text-red-400 dark:hover:text-black dark:hover:bg-red-400 flex-shrink-0 h-12 w-12 border-2 border-red-600 dark:border-red-400 rounded-xl transition-all hover:scale-110"
+                        className="text-red-600 hover:text-white hover:bg-red-600 dark:text-red-400 dark:hover:text-black dark:hover:bg-red-400 flex-shrink-0 h-10 w-10 md:h-12 md:w-12 border-2 border-red-600 dark:border-red-400 rounded-lg md:rounded-xl transition-all hover:scale-110"
                       >
-                        <Trash2 className="h-5 w-5" />
+                        <Trash2 className="h-4 w-4 md:h-5 md:w-5" />
                       </Button>
                     </div>
 
                     {/* Quantity and Price */}
-                    <div className="flex items-center justify-between mt-6 pt-6 border-t-3 border-gray-900 dark:border-white">
-                      <div className="flex items-center gap-4">
+                    <div className="flex items-center justify-between mt-4 md:mt-6 pt-4 md:pt-6 border-t-2 md:border-t-3 border-gray-900 dark:border-white">
+                      <div className="flex items-center gap-2 md:gap-4">
                         <Button
                           variant="outline"
                           size="icon"
                           onClick={() => updateQuantity(item.menu_item_id, optionsKey, item.qty - 1)}
-                          className="border-3 border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black h-12 w-12 rounded-xl font-black transition-all hover:scale-110"
+                          className="border-2 md:border-3 border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black h-10 w-10 md:h-12 md:w-12 rounded-lg md:rounded-xl font-black transition-all hover:scale-110"
                         >
-                          <Minus className="h-5 w-5" />
+                          <Minus className="h-4 w-4 md:h-5 md:w-5" />
                         </Button>
-                        <span className="text-3xl font-black text-black dark:text-white w-16 text-center">
+                        <span className="text-2xl md:text-3xl font-black text-black dark:text-white w-12 md:w-16 text-center">
                           {item.qty}
                         </span>
                         <Button
                           variant="outline"
                           size="icon"
                           onClick={() => updateQuantity(item.menu_item_id, optionsKey, item.qty + 1)}
-                          className="border-3 border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black h-12 w-12 rounded-xl font-black transition-all hover:scale-110"
+                          className="border-2 md:border-3 border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black h-10 w-10 md:h-12 md:w-12 rounded-lg md:rounded-xl font-black transition-all hover:scale-110"
                         >
-                          <Plus className="h-5 w-5" />
+                          <Plus className="h-4 w-4 md:h-5 md:w-5" />
                         </Button>
                       </div>
-                      <span className="text-3xl font-black text-black dark:text-white">
+                      <span className="text-xl md:text-2xl lg:text-3xl font-black text-black dark:text-white">
                         {(itemPrice * item.qty).toFixed(2)} EGP
                       </span>
                     </div>
@@ -195,14 +195,14 @@ export function Checkout() {
         </div>
 
         {/* Order Summary */}
-        <Card className="border-4 border-black dark:border-white bg-white dark:bg-black shadow-2xl animate-fade-in-up" style={{ animationDelay: `${items.length * 0.1}s` }}>
-          <CardHeader className="bg-black dark:bg-white pb-8 pt-8">
-            <CardTitle className="text-3xl font-black text-white dark:text-black flex items-center gap-3">
-              <CreditCard className="h-8 w-8" />
+        <Card className="border-2 md:border-4 border-black dark:border-white bg-white dark:bg-black shadow-xl md:shadow-2xl animate-fade-in-up" style={{ animationDelay: `${items.length * 0.1}s` }}>
+          <CardHeader className="bg-black dark:bg-white pb-4 md:pb-8 pt-4 md:pt-8">
+            <CardTitle className="text-xl md:text-2xl lg:text-3xl font-black text-white dark:text-black flex items-center gap-2 md:gap-3">
+              <CreditCard className="h-6 w-6 md:h-8 md:w-8" />
               Order Summary
             </CardTitle>
           </CardHeader>
-          <CardContent className="pt-10 pb-10">
+          <CardContent className="pt-6 md:pt-10 pb-6 md:pb-10">
             {/* Subtotal */}
             <div className="flex justify-between items-center mb-6 pb-6 border-b-2 border-gray-200 dark:border-gray-800">
               <span className="text-xl font-bold text-gray-700 dark:text-gray-300">Subtotal</span>

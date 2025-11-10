@@ -1,5 +1,58 @@
 # Changelog
 
+## Version 3.1.1 - Mobile Optimization Release
+
+### Mobile Responsiveness Improvements
+
+#### 1. Chatbot Mobile Optimization
+- Reduced button size on mobile: 56x56px vs 80x80px on desktop
+- Full-screen chat on mobile (inset-4) vs fixed 420x600px on desktop
+- Smaller text and padding throughout
+- Hidden encouragement bubble on mobile to save space
+- Game components optimized for smaller screens
+- Responsive borders: 2px mobile, 4px desktop
+- Better touch targets for mobile interaction
+
+#### 2. Menu Page Mobile Layout
+- Banner text sizes: 3xl/4xl mobile vs 6xl/8xl desktop
+- Better padding and spacing on mobile
+- Grid gap reduced from 8 to 4 on mobile
+- Added horizontal padding for content
+- Responsive typography throughout
+
+#### 3. Checkout Page Mobile
+- Header sizes: 3xl mobile vs 6xl desktop
+- Icon sizes: 32px mobile vs 56px desktop
+- Item cards with smaller images: 80x80px vs 128x128px
+- Reduced padding and gaps throughout
+- Quantity buttons: 40x40px mobile vs 48x48px desktop
+- Better text scaling for prices
+
+#### 4. Payment Page Mobile
+- Header responsive sizing
+- Grid layout stacks on mobile
+- Smaller card padding
+- Item images: 64x64px mobile vs 96x96px desktop
+- Responsive button sizes and spacing
+
+#### 5. System-wide Mobile Fixes
+- All cards use responsive borders (2px vs 4px)
+- Typography scales appropriately
+- Touch targets sized correctly
+- Proper spacing on all screen sizes
+- No horizontal overflow issues
+
+### Technical Changes
+1. `apps/customer/src/components/ChatBot.tsx` - Full mobile responsive design
+2. `apps/customer/src/pages/Menu.tsx` - Mobile-optimized layout
+3. `apps/customer/src/pages/Checkout.tsx` - Responsive card and button sizing
+4. `apps/customer/src/pages/Payment.tsx` - Mobile-friendly payment flow
+
+### Build Status
+Customer app built successfully: 562.40 kB
+
+---
+
 ## Version 3.1.0 - Interactive Chatbot Feature
 
 ### Major New Feature: AI Coffee Assistant
