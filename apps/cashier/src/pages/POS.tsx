@@ -66,6 +66,9 @@ export function POS() {
     base_price: number;
     options: Array<{ key: string; value: string; price_delta: number }>;
     note?: string;
+    image_url?: string;
+    local_image_path?: string;
+    category?: string;
   }) => {
     const existing = cart.find(
       (c) => c.menu_item_id === cartItem.menu_item_id && JSON.stringify(c.options) === JSON.stringify(cartItem.options)

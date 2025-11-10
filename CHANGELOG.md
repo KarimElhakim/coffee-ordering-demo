@@ -1,5 +1,35 @@
 # Changelog
 
+## Version 3.0.2 - Bug Fix Release
+
+### Critical Fixes
+
+#### 1. Add to Cart Modal - Fixed White Screen Issue
+- **Problem**: Select dropdown component was causing modal to display white screen
+- **Solution**: Reverted milk options back to button grid for stability
+- **Impact**: Modal now displays correctly and adds items to cart successfully
+
+#### 2. Image Display - Complete Fix for All Apps
+- **Customer Cart**: Fixed cart items to use stored image data from CartItem
+- **Cashier Cart**: Updated ItemModal to pass image_url, local_image_path, category
+- **Cashier POS**: Extended addToCart function to accept and store image fields
+- **All Views**: Cart items now display correct Starbucks product images system-wide
+
+#### 3. Image Styling - Removed Blending
+- **ItemModal**: Removed gradient overlay from product images
+- **Display**: Images now show clean without any visual effects
+- **Background**: Added solid white/dark background for proper image display
+
+### Technical Changes
+1. `apps/customer/src/components/ItemModal.tsx` - Reverted Select dropdown, removed gradient
+2. `apps/cashier/src/components/ItemModal.tsx` - Added image data to onAdd callback
+3. `apps/cashier/src/pages/POS.tsx` - Extended addToCart to accept image fields
+
+### Build Status
+All applications built successfully with no errors.
+
+---
+
 ## Version 3.0.1 - UX Enhancement Release
 
 ### Author & Publisher

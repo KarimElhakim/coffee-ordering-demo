@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, Button, Label, Input, Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@coffee-demo/ui';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, Button, Label, Input } from '@coffee-demo/ui';
 import { useCart } from '../store/cart';
 import { getItemImage } from '@coffee-demo/api-client';
 import type { Database } from '@coffee-demo/api-client';
@@ -193,11 +193,11 @@ export function ItemModal({ item, onClose, onAdd }: ItemModalProps) {
             Customize your order and add to cart
           </DialogDescription>
           {/* Item Image - Full Size */}
-          <div className="relative w-full h-72 rounded-2xl overflow-hidden mx-auto mb-6 shadow-2xl border-4 border-gray-900 dark:border-white">
+          <div className="relative w-full h-64 rounded-2xl overflow-hidden mx-auto mb-6 shadow-2xl border-4 border-gray-900 dark:border-white bg-white dark:bg-gray-900">
             <img 
               src={getItemImage(item.name, item)} 
               alt={item.name}
-              className="w-full h-full object-contain bg-white dark:bg-gray-900"
+              className="w-full h-full object-contain"
               onError={(e) => {
                 (e.target as HTMLImageElement).src = 'https://via.placeholder.com/400x400/000000/ffffff?text=' + encodeURIComponent(item.name);
               }}
@@ -257,26 +257,19 @@ export function ItemModal({ item, onClose, onAdd }: ItemModalProps) {
                 <Milk className="h-5 w-5" />
                 Milk (optional)
               </Label>
-              <Select value={milk || ''} onValueChange={(value) => setMilk(value || null)}>
-                <SelectTrigger className="w-full h-14 text-base font-semibold border-3 border-gray-900 dark:border-white rounded-xl bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
-                  <SelectValue placeholder="Select milk type" />
-                </SelectTrigger>
-                <SelectContent className="bg-white dark:bg-gray-900 border-3 border-gray-900 dark:border-white rounded-xl shadow-2xl">
-                  <SelectItem value="" className="text-base font-semibold hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer py-3">
-                    No Milk
-                  </SelectItem>
-                  {MILK_OPTIONS.map((option) => (
-                    <SelectItem 
-                      key={option.value} 
-                      value={option.value}
-                      className="text-base font-semibold hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer py-3"
-                    >
-                      {option.label}
-                      {option.price > 0 && <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">(+{option.price} EGP)</span>}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <div className="grid grid-cols-2 gap-3 mt-2">
+                {MILK_OPTIONS.map((option) => (
+                  <Button
+                    key={option.value}
+                    variant={milk === option.value ? 'default' : 'outline'}
+                    onClick={() => setMilk(milk === option.value ? null : option.value)}
+                    className={`border-2 py-3 rounded-lg transition-all duration-200 hover:scale-105 active:scale-95 ${milk === option.value ? 'bg-gray-900 hover:bg-gray-800 text-white dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100 border-gray-900 dark:border-white shadow-lg' : 'border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800'}`}
+                  >
+                    <span className="font-semibold">{option.label}</span>
+                    {option.price > 0 && <span className="ml-1 text-xs">(+{option.price} EGP)</span>}
+                  </Button>
+                ))}
+              </div>
             </div>
           )}
 

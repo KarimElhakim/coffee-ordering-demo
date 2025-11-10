@@ -20,6 +20,9 @@ interface ItemModalProps {
     base_price: number;
     options: Array<{ key: string; value: string; price_delta: number }>;
     note?: string;
+    image_url?: string;
+    local_image_path?: string;
+    category?: string;
   }) => void;
 }
 
@@ -124,6 +127,10 @@ export function ItemModal({ item, onClose, onAdd }: ItemModalProps) {
       base_price: finalPrice,
       options: options || [],
       note: note || undefined,
+      // Include image data for proper display
+      image_url: (item as any).image_url,
+      local_image_path: (item as any).local_image_path,
+      category: (item as any).category,
     });
     
     onClose();
