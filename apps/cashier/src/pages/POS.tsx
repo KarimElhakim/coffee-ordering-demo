@@ -254,7 +254,7 @@ export function POS() {
             >
               <div className="relative w-full h-[200px] overflow-hidden rounded-t-3xl flex items-center justify-center">
                 <img 
-                  src={getItemImage(item.name)} 
+                  src={getItemImage(item.name, item)} 
                   alt={item.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   onError={(e) => {

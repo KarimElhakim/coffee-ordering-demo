@@ -20,7 +20,7 @@ export function Menu() {
   const [addedItem, setAddedItem] = useState<string | null>(null);
   // Subscribe to cart items - Zustand will trigger re-render when items change
   const cartItems = useCart((state) => state.items);
-  const [activeTab, setActiveTab] = useState('Bar');
+  const [activeTab, setActiveTab] = useState('');
 
   useEffect(() => {
     async function load() {
@@ -31,6 +31,12 @@ export function Menu() {
         ]);
         setItems(menuItems as MenuItem[]);
         setModifiers(allModifiers);
+        
+        // Set initial tab to first available category
+        if (menuItems.length > 0) {
+          const firstCategory = (menuItems[0] as any).category || menuItems[0].station?.name || 'Other';
+          setActiveTab(firstCategory);
+        }
       } catch (error) {
         console.error('Failed to load menu:', error);
       } finally {
@@ -58,12 +64,16 @@ export function Menu() {
     );
   }
 
-  const groupedByStation = items.reduce((acc, item) => {
-    const stationName = item.station?.name || 'Other';
-    if (!acc[stationName]) acc[stationName] = [];
-    acc[stationName].push(item);
+  // Group by Starbucks category (or fall back to station for non-Starbucks items)
+  const groupedByCategory = items.reduce((acc, item) => {
+    const category = (item as any).category || item.station?.name || 'Other';
+    if (!acc[category]) acc[category] = [];
+    acc[category].push(item);
     return acc;
   }, {} as Record<string, MenuItem[]>);
+  
+  // Get all available categories
+  const availableCategories = Object.keys(groupedByCategory).sort();
 
   // Handle Espresso special case - show popup to choose single or double
   const handleEspressoClick = () => {
@@ -264,48 +274,41 @@ export function Menu() {
         </div>
         
         <div className="flex justify-center mb-8 overflow-x-hidden">
-          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full max-w-2xl overflow-x-hidden">
-            <TabsList className="grid w-full grid-cols-3 bg-gray-100 dark:bg-gray-800 rounded-lg p-1 h-12 overflow-x-hidden relative">
-              <TabsTrigger 
-                value="Bar" 
-                className="data-[state=active]:bg-gray-900 data-[state=active]:text-white data-[state=active]:z-10 data-[state=inactive]:text-gray-600 dark:data-[state=inactive]:text-gray-400 rounded-md font-semibold transition-all duration-200 flex items-center justify-center gap-2 data-[state=inactive]:hover:bg-gray-200 dark:data-[state=inactive]:hover:bg-gray-700 data-[state=inactive]:hover:scale-[1.02] active:scale-95 data-[state=inactive]:hover:text-gray-900 dark:data-[state=inactive]:hover:text-white relative"
-              >
-                <Coffee className="h-4 w-4 transition-transform duration-200" />
-                <span>Coffee Drinks</span>
-              </TabsTrigger>
-            <TabsTrigger 
-              value="Hot" 
-              className="data-[state=active]:bg-gray-900 data-[state=active]:text-white data-[state=active]:z-10 data-[state=inactive]:text-gray-600 dark:data-[state=inactive]:text-gray-400 rounded-md font-semibold transition-all duration-200 flex items-center justify-center gap-2 data-[state=inactive]:hover:bg-gray-200 dark:data-[state=inactive]:hover:bg-gray-700 data-[state=inactive]:hover:scale-[1.02] active:scale-95 data-[state=inactive]:hover:text-gray-900 dark:data-[state=inactive]:hover:text-white relative"
-            >
-              <Flame className="h-4 w-4 transition-transform duration-200" />
-              <span>Hot Drinks</span>
-            </TabsTrigger>
-            <TabsTrigger 
-              value="Cold" 
-              className="data-[state=active]:bg-gray-900 data-[state=active]:text-white data-[state=active]:z-10 data-[state=inactive]:text-gray-600 dark:data-[state=inactive]:text-gray-400 rounded-md font-semibold transition-all duration-200 flex items-center justify-center gap-2 data-[state=inactive]:hover:bg-gray-200 dark:data-[state=inactive]:hover:bg-gray-700 data-[state=inactive]:hover:scale-[1.02] active:scale-95 data-[state=inactive]:hover:text-gray-900 dark:data-[state=inactive]:hover:text-white relative"
-            >
-              <Snowflake className="h-4 w-4 transition-transform duration-200" />
-              <span>Cold Drinks</span>
-            </TabsTrigger>
-          </TabsList>
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full max-w-4xl overflow-x-hidden">
+            <TabsList className={`grid w-full bg-gray-100 dark:bg-gray-800 rounded-lg p-1 h-auto overflow-x-auto`} style={{ gridTemplateColumns: `repeat(${availableCategories.length}, minmax(120px, 1fr))` }}>
+              {availableCategories.map((category) => {
+                const icon = 
+                  category.includes('Hot Coffee') ? <Flame className="h-4 w-4" /> :
+                  category.includes('Hot Tea') ? <Flame className="h-4 w-4" /> :
+                  category.includes('Cold Coffee') || category.includes('Iced') ? <Snowflake className="h-4 w-4" /> :
+                  category.includes('Frappuccino') ? <Snowflake className="h-4 w-4" /> :
+                  <Coffee className="h-4 w-4" />;
+                
+                // Shorten long category names for display
+                const displayName = 
+                  category === 'Frappuccino® Blended Beverage' ? 'Frappuccino®' :
+                  category;
+                
+                return (
+                  <TabsTrigger 
+                    key={category}
+                    value={category} 
+                    className="data-[state=active]:bg-gray-900 data-[state=active]:text-white data-[state=active]:z-10 data-[state=inactive]:text-gray-600 dark:data-[state=inactive]:text-gray-400 rounded-md font-semibold transition-all duration-200 flex items-center justify-center gap-2 data-[state=inactive]:hover:bg-gray-200 dark:data-[state=inactive]:hover:bg-gray-700 data-[state=inactive]:hover:scale-[1.02] active:scale-95 data-[state=inactive]:hover:text-gray-900 dark:data-[state=inactive]:hover:text-white relative px-3 py-2"
+                  >
+                    {icon}
+                    <span className="text-sm">{displayName}</span>
+                  </TabsTrigger>
+                );
+              })}
+            </TabsList>
 
-            <TabsContent value="Bar" className="mt-6 overflow-x-hidden">
-              {groupedByStation['Bar'] ? renderMenuItems(groupedByStation['Bar']) : (
-                <div className="text-center py-12 text-gray-600 dark:text-gray-400">No Coffee drinks available</div>
-              )}
-            </TabsContent>
-
-            <TabsContent value="Hot" className="mt-6 overflow-x-hidden">
-              {groupedByStation['Hot'] ? renderMenuItems(groupedByStation['Hot']) : (
-                <div className="text-center py-12 text-gray-600 dark:text-gray-400">No Hot drinks available</div>
-              )}
-            </TabsContent>
-
-            <TabsContent value="Cold" className="mt-6 overflow-x-hidden">
-              {groupedByStation['Cold'] ? renderMenuItems(groupedByStation['Cold']) : (
-                <div className="text-center py-12 text-gray-600 dark:text-gray-400">No Cold drinks available</div>
-              )}
-            </TabsContent>
+            {availableCategories.map((category) => (
+              <TabsContent key={category} value={category} className="mt-6 overflow-x-hidden">
+                {groupedByCategory[category] ? renderMenuItems(groupedByCategory[category]) : (
+                  <div className="text-center py-12 text-gray-600 dark:text-gray-400">No {category} drinks available</div>
+                )}
+              </TabsContent>
+            ))}
         </Tabs>
         </div>
       </div>
