@@ -10,3 +10,4 @@ const tableSchema = new mongoose.Schema({
 
 export const Table = mongoose.model('Table', tableSchema);
 
+

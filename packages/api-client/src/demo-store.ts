@@ -259,8 +259,8 @@ export function getDemoOrders() {
   
   // Deduplicate orders by ID
   const uniqueOrders = orders.filter((order: any, index: number, self: any[]) =>
-    index === self.findIndex((o: any) => o.id === order.id)
-  );
+        index === self.findIndex((o: any) => o.id === order.id)
+      );
   
   // If deduplication found duplicates, save the cleaned version
   if (uniqueOrders.length !== orders.length) {
@@ -282,8 +282,8 @@ export function getDemoKdsTickets() {
   
   // Deduplicate tickets by ID
   const uniqueTickets = tickets.filter((ticket: any, index: number, self: any[]) =>
-    index === self.findIndex((t: any) => t.id === ticket.id)
-  );
+        index === self.findIndex((t: any) => t.id === ticket.id)
+      );
   
   // If deduplication found duplicates, save the cleaned version
   if (uniqueTickets.length !== tickets.length) {
@@ -402,7 +402,7 @@ export function createDemoOrder(orderData: {
     console.warn('⚠️ Order already exists, not creating duplicate:', orderId);
     return storedOrders[existingOrderIndex];
   }
-  
+
   storedOrders.push(order);
   localStorage.setItem('demo-orders', JSON.stringify(storedOrders));
   console.log('✅ Order created and saved:', orderId, orderNumber);

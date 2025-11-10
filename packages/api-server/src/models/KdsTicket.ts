@@ -16,3 +16,4 @@ const kdsTicketSchema = new mongoose.Schema({
 
 export const KdsTicket = mongoose.model('KdsTicket', kdsTicketSchema);
 
+

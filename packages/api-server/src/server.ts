@@ -2,7 +2,12 @@ import express from 'express';
 import { createServer } from 'http';
 import { Server as SocketIOServer } from 'socket.io';
 import cors from 'cors';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { connectDB } from './db.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Import routes
 import storesRouter from './routes/stores.js';
@@ -12,6 +17,7 @@ import modifiersRouter from './routes/modifiers.js';
 import ordersRouter from './routes/orders.js';
 import paymentsRouter from './routes/payments.js';
 import kdsTicketsRouter from './routes/kds-tickets.js';
+import starbucksApiRouter from './starbucks-api.js';
 
 const PORT = process.env.PORT || 3001;
 
@@ -38,6 +44,11 @@ async function startServer() {
   app.use(cors());
   app.use(express.json());
 
+  // Serve static images from scraped-data/images
+  const imagesPath = path.join(__dirname, '../scraped-data/images');
+  app.use('/images', express.static(imagesPath));
+  console.log(`📷 Serving images from: ${imagesPath}`);
+
   // Health check
   app.get('/health', (req, res) => {
     res.json({ status: 'ok', message: 'Coffee Shop API is running' });
@@ -51,6 +62,7 @@ async function startServer() {
   app.use('/api/orders', ordersRouter);
   app.use('/api/payments', paymentsRouter);
   app.use('/api/kds-tickets', kdsTicketsRouter);
+  app.use('/api/starbucks', starbucksApiRouter);
 
   // Socket.io connection handling
   io.on('connection', (socket) => {
@@ -81,4 +93,5 @@ async function startServer() {
 }
 
 startServer().catch(console.error);
+
 

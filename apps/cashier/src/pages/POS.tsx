@@ -282,8 +282,8 @@ export function POS() {
                     </>
                   ) : (
                     <>
-                      <Plus className="h-3 w-3 mr-1" />
-                      <span>Add</span>
+                  <Plus className="h-3 w-3 mr-1" />
+                  <span>Add</span>
                     </>
                   )}
                 </Button>

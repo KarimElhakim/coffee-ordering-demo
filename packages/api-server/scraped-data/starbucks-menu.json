@@ -1,0 +1,3892 @@
+[
+  {
+    "name": "Blonde Roast - Starbucks® Christmas Blonde",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/Veranda_Blend_Hot?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 5,
+    "nutritionInfo": {
+      "calories": 5,
+      "sugar_g": 0,
+      "fat_g": 0
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {},
+    "stars": 5,
+    "localImagePath": "/images/blonde_roast___starbucks__christmas_blonde.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/873068625/hot",
+    "scrapedAt": "2025-11-10T16:01:18.635Z"
+  },
+  {
+    "name": "Medium Roast - Pike Place® Roast",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/BrewedCoffee?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 5,
+    "nutritionInfo": {
+      "calories": 5,
+      "sugar_g": 0,
+      "fat_g": 0
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {},
+    "stars": 5,
+    "localImagePath": "/images/medium_roast___pike_place__roast.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/480/hot",
+    "scrapedAt": "2025-11-10T16:01:27.370Z"
+  },
+  {
+    "name": "Dark Roast - Starbucks® Thanksgiving Blend",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/SBX20190617_DecafPikePlaceRoast?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 5,
+    "nutritionInfo": {
+      "calories": 5,
+      "sugar_g": 0,
+      "fat_g": 0
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {},
+    "stars": 5,
+    "localImagePath": "/images/dark_roast___starbucks__thanksgiving_blend.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/479/hot",
+    "scrapedAt": "2025-11-10T16:01:36.350Z"
+  },
+  {
+    "name": "Dark Roast - Caffè Verona®",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/Veranda_Blend_Hot?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 5,
+    "nutritionInfo": {
+      "calories": 5,
+      "sugar_g": 0,
+      "fat_g": 0
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {},
+    "stars": 5,
+    "localImagePath": "/images/dark_roast___caff__verona_.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/2123740/hot",
+    "scrapedAt": "2025-11-10T16:01:44.995Z"
+  },
+  {
+    "name": "Decaf Roast - Pike Place® Roast",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/SBX20190617_DecafPikePlaceRoast?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 5,
+    "nutritionInfo": {
+      "calories": 5,
+      "sugar_g": 0,
+      "fat_g": 0
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {},
+    "stars": 5,
+    "localImagePath": "/images/decaf_roast___pike_place__roast.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/481/hot",
+    "scrapedAt": "2025-11-10T16:01:56.371Z"
+  },
+  {
+    "name": "Caffè Misto",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/CaffeMisto?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 110,
+    "nutritionInfo": {
+      "calories": 110,
+      "sugar_g": 10,
+      "fat_g": 4
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "Steamed Hot",
+        "Extra Hot",
+        "Warm"
+      ]
+    },
+    "stars": 110,
+    "localImagePath": "/images/caff__misto.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/478/hot",
+    "scrapedAt": "2025-11-10T16:02:06.064Z"
+  },
+  {
+    "name": "Caffè Americano",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/CaffeAmericano?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 15,
+    "nutritionInfo": {
+      "calories": 15,
+      "sugar_g": 0,
+      "fat_g": 0
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 15,
+    "localImagePath": "/images/caff__americano.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/406/hot",
+    "scrapedAt": "2025-11-10T16:02:15.511Z"
+  },
+  {
+    "name": "Caffè Latte",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/CaffeLatte?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 190,
+    "nutritionInfo": {
+      "calories": 190,
+      "sugar_g": 18,
+      "fat_g": 7
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "Steamed Hot",
+        "Extra Hot",
+        "Warm"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 190,
+    "localImagePath": "/images/caff__latte.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/407/hot",
+    "scrapedAt": "2025-11-10T16:02:24.643Z"
+  },
+  {
+    "name": "Sugar Cookie Latte",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/SugarCookieOatLatteCAN?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 260,
+    "nutritionInfo": {
+      "calories": 260,
+      "sugar_g": 4,
+      "fat_g": 6
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "Steamed Hot",
+        "Extra Hot",
+        "Warm"
+      ],
+      "Toppings": [
+        "Extra Red and Green Sprinkle Topping",
+        "Light Red and Green Sprinkle Topping",
+        "No Red and Green Sprinkle Topping",
+        "Red and Green Sprinkle Topping"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 260,
+    "localImagePath": "/images/sugar_cookie_latte.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/28517/hot",
+    "scrapedAt": "2025-11-10T16:02:34.395Z"
+  },
+  {
+    "name": "Caramel Brulée Latte",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/CaramelBruleeLatte?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 410,
+    "nutritionInfo": {
+      "calories": 410,
+      "sugar_g": 48,
+      "fat_g": 14
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "Steamed Hot",
+        "Extra Hot",
+        "Warm"
+      ],
+      "Toppings": [
+        "Caramel Brulée Topping",
+        "Extra Caramel Brulée Topping",
+        "Light Caramel Brulée Topping",
+        "No Caramel Brulée Topping"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 410,
+    "localImagePath": "/images/caramel_brul_e_latte.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/517/hot",
+    "scrapedAt": "2025-11-10T16:02:44.074Z"
+  },
+  {
+    "name": "Gingerbread Latte",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/GingerbreadLatte?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 310,
+    "nutritionInfo": {
+      "calories": 310,
+      "sugar_g": 33,
+      "fat_g": 14
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "Steamed Hot",
+        "Extra Hot",
+        "Warm"
+      ],
+      "Toppings": [
+        "Whipped Cream",
+        "Extra Whipped Cream",
+        "Light Whipped Cream",
+        "No Whipped Cream"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 310,
+    "localImagePath": "/images/gingerbread_latte.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/417/hot",
+    "scrapedAt": "2025-11-10T16:02:53.024Z"
+  },
+  {
+    "name": "Sugar Cookie Breve",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/SugarCookieOatLatteCAN?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 460,
+    "nutritionInfo": {
+      "calories": 460,
+      "sugar_g": 4,
+      "fat_g": 32
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "Extra Red and Green Sprinkle Topping",
+        "Light Red and Green Sprinkle Topping",
+        "No Red and Green Sprinkle Topping",
+        "Red and Green Sprinkle Topping"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 460,
+    "localImagePath": "/images/sugar_cookie_breve.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/28546/hot",
+    "scrapedAt": "2025-11-10T16:03:02.555Z"
+  },
+  {
+    "name": "Pumpkin Spice Latte",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/PumpkinSpiceLatte-2?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 390,
+    "nutritionInfo": {
+      "calories": 390,
+      "sugar_g": 50,
+      "fat_g": 14
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "Steamed Hot",
+        "Extra Hot",
+        "Warm"
+      ],
+      "Toppings": [
+        "Extra Pumpkin Spice Topping",
+        "Light Pumpkin Spice Topping",
+        "No Pumpkin Spice Topping",
+        "Pumpkin Spice Topping"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 390,
+    "localImagePath": "/images/pumpkin_spice_latte.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/418/hot",
+    "scrapedAt": "2025-11-10T16:03:12.277Z"
+  },
+  {
+    "name": "Pecan Crunch Oatmilk Latte",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/PecanCrunchOatmilkLatte?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 270,
+    "nutritionInfo": {
+      "calories": 270,
+      "sugar_g": 26,
+      "fat_g": 9
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "Extra Foam",
+        "Foam",
+        "Light Foam",
+        "No Foam"
+      ],
+      "Toppings": [
+        "No Pecan Crunch Topping",
+        "Light Pecan Crunch Topping",
+        "Pecan Crunch Topping",
+        "Extra Pecan Crunch Topping"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 270,
+    "localImagePath": "/images/pecan_crunch_oatmilk_latte.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/2123935/hot",
+    "scrapedAt": "2025-11-10T16:03:22.144Z"
+  },
+  {
+    "name": "Vanilla Protein Latte",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/CaffeLattewProtein?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 310,
+    "nutritionInfo": {
+      "calories": 310,
+      "sugar_g": 34,
+      "fat_g": 6
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 310,
+    "localImagePath": "/images/vanilla_protein_latte.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/28499/hot",
+    "scrapedAt": "2025-11-10T16:03:31.975Z"
+  },
+  {
+    "name": "Sugar-Free Vanilla Protein Latte",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/CaffeLattewProtein?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 230,
+    "nutritionInfo": {
+      "calories": 230,
+      "sugar_g": 4,
+      "fat_g": 6
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ],
+      "Milk": [
+        "Extra Foam",
+        "Foam",
+        "Light Foam",
+        "No Foam"
+      ]
+    },
+    "stars": 230,
+    "localImagePath": "/images/sugar_free_vanilla_protein_latte.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/28501/hot",
+    "scrapedAt": "2025-11-10T16:03:42.737Z"
+  },
+  {
+    "name": "Cinnamon Dolce Latte",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/CinnamonDolceLatte?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 340,
+    "nutritionInfo": {
+      "calories": 340,
+      "sugar_g": 40,
+      "fat_g": 14
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "Steamed Hot",
+        "Extra Hot",
+        "Warm"
+      ],
+      "Toppings": [
+        "Cinnamon Dolce Sprinkles",
+        "Extra Cinnamon Dolce Sprinkles",
+        "Light Cinnamon Dolce Sprinkles",
+        "No Cinnamon Dolce Sprinkles"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 340,
+    "localImagePath": "/images/cinnamon_dolce_latte.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/414/hot",
+    "scrapedAt": "2025-11-10T16:03:52.649Z"
+  },
+  {
+    "name": "Starbucks® Blonde Vanilla Latte",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/BlondeVanillaLatte?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 250,
+    "nutritionInfo": {
+      "calories": 250,
+      "sugar_g": 35,
+      "fat_g": 6
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "Steamed Hot",
+        "Extra Hot",
+        "Warm"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 250,
+    "localImagePath": "/images/starbucks__blonde_vanilla_latte.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/2122164/hot",
+    "scrapedAt": "2025-11-10T16:04:03.733Z"
+  },
+  {
+    "name": "Cappuccino",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/Cappuccino?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 140,
+    "nutritionInfo": {
+      "calories": 140,
+      "sugar_g": 12,
+      "fat_g": 5
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "Extra Foam",
+        "Foam",
+        "Light Foam",
+        "No Foam"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 140,
+    "localImagePath": "/images/cappuccino.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/409/hot",
+    "scrapedAt": "2025-11-10T16:04:14.247Z"
+  },
+  {
+    "name": "Caffè Mocha",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/SBX20220607_CaffeMocha?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 370,
+    "nutritionInfo": {
+      "calories": 370,
+      "sugar_g": 35,
+      "fat_g": 15
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "Steamed Hot",
+        "Warm",
+        "Extra Hot"
+      ],
+      "Toppings": [
+        "Whipped Cream",
+        "Extra Whipped Cream",
+        "Light Whipped Cream",
+        "No Whipped Cream"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 370,
+    "localImagePath": "/images/caff__mocha.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/408/hot",
+    "scrapedAt": "2025-11-10T16:04:24.218Z"
+  },
+  {
+    "name": "Peppermint Mocha",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/PeppermintMocha?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 440,
+    "nutritionInfo": {
+      "calories": 440,
+      "sugar_g": 54,
+      "fat_g": 16
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "Steamed Hot",
+        "Warm",
+        "Extra Hot"
+      ],
+      "Toppings": [
+        "Chocolate Curls Topping",
+        "Extra Chocolate Curls Topping",
+        "Light Chocolate Curls Topping",
+        "No Chocolate Curls Topping"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 440,
+    "localImagePath": "/images/peppermint_mocha.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/496/hot",
+    "scrapedAt": "2025-11-10T16:04:33.687Z"
+  },
+  {
+    "name": "Peppermint White Chocolate Mocha",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/PeppermintWhiteChocolateMocha?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 480,
+    "nutritionInfo": {
+      "calories": 480,
+      "sugar_g": 66,
+      "fat_g": 18
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "Steamed Hot",
+        "Warm",
+        "Extra Hot"
+      ],
+      "Toppings": [
+        "Chocolate Curls Topping",
+        "Extra Chocolate Curls Topping",
+        "Light Chocolate Curls Topping",
+        "No Chocolate Curls Topping"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 480,
+    "localImagePath": "/images/peppermint_white_chocolate_mocha.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/497/hot",
+    "scrapedAt": "2025-11-10T16:04:46.642Z"
+  },
+  {
+    "name": "White Chocolate Mocha",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/WhiteChocolateMocha?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 390,
+    "nutritionInfo": {
+      "calories": 390,
+      "sugar_g": 46,
+      "fat_g": 17
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "Steamed Hot",
+        "Warm",
+        "Extra Hot"
+      ],
+      "Toppings": [
+        "Whipped Cream",
+        "Extra Whipped Cream",
+        "Light Whipped Cream",
+        "No Whipped Cream"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 390,
+    "localImagePath": "/images/white_chocolate_mocha.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/420/hot",
+    "scrapedAt": "2025-11-10T16:04:57.909Z"
+  },
+  {
+    "name": "Espresso Macchiato",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/SBX20190617_EspressoMacchiato?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 15,
+    "nutritionInfo": {
+      "calories": 15,
+      "sugar_g": 0,
+      "fat_g": 0
+    },
+    "sizes": [],
+    "customizations": {
+      "Size": [
+        "Solo 0.8 fl oz",
+        "Doppio 1.6 fl oz",
+        "Triple 2.3 fl oz",
+        "Quad 3.1 fl oz"
+      ],
+      "Milk": [
+        "Extra Foam",
+        "Foam",
+        "Light Foam",
+        "No Foam"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 15,
+    "localImagePath": "/images/espresso_macchiato.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/412/hot",
+    "scrapedAt": "2025-11-10T16:05:10.299Z"
+  },
+  {
+    "name": "Caramel Macchiato",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/SBX20211029_CaramelMacchiato?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 250,
+    "nutritionInfo": {
+      "calories": 250,
+      "sugar_g": 33,
+      "fat_g": 7
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "Steamed Hot",
+        "Warm",
+        "Extra Hot"
+      ],
+      "Toppings": [
+        "Caramel Drizzle",
+        "No Caramel Drizzle",
+        "Light Caramel Drizzle",
+        "Extra Caramel Drizzle"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 250,
+    "localImagePath": "/images/caramel_macchiato.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/413/hot",
+    "scrapedAt": "2025-11-10T16:05:26.384Z"
+  },
+  {
+    "name": "Flat White",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/SBX20230406_FlatWhite?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 170,
+    "nutritionInfo": {
+      "calories": 170,
+      "sugar_g": 13,
+      "fat_g": 9
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "Steamed Hot",
+        "Warm",
+        "Extra Hot"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 170,
+    "localImagePath": "/images/flat_white.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/565/hot",
+    "scrapedAt": "2025-11-10T16:05:38.618Z"
+  },
+  {
+    "name": "Cortado",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/Cortado?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 90,
+    "nutritionInfo": {
+      "calories": 90,
+      "sugar_g": 6,
+      "fat_g": 5
+    },
+    "sizes": [],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Espresso & Shot Options": [
+        "Ristretto",
+        "Long Shot"
+      ]
+    },
+    "stars": 90,
+    "localImagePath": "/images/cortado.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/2124649/hot",
+    "scrapedAt": "2025-11-10T16:05:50.183Z"
+  },
+  {
+    "name": "Pecan Oatmilk Cortado",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/PecanOatmilkCortado-1?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 120,
+    "nutritionInfo": {
+      "calories": 120,
+      "sugar_g": 13,
+      "fat_g": 5
+    },
+    "sizes": [],
+    "customizations": {
+      "Milk": [
+        "Extra Foam",
+        "Foam",
+        "Light Foam",
+        "No Foam"
+      ],
+      "Toppings": [
+        "No Pecan Crunch Topping",
+        "Light Pecan Crunch Topping",
+        "Pecan Crunch Topping",
+        "Extra Pecan Crunch Topping"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 120,
+    "localImagePath": "/images/pecan_oatmilk_cortado.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/27555/hot",
+    "scrapedAt": "2025-11-10T16:06:01.175Z"
+  },
+  {
+    "name": "Brown Sugar Oatmilk Cortado",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/BrownSugarOatmilkCortado?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 130,
+    "nutritionInfo": {
+      "calories": 130,
+      "sugar_g": 14,
+      "fat_g": 5
+    },
+    "sizes": [],
+    "customizations": {
+      "Milk": [
+        "Extra Foam",
+        "Foam",
+        "Light Foam",
+        "No Foam"
+      ],
+      "Toppings": [
+        "Extra Cinnamon Powder",
+        "Light Cinnamon Powder",
+        "No Cinnamon Powder",
+        "Cinnamon Powder"
+      ],
+      "Espresso & Shot Options": [
+        "Ristretto",
+        "Long Shot"
+      ]
+    },
+    "stars": 130,
+    "localImagePath": "/images/brown_sugar_oatmilk_cortado.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/2124651/hot",
+    "scrapedAt": "2025-11-10T16:06:13.283Z"
+  },
+  {
+    "name": "Espresso",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/SBX20190617_Espresso_Single?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 10,
+    "nutritionInfo": {
+      "calories": 10,
+      "sugar_g": 0,
+      "fat_g": 0
+    },
+    "sizes": [],
+    "customizations": {
+      "Size": [
+        "Solo 0.75 fl oz",
+        "Doppio 1.5 fl oz",
+        "Triple 2.25 fl oz",
+        "Quad 3 fl oz"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 10,
+    "localImagePath": "/images/espresso.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/410/hot",
+    "scrapedAt": "2025-11-10T16:06:25.935Z"
+  },
+  {
+    "name": "Espresso Con Panna",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/SBX20190617_EspressoConPanna?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 35,
+    "nutritionInfo": {
+      "calories": 35,
+      "sugar_g": 0,
+      "fat_g": 5
+    },
+    "sizes": [],
+    "customizations": {
+      "Size": [
+        "Solo 0.75 fl oz",
+        "Doppio 1.5 fl oz",
+        "Triple 2.25 fl oz",
+        "Quad 3 fl oz"
+      ],
+      "Toppings": [
+        "Whipped Cream",
+        "Extra Whipped Cream",
+        "Light Whipped Cream",
+        "No Whipped Cream"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 35,
+    "localImagePath": "/images/espresso_con_panna.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/411/hot",
+    "scrapedAt": "2025-11-10T16:06:40.416Z"
+  },
+  {
+    "name": "Coffee Traveler – Pike Place® Roast",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/CoffeeTraveler?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 5,
+    "nutritionInfo": {
+      "calories": 5,
+      "sugar_g": 0,
+      "fat_g": 0
+    },
+    "sizes": [],
+    "customizations": {},
+    "stars": null,
+    "localImagePath": "/images/coffee_traveler___pike_place__roast.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/873068655/hot",
+    "scrapedAt": "2025-11-10T16:06:50.116Z"
+  },
+  {
+    "name": "Coffee Traveler – Decaf Pike Place® Roast",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/CoffeeTraveler?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 5,
+    "nutritionInfo": {
+      "calories": 5,
+      "sugar_g": 0,
+      "fat_g": 0
+    },
+    "sizes": [],
+    "customizations": {},
+    "stars": null,
+    "localImagePath": "/images/coffee_traveler___decaf_pike_place__roast.jpg",
+    "category": "Hot Coffee",
+    "url": "/menu/product/873068657/hot",
+    "scrapedAt": "2025-11-10T16:07:03.312Z"
+  },
+  {
+    "name": "Cold Brew",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/ColdBrew?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 5,
+    "nutritionInfo": {
+      "calories": 5,
+      "sugar_g": 0,
+      "fat_g": 0
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti",
+      "Trenta"
+    ],
+    "customizations": {
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ]
+    },
+    "stars": 5,
+    "localImagePath": "/images/cold_brew.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/2121255/iced",
+    "scrapedAt": "2025-11-10T16:07:23.419Z"
+  },
+  {
+    "name": "Pumpkin Cream Cold Brew",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/PumpkinCreamColdBrew?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 250,
+    "nutritionInfo": {
+      "calories": 250,
+      "sugar_g": 31,
+      "fat_g": 12
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti",
+      "Trenta"
+    ],
+    "customizations": {
+      "Toppings": [
+        "Extra Pumpkin Spice Topping",
+        "Light Pumpkin Spice Topping",
+        "No Pumpkin Spice Topping",
+        "Pumpkin Spice Topping"
+      ],
+      "Cold Foams": [
+        "Extra Pumpkin Cream Cold Foam",
+        "Light Pumpkin Cream Cold Foam",
+        "No Pumpkin Cream Cold Foam",
+        "Pumpkin Cream Cold Foam"
+      ],
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ]
+    },
+    "stars": 250,
+    "localImagePath": "/images/pumpkin_cream_cold_brew.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/2123113/iced",
+    "scrapedAt": "2025-11-10T16:07:36.716Z"
+  },
+  {
+    "name": "Chocolate Cream Protein Cold Brew",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/ChocolateProteinColdBrew?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 330,
+    "nutritionInfo": {
+      "calories": 330,
+      "sugar_g": 26,
+      "fat_g": 15
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti",
+      "Trenta"
+    ],
+    "customizations": {
+      "Cold Foams": [
+        "Extra Chocolate Protein Cold Foam",
+        "Light Chocolate Protein Cold Foam",
+        "No Chocolate Protein Cold Foam",
+        "Chocolate Protein Cold Foam"
+      ],
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ]
+    },
+    "stars": 330,
+    "localImagePath": "/images/chocolate_cream_protein_cold_brew.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/28242/iced",
+    "scrapedAt": "2025-11-10T16:07:47.501Z"
+  },
+  {
+    "name": "Vanilla Sweet Cream Cold Brew",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/VanillaSweetCreamColdBrew?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 110,
+    "nutritionInfo": {
+      "calories": 110,
+      "sugar_g": 14,
+      "fat_g": 5
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti",
+      "Trenta"
+    ],
+    "customizations": {
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ]
+    },
+    "stars": 110,
+    "localImagePath": "/images/vanilla_sweet_cream_cold_brew.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/2121859/iced",
+    "scrapedAt": "2025-11-10T16:07:59.518Z"
+  },
+  {
+    "name": "Salted Caramel Cream Cold Brew",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/SBX20211029_SaltedCaramelCreamColdBrew?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 240,
+    "nutritionInfo": {
+      "calories": 240,
+      "sugar_g": 26,
+      "fat_g": 14
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti",
+      "Trenta"
+    ],
+    "customizations": {
+      "Cold Foams": [
+        "No Salted Caramel Cream Cold Foam",
+        "Light Salted Caramel Cream Cold Foam",
+        "Salted Caramel Cream Cold Foam",
+        "Extra Salted Caramel Cream Cold Foam"
+      ],
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ]
+    },
+    "stars": 240,
+    "localImagePath": "/images/salted_caramel_cream_cold_brew.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/2122795/iced",
+    "scrapedAt": "2025-11-10T16:08:11.616Z"
+  },
+  {
+    "name": "Chocolate Cream Cold Brew",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/ChocolateCreamColdBrew?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 240,
+    "nutritionInfo": {
+      "calories": 240,
+      "sugar_g": 25,
+      "fat_g": 14
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti",
+      "Trenta"
+    ],
+    "customizations": {
+      "Cold Foams": [
+        "No Chocolate Cream Cold Foam",
+        "Light Chocolate Cream Cold Foam",
+        "Chocolate Cream Cold Foam",
+        "Extra Chocolate Cream Cold Foam"
+      ],
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ]
+    },
+    "stars": 240,
+    "localImagePath": "/images/chocolate_cream_cold_brew.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/2123644/iced",
+    "scrapedAt": "2025-11-10T16:08:22.904Z"
+  },
+  {
+    "name": "Nondairy Vanilla Sweet Cream Cold Brew",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/NonDairyVanillaSweetCreamColdBrew?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 100,
+    "nutritionInfo": {
+      "calories": 100,
+      "sugar_g": 13,
+      "fat_g": 4
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti",
+      "Trenta"
+    ],
+    "customizations": {
+      "Add-ins": [
+        "No Splash of Nondairy Vanilla Sweet Cream",
+        "1/4 Inch Splash of Nondairy Vanilla Sweet Cream",
+        "1/2 Inch Splash of Nondairy Vanilla Sweet Cream",
+        "3/4 Inch Splash of Nondairy Vanilla Sweet Cream"
+      ]
+    },
+    "stars": 100,
+    "localImagePath": "/images/nondairy_vanilla_sweet_cream_cold_brew.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/2123879/iced",
+    "scrapedAt": "2025-11-10T16:08:34.631Z"
+  },
+  {
+    "name": "Nondairy Salted Caramel Cream Cold Brew",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/NonDairySaltedCaramelColdBrewColdFoam?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 150,
+    "nutritionInfo": {
+      "calories": 150,
+      "sugar_g": 19,
+      "fat_g": 6
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti",
+      "Trenta"
+    ],
+    "customizations": {
+      "Cold Foams": [
+        "No Nondairy Salted Caramel Cream Cold Foam",
+        "Light Nondairy Salted Caramel Cream Cold Foam",
+        "Nondairy Salted Caramel Cream Cold Foam",
+        "Extra Nondairy Salted Caramel Cream Cold Foam"
+      ],
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ]
+    },
+    "stars": 150,
+    "localImagePath": "/images/nondairy_salted_caramel_cream_cold_brew.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/2123883/iced",
+    "scrapedAt": "2025-11-10T16:08:46.583Z"
+  },
+  {
+    "name": "Cold Brew with Nondairy Vanilla Sweet Cream Cold Foam",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/NonDairyVanillaSweetCreamColdFoam?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 160,
+    "nutritionInfo": {
+      "calories": 160,
+      "sugar_g": 18,
+      "fat_g": 8
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti",
+      "Trenta"
+    ],
+    "customizations": {
+      "Cold Foams": [
+        "No Nondairy Vanilla Sweet Cream Cold Foam",
+        "Light Nondairy Vanilla Sweet Cream Cold Foam",
+        "Nondairy Vanilla Sweet Cream Cold Foam",
+        "Extra Nondairy Vanilla Sweet Cream Cold Foam"
+      ],
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ]
+    },
+    "stars": 160,
+    "localImagePath": "/images/cold_brew_with_nondairy_vanilla_sweet_cream_cold_foam.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/2123880/iced",
+    "scrapedAt": "2025-11-10T16:09:00.309Z"
+  },
+  {
+    "name": "Nondairy Chocolate Cream Cold Brew",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/NonDairyChocolateCreamColdBrew?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 190,
+    "nutritionInfo": {
+      "calories": 190,
+      "sugar_g": 22,
+      "fat_g": 9
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti",
+      "Trenta"
+    ],
+    "customizations": {
+      "Cold Foams": [
+        "No Nondairy Chocolate Cream Cold Foam",
+        "Light Nondairy Chocolate Cream Cold Foam",
+        "Nondairy Chocolate Cream Cold Foam",
+        "Extra Nondairy Chocolate Cream Cold Foam"
+      ],
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ]
+    },
+    "stars": 190,
+    "localImagePath": "/images/nondairy_chocolate_cream_cold_brew.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/2123881/iced",
+    "scrapedAt": "2025-11-10T16:09:15.036Z"
+  },
+  {
+    "name": "Nitro Cold Brew",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/NitroColdBrew?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 5,
+    "nutritionInfo": {
+      "calories": 5,
+      "sugar_g": 0,
+      "fat_g": 0
+    },
+    "sizes": [
+      "Tall",
+      "Grande"
+    ],
+    "customizations": {},
+    "stars": 5,
+    "localImagePath": "/images/nitro_cold_brew.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/2121912/iced",
+    "scrapedAt": "2025-11-10T16:09:27.832Z"
+  },
+  {
+    "name": "Vanilla Sweet Cream Nitro Cold Brew",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/VanillaSweetCreamNitroColdBrew?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 70,
+    "nutritionInfo": {
+      "calories": 70,
+      "sugar_g": 4,
+      "fat_g": 5
+    },
+    "sizes": [
+      "Tall",
+      "Grande"
+    ],
+    "customizations": {
+      "Add-ins": [
+        "3/4 Inch Splash of Vanilla Sweet Cream",
+        "1/4 Inch Splash of Vanilla Sweet Cream",
+        "No Splash of Vanilla Sweet Cream",
+        "1/2 Inch Splash of Vanilla Sweet Cream"
+      ]
+    },
+    "stars": 70,
+    "localImagePath": "/images/vanilla_sweet_cream_nitro_cold_brew.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/2122237/iced",
+    "scrapedAt": "2025-11-10T16:09:39.294Z"
+  },
+  {
+    "name": "Iced Coffee",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/IcedCoffee?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 5,
+    "nutritionInfo": {
+      "calories": 5,
+      "sugar_g": 0,
+      "fat_g": 0
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti",
+      "Trenta"
+    ],
+    "customizations": {
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ]
+    },
+    "stars": 5,
+    "localImagePath": "/images/iced_coffee.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/2123863/iced",
+    "scrapedAt": "2025-11-10T16:09:51.672Z"
+  },
+  {
+    "name": "Iced Shaken Espresso",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/IcedShakenEspresso?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 100,
+    "nutritionInfo": {
+      "calories": 100,
+      "sugar_g": 14,
+      "fat_g": 2
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "1/3 Decaf",
+        "Decaf Espresso Roast",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 100,
+    "localImagePath": "/images/iced_shaken_espresso.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/2123425/iced",
+    "scrapedAt": "2025-11-10T16:10:03.942Z"
+  },
+  {
+    "name": "Iced Brown Sugar Oatmilk Shaken Espresso",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/IcedBrownSugarOatmilkShakenEspresso?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 150,
+    "nutritionInfo": {
+      "calories": 150,
+      "sugar_g": 15,
+      "fat_g": 5
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "Extra Cinnamon Powder",
+        "Light Cinnamon Powder",
+        "No Cinnamon Powder",
+        "Cinnamon Powder"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 150,
+    "localImagePath": "/images/iced_brown_sugar_oatmilk_shaken_espresso.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/2123431/iced",
+    "scrapedAt": "2025-11-10T16:10:20.225Z"
+  },
+  {
+    "name": "Iced Hazelnut Oatmilk Shaken Espresso",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/IcedHazelnutOatmilkShakenEspresso?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 150,
+    "nutritionInfo": {
+      "calories": 150,
+      "sugar_g": 16,
+      "fat_g": 5
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 150,
+    "localImagePath": "/images/iced_hazelnut_oatmilk_shaken_espresso.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/2123805/iced",
+    "scrapedAt": "2025-11-10T16:10:36.474Z"
+  },
+  {
+    "name": "Iced Espresso",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/SBX20190607_IcedEspresso?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 10,
+    "nutritionInfo": {
+      "calories": 10,
+      "sugar_g": 0,
+      "fat_g": 0
+    },
+    "sizes": [],
+    "customizations": {
+      "Size": [
+        "Solo 0.75 fl oz",
+        "Doppio 1.5 fl oz",
+        "Triple 2.25 fl oz",
+        "Quad 3 fl oz"
+      ],
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 10,
+    "localImagePath": "/images/iced_espresso.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/410/iced",
+    "scrapedAt": "2025-11-10T16:10:51.378Z"
+  },
+  {
+    "name": "Iced Caffè Americano",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/IcedCaffeAmericano?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 15,
+    "nutritionInfo": {
+      "calories": 15,
+      "sugar_g": 0,
+      "fat_g": 0
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 15,
+    "localImagePath": "/images/iced_caff__americano.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/406/iced",
+    "scrapedAt": "2025-11-10T16:11:06.158Z"
+  },
+  {
+    "name": "Iced Caffè Latte",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/IcedCaffeLatte?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 130,
+    "nutritionInfo": {
+      "calories": 130,
+      "sugar_g": 11,
+      "fat_g": 5
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 130,
+    "localImagePath": "/images/iced_caff__latte.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/407/iced",
+    "scrapedAt": "2025-11-10T16:11:22.235Z"
+  },
+  {
+    "name": "Iced Sugar Cookie Latte",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/IcedSugarCookieAlmondmilkLatte?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 210,
+    "nutritionInfo": {
+      "calories": 210,
+      "sugar_g": 4,
+      "fat_g": 4
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "Extra Red and Green Sprinkle Topping",
+        "Light Red and Green Sprinkle Topping",
+        "No Red and Green Sprinkle Topping",
+        "Red and Green Sprinkle Topping"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ],
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ]
+    },
+    "stars": 210,
+    "localImagePath": "/images/iced_sugar_cookie_latte.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/28516/iced",
+    "scrapedAt": "2025-11-10T16:11:38.413Z"
+  },
+  {
+    "name": "Iced Caramel Brulée Latte",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/IcedCaramelBruleeLatte?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 400,
+    "nutritionInfo": {
+      "calories": 400,
+      "sugar_g": 44,
+      "fat_g": 16
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "Caramel Brulée Topping",
+        "Extra Caramel Brulée Topping",
+        "Light Caramel Brulée Topping",
+        "No Caramel Brulée Topping"
+      ],
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 400,
+    "localImagePath": "/images/iced_caramel_brul_e_latte.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/517/iced",
+    "scrapedAt": "2025-11-10T16:11:56.714Z"
+  },
+  {
+    "name": "Iced Gingerbread Latte",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/SBX20250612_IcedGingerbreadLatte?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 300,
+    "nutritionInfo": {
+      "calories": 300,
+      "sugar_g": 28,
+      "fat_g": 16
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "Extra Pumpkin Spice Topping",
+        "Light Pumpkin Spice Topping",
+        "No Pumpkin Spice Topping",
+        "Pumpkin Spice Topping"
+      ],
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 300,
+    "localImagePath": "/images/iced_gingerbread_latte.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/417/iced",
+    "scrapedAt": "2025-11-10T16:12:11.721Z"
+  },
+  {
+    "name": "Iced Sugar Cookie Breve",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/IcedSugarCookieAlmondmilkLatte?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 380,
+    "nutritionInfo": {
+      "calories": 380,
+      "sugar_g": 4,
+      "fat_g": 24
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "Extra Red and Green Sprinkle Topping",
+        "Light Red and Green Sprinkle Topping",
+        "No Red and Green Sprinkle Topping",
+        "Red and Green Sprinkle Topping"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ],
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ]
+    },
+    "stars": 380,
+    "localImagePath": "/images/iced_sugar_cookie_breve.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/28545/iced",
+    "scrapedAt": "2025-11-10T16:12:23.328Z"
+  },
+  {
+    "name": "Iced Pumpkin Spice Latte",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/IcedPumpkinSpicedLatte?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 370,
+    "nutritionInfo": {
+      "calories": 370,
+      "sugar_g": 45,
+      "fat_g": 16
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "Extra Pumpkin Spice Topping",
+        "Light Pumpkin Spice Topping",
+        "No Pumpkin Spice Topping",
+        "Pumpkin Spice Topping"
+      ],
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 370,
+    "localImagePath": "/images/iced_pumpkin_spice_latte.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/418/iced",
+    "scrapedAt": "2025-11-10T16:12:35.113Z"
+  },
+  {
+    "name": "Iced Pecan Crunch Oatmilk Latte",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/IcedPecanCrunchOatmilkLatteColdFoam?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 410,
+    "nutritionInfo": {
+      "calories": 410,
+      "sugar_g": 36,
+      "fat_g": 21
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "No Pecan Crunch Topping",
+        "Light Pecan Crunch Topping",
+        "Pecan Crunch Topping",
+        "Extra Pecan Crunch Topping"
+      ],
+      "Cold Foams": [
+        "No Vanilla Sweet Cream Cold Foam",
+        "Vanilla Sweet Cream Cold Foam",
+        "Light Vanilla Sweet Cream Cold Foam",
+        "Extra Vanilla Sweet Cream Cold Foam"
+      ],
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 410,
+    "localImagePath": "/images/iced_pecan_crunch_oatmilk_latte.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/27688/iced",
+    "scrapedAt": "2025-11-10T16:12:51.518Z"
+  },
+  {
+    "name": "Iced Vanilla Protein Latte",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/IcedCaffeLattewProtein?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 270,
+    "nutritionInfo": {
+      "calories": 270,
+      "sugar_g": 29,
+      "fat_g": 4
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ],
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ]
+    },
+    "stars": 270,
+    "localImagePath": "/images/iced_vanilla_protein_latte.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/28498/iced",
+    "scrapedAt": "2025-11-10T16:13:02.324Z"
+  },
+  {
+    "name": "Iced Sugar-Free Vanilla Protein Latte",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/IcedCaffeLattewProtein?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 200,
+    "nutritionInfo": {
+      "calories": 200,
+      "sugar_g": 4,
+      "fat_g": 4
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ],
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ]
+    },
+    "stars": 200,
+    "localImagePath": "/images/iced_sugar_free_vanilla_protein_latte.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/28500/iced",
+    "scrapedAt": "2025-11-10T16:13:13.721Z"
+  },
+  {
+    "name": "Iced Vanilla Cream Protein Latte",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/IcedVanillaCreamProteinLatte?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 390,
+    "nutritionInfo": {
+      "calories": 390,
+      "sugar_g": 25,
+      "fat_g": 21
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Cold Foams": [
+        "Extra Vanilla Protein Cold Foam",
+        "Light Vanilla Protein Cold Foam",
+        "No Vanilla Protein Cold Foam",
+        "Vanilla Protein Cold Foam"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ],
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ]
+    },
+    "stars": 390,
+    "localImagePath": "/images/iced_vanilla_cream_protein_latte.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/28244/iced",
+    "scrapedAt": "2025-11-10T16:13:28.737Z"
+  },
+  {
+    "name": "Iced Starbucks® Blonde Vanilla Latte",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/IcedBlondeVanillaLatte?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 190,
+    "nutritionInfo": {
+      "calories": 190,
+      "sugar_g": 28,
+      "fat_g": 4
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 190,
+    "localImagePath": "/images/iced_starbucks__blonde_vanilla_latte.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/2122164/iced",
+    "scrapedAt": "2025-11-10T16:13:43.445Z"
+  },
+  {
+    "name": "Iced Cinnamon Dolce Latte",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/IcedCinnamonDolceLatte?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 300,
+    "nutritionInfo": {
+      "calories": 300,
+      "sugar_g": 35,
+      "fat_g": 13
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "Cinnamon Dolce Sprinkles",
+        "Extra Cinnamon Dolce Sprinkles",
+        "Light Cinnamon Dolce Sprinkles",
+        "No Cinnamon Dolce Sprinkles"
+      ],
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ]
+    },
+    "stars": 300,
+    "localImagePath": "/images/iced_cinnamon_dolce_latte.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/414/iced",
+    "scrapedAt": "2025-11-10T16:13:57.263Z"
+  },
+  {
+    "name": "Iced Caffè Mocha",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/IcedCaffeMocha%E2%80%8B?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 350,
+    "nutritionInfo": {
+      "calories": 350,
+      "sugar_g": 30,
+      "fat_g": 17
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "Whipped Cream",
+        "Extra Whipped Cream",
+        "Light Whipped Cream",
+        "No Whipped Cream"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ],
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ]
+    },
+    "stars": 350,
+    "localImagePath": "/images/iced_caff__mocha.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/408/iced",
+    "scrapedAt": "2025-11-10T16:14:11.099Z"
+  },
+  {
+    "name": "Iced Peppermint Mocha",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/IcedPeppermintMocha?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 420,
+    "nutritionInfo": {
+      "calories": 420,
+      "sugar_g": 49,
+      "fat_g": 17
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "Chocolate Curls Topping",
+        "Extra Chocolate Curls Topping",
+        "Light Chocolate Curls Topping",
+        "No Chocolate Curls Topping"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ],
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ]
+    },
+    "stars": 420,
+    "localImagePath": "/images/iced_peppermint_mocha.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/496/iced",
+    "scrapedAt": "2025-11-10T16:14:25.344Z"
+  },
+  {
+    "name": "Iced Peppermint White Chocolate Mocha",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/IcedPeppermintWhiteChocolateMocha?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 460,
+    "nutritionInfo": {
+      "calories": 460,
+      "sugar_g": 61,
+      "fat_g": 20
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "Chocolate Curls Topping",
+        "Extra Chocolate Curls Topping",
+        "Light Chocolate Curls Topping",
+        "No Chocolate Curls Topping"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ],
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ]
+    },
+    "stars": 460,
+    "localImagePath": "/images/iced_peppermint_white_chocolate_mocha.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/497/iced",
+    "scrapedAt": "2025-11-10T16:14:39.660Z"
+  },
+  {
+    "name": "Iced White Chocolate Mocha",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/IcedWhiteChocolateMocha?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 390,
+    "nutritionInfo": {
+      "calories": 390,
+      "sugar_g": 42,
+      "fat_g": 20
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "Whipped Cream",
+        "Extra Whipped Cream",
+        "Light Whipped Cream",
+        "No Whipped Cream"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ],
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ]
+    },
+    "stars": 390,
+    "localImagePath": "/images/iced_white_chocolate_mocha.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/420/iced",
+    "scrapedAt": "2025-11-10T16:14:54.207Z"
+  },
+  {
+    "name": "Iced Caramel Macchiato",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/IcedCaramelMacchiato?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 250,
+    "nutritionInfo": {
+      "calories": 250,
+      "sugar_g": 34,
+      "fat_g": 7
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "Caramel Drizzle",
+        "No Caramel Drizzle",
+        "Light Caramel Drizzle",
+        "Extra Caramel Drizzle"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ],
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ]
+    },
+    "stars": 250,
+    "localImagePath": "/images/iced_caramel_macchiato.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/413/iced",
+    "scrapedAt": "2025-11-10T16:15:05.746Z"
+  },
+  {
+    "name": "Iced Flat White",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/SBX20190607_IcedFlatWhite?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 110,
+    "nutritionInfo": {
+      "calories": 110,
+      "sugar_g": 8,
+      "fat_g": 6
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Espresso & Shot Options": [
+        "Blonde Espresso",
+        "Signature Espresso",
+        "1/2 Decaf",
+        "Decaf Espresso Roast",
+        "1/3 Decaf",
+        "2/3 Decaf"
+      ],
+      "Add-ins": [
+        "Extra Ice",
+        "Light Ice",
+        "No Ice",
+        "Ice"
+      ]
+    },
+    "stars": 110,
+    "localImagePath": "/images/iced_flat_white.jpg",
+    "category": "Cold Coffee",
+    "url": "/menu/product/565/iced",
+    "scrapedAt": "2025-11-10T16:15:19.440Z"
+  },
+  {
+    "name": "Caramel Ribbon Crunch Frappuccino® Blended Beverage",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/SBX20211210_CaramelRibbonCrunchFrapp?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 470,
+    "nutritionInfo": {
+      "calories": 470,
+      "sugar_g": 60,
+      "fat_g": 22
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "Caramel Crunch Topping",
+        "Extra Caramel Crunch Topping",
+        "Light Caramel Crunch Topping",
+        "No Caramel Crunch Topping"
+      ]
+    },
+    "stars": 470,
+    "localImagePath": "/images/caramel_ribbon_crunch_frappuccino__blended_beverage.jpg",
+    "category": "Frappuccino® Blended Beverage",
+    "url": "/menu/product/1044/iced",
+    "scrapedAt": "2025-11-10T16:15:41.078Z"
+  },
+  {
+    "name": "Sugar Cookie Frappuccino® Blended Beverage",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/SugarCookieAlmondmilkFrappuccino?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 360,
+    "nutritionInfo": {
+      "calories": 360,
+      "sugar_g": 2,
+      "fat_g": 15
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "Extra Red and Green Sprinkle Topping",
+        "Light Red and Green Sprinkle Topping",
+        "No Red and Green Sprinkle Topping",
+        "Red and Green Sprinkle Topping"
+      ]
+    },
+    "stars": 360,
+    "localImagePath": "/images/sugar_cookie_frappuccino__blended_beverage.jpg",
+    "category": "Frappuccino® Blended Beverage",
+    "url": "/menu/product/28518/iced",
+    "scrapedAt": "2025-11-10T16:15:53.134Z"
+  },
+  {
+    "name": "Caramel Brulée Frappuccino® Blended Beverage",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/CaramelBruleeFrappuccino?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 400,
+    "nutritionInfo": {
+      "calories": 400,
+      "sugar_g": 58,
+      "fat_g": 15
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "Caramel Brulée Topping",
+        "Extra Caramel Brulée Topping",
+        "Light Caramel Brulée Topping",
+        "No Caramel Brulée Topping"
+      ]
+    },
+    "stars": 400,
+    "localImagePath": "/images/caramel_brul_e_frappuccino__blended_beverage.jpg",
+    "category": "Frappuccino® Blended Beverage",
+    "url": "/menu/product/518/iced",
+    "scrapedAt": "2025-11-10T16:16:06.455Z"
+  },
+  {
+    "name": "Peppermint Mocha Frappuccino® Blended Beverage",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/PeppermintMochaFrappuccino?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 430,
+    "nutritionInfo": {
+      "calories": 430,
+      "sugar_g": 63,
+      "fat_g": 16
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "Chocolate Curls Topping",
+        "Extra Chocolate Curls Topping",
+        "Light Chocolate Curls Topping",
+        "No Chocolate Curls Topping"
+      ]
+    },
+    "stars": 430,
+    "localImagePath": "/images/peppermint_mocha_frappuccino__blended_beverage.jpg",
+    "category": "Frappuccino® Blended Beverage",
+    "url": "/menu/product/522/iced",
+    "scrapedAt": "2025-11-10T16:16:24.695Z"
+  },
+  {
+    "name": "Peppermint White Chocolate Mocha Frappuccino® Blended Beverage",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/PeppermintWhiteChocolateMochaFrappucino?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 440,
+    "nutritionInfo": {
+      "calories": 440,
+      "sugar_g": 67,
+      "fat_g": 17
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "Chocolate Curls Topping",
+        "Extra Chocolate Curls Topping",
+        "Light Chocolate Curls Topping",
+        "No Chocolate Curls Topping"
+      ]
+    },
+    "stars": 440,
+    "localImagePath": "/images/peppermint_white_chocolate_mocha_frappuccino__blended_beverage.jpg",
+    "category": "Frappuccino® Blended Beverage",
+    "url": "/menu/product/873068728/iced",
+    "scrapedAt": "2025-11-10T16:16:39.118Z"
+  },
+  {
+    "name": "Pumpkin Spice Frappuccino® Blended Beverage",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/PumpkinSpiceCoffeeFrapp?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 420,
+    "nutritionInfo": {
+      "calories": 420,
+      "sugar_g": 65,
+      "fat_g": 15
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "Extra Pumpkin Spice Topping",
+        "Light Pumpkin Spice Topping",
+        "No Pumpkin Spice Topping",
+        "Pumpkin Spice Topping"
+      ]
+    },
+    "stars": 420,
+    "localImagePath": "/images/pumpkin_spice_frappuccino__blended_beverage.jpg",
+    "category": "Frappuccino® Blended Beverage",
+    "url": "/menu/product/427/iced",
+    "scrapedAt": "2025-11-10T16:16:53.866Z"
+  },
+  {
+    "name": "Caramel Frappuccino® Blended Beverage",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/SBX20220323_CaramelFrapp?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 380,
+    "nutritionInfo": {
+      "calories": 380,
+      "sugar_g": 54,
+      "fat_g": 16
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "Caramel Drizzle",
+        "No Caramel Drizzle",
+        "Light Caramel Drizzle",
+        "Extra Caramel Drizzle"
+      ]
+    },
+    "stars": 380,
+    "localImagePath": "/images/caramel_frappuccino__blended_beverage.jpg",
+    "category": "Frappuccino® Blended Beverage",
+    "url": "/menu/product/424/iced",
+    "scrapedAt": "2025-11-10T16:17:05.838Z"
+  },
+  {
+    "name": "Mocha Cookie Crumble Frappuccino® Blended Beverage",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/SBX20211210_MochaCookieCrumbleFrapp?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 480,
+    "nutritionInfo": {
+      "calories": 480,
+      "sugar_g": 55,
+      "fat_g": 24
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "Cookie Crumble Topping",
+        "Extra Cookie Crumble Topping",
+        "Light Cookie Crumble Topping",
+        "No Cookie Crumble Topping"
+      ]
+    },
+    "stars": 480,
+    "localImagePath": "/images/mocha_cookie_crumble_frappuccino__blended_beverage.jpg",
+    "category": "Frappuccino® Blended Beverage",
+    "url": "/menu/product/956/iced",
+    "scrapedAt": "2025-11-10T16:17:18.304Z"
+  },
+  {
+    "name": "Mocha Frappuccino® Blended Beverage",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/MochaFrappuccino?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 370,
+    "nutritionInfo": {
+      "calories": 370,
+      "sugar_g": 51,
+      "fat_g": 15
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "Whipped Cream",
+        "Extra Whipped Cream",
+        "Light Whipped Cream",
+        "No Whipped Cream"
+      ]
+    },
+    "stars": 370,
+    "localImagePath": "/images/mocha_frappuccino__blended_beverage.jpg",
+    "category": "Frappuccino® Blended Beverage",
+    "url": "/menu/product/426/iced",
+    "scrapedAt": "2025-11-10T16:17:32.405Z"
+  },
+  {
+    "name": "Coffee Frappuccino® Blended Beverage",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/CoffeeFrappuccino?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 230,
+    "nutritionInfo": {
+      "calories": 230,
+      "sugar_g": 45,
+      "fat_g": 3
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ]
+    },
+    "stars": 230,
+    "localImagePath": "/images/coffee_frappuccino__blended_beverage.jpg",
+    "category": "Frappuccino® Blended Beverage",
+    "url": "/menu/product/483/iced",
+    "scrapedAt": "2025-11-10T16:17:44.041Z"
+  },
+  {
+    "name": "Vanilla Bean Crème Frappuccino® Blended Crème",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/VanillaBeanCremeFrappuccino?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 380,
+    "nutritionInfo": {
+      "calories": 380,
+      "sugar_g": 52,
+      "fat_g": 16
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "Whipped Cream",
+        "Extra Whipped Cream",
+        "Light Whipped Cream",
+        "No Whipped Cream"
+      ]
+    },
+    "stars": 380,
+    "localImagePath": "/images/vanilla_bean_cr_me_frappuccino__blended_cr_me.jpg",
+    "category": "Frappuccino® Blended Beverage",
+    "url": "/menu/product/440/iced",
+    "scrapedAt": "2025-11-10T16:17:55.778Z"
+  },
+  {
+    "name": "Sugar Cookie Crème Frappuccino® Blended Beverage",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/SugarCookieAlmondmilkCremeFrappuccino?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 330,
+    "nutritionInfo": {
+      "calories": 330,
+      "sugar_g": 2,
+      "fat_g": 16
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "Extra Red and Green Sprinkle Topping",
+        "Light Red and Green Sprinkle Topping",
+        "No Red and Green Sprinkle Topping",
+        "Red and Green Sprinkle Topping"
+      ]
+    },
+    "stars": 330,
+    "localImagePath": "/images/sugar_cookie_cr_me_frappuccino__blended_beverage.jpg",
+    "category": "Frappuccino® Blended Beverage",
+    "url": "/menu/product/28519/iced",
+    "scrapedAt": "2025-11-10T16:18:08.327Z"
+  },
+  {
+    "name": "Caramel Brulée Crème Frappuccino® Blended Beverage",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/CaramelBruleeCremeFrappuccino?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 380,
+    "nutritionInfo": {
+      "calories": 380,
+      "sugar_g": 49,
+      "fat_g": 16
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "Caramel Brulée Topping",
+        "Extra Caramel Brulée Topping",
+        "Light Caramel Brulée Topping",
+        "No Caramel Brulée Topping"
+      ]
+    },
+    "stars": 380,
+    "localImagePath": "/images/caramel_brul_e_cr_me_frappuccino__blended_beverage.jpg",
+    "category": "Frappuccino® Blended Beverage",
+    "url": "/menu/product/520/iced",
+    "scrapedAt": "2025-11-10T16:18:20.481Z"
+  },
+  {
+    "name": "Peppermint Mocha Crème Frappuccino® Blended Beverage",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/PeppermintMochaCremeFrappuccino?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 390,
+    "nutritionInfo": {
+      "calories": 390,
+      "sugar_g": 50,
+      "fat_g": 18
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "Chocolate Curls Topping",
+        "Extra Chocolate Curls Topping",
+        "Light Chocolate Curls Topping",
+        "No Chocolate Curls Topping"
+      ]
+    },
+    "stars": 390,
+    "localImagePath": "/images/peppermint_mocha_cr_me_frappuccino__blended_beverage.jpg",
+    "category": "Frappuccino® Blended Beverage",
+    "url": "/menu/product/2122089/iced",
+    "scrapedAt": "2025-11-10T16:18:32.506Z"
+  },
+  {
+    "name": "Peppermint White Chocolate Crème Frappuccino® Blended Beverage",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/PeppermintWhiteChocolateCremeFrappuccino?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 400,
+    "nutritionInfo": {
+      "calories": 400,
+      "sugar_g": 54,
+      "fat_g": 18
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "Chocolate Curls Topping",
+        "Extra Chocolate Curls Topping",
+        "Light Chocolate Curls Topping",
+        "No Chocolate Curls Topping"
+      ]
+    },
+    "stars": 400,
+    "localImagePath": "/images/peppermint_white_chocolate_cr_me_frappuccino__blended_beverage.jpg",
+    "category": "Frappuccino® Blended Beverage",
+    "url": "/menu/product/2123305/iced",
+    "scrapedAt": "2025-11-10T16:18:45.672Z"
+  },
+  {
+    "name": "Pumpkin Spice Crème Frappuccino® Blended Beverage",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/PumpkinSpiceCremeFrappuccino?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 360,
+    "nutritionInfo": {
+      "calories": 360,
+      "sugar_g": 47,
+      "fat_g": 16
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Toppings": [
+        "Extra Pumpkin Spice Topping",
+        "Light Pumpkin Spice Topping",
+        "No Pumpkin Spice Topping",
+        "Pumpkin Spice Topping"
+      ]
+    },
+    "stars": 360,
+    "localImagePath": "/images/pumpkin_spice_cr_me_frappuccino__blended_beverage.jpg",
+    "category": "Frappuccino® Blended Beverage",
+    "url": "/menu/product/436/iced",
+    "scrapedAt": "2025-11-10T16:19:00.890Z"
+  },
+  {
+    "name": "Strawberry Crème Frappuccino® Blended Beverage",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/SBX20220323_StrawberryFrapp?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 370,
+    "nutritionInfo": {
+      "calories": 370,
+      "sugar_g": 51,
+      "fat_g": 16
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "Whipped Cream",
+        "Extra Whipped Cream",
+        "Light Whipped Cream",
+        "No Whipped Cream"
+      ],
+      "Add-ins": [
+        "Strawberry Purée",
+        "Extra Strawberry Purée",
+        "Light Strawberry Purée",
+        "No Strawberry Purée"
+      ]
+    },
+    "stars": 370,
+    "localImagePath": "/images/strawberry_cr_me_frappuccino__blended_beverage.jpg",
+    "category": "Frappuccino® Blended Beverage",
+    "url": "/menu/product/2122724/iced",
+    "scrapedAt": "2025-11-10T16:19:13.727Z"
+  },
+  {
+    "name": "Matcha Crème Frappuccino® Blended Beverage",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/MatchaCremeFrappuccino?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 320,
+    "nutritionInfo": {
+      "calories": 320,
+      "sugar_g": 45,
+      "fat_g": 13
+    },
+    "sizes": [
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "2% Milk",
+        "Almond",
+        "Coconut",
+        "Breve (Half & Half)",
+        "Heavy Cream",
+        "Nonfat Milk",
+        "Oatmilk",
+        "Protein-boosted Milk",
+        "Soy",
+        "Nondairy Vanilla Sweet Cream",
+        "Vanilla Sweet Cream",
+        "Whole Milk"
+      ],
+      "Toppings": [
+        "Whipped Cream",
+        "Extra Whipped Cream",
+        "Light Whipped Cream",
+        "No Whipped Cream"
+      ]
+    },
+    "stars": 320,
+    "localImagePath": "/images/matcha_cr_me_frappuccino__blended_beverage.jpg",
+    "category": "Frappuccino® Blended Beverage",
+    "url": "/menu/product/439/iced",
+    "scrapedAt": "2025-11-10T16:19:27.093Z"
+  },
+  {
+    "name": "Chai Latte",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/SBX20220411_ChaiLatte?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 240,
+    "nutritionInfo": {
+      "calories": 240,
+      "sugar_g": 42,
+      "fat_g": 5
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "Steamed Hot",
+        "Warm",
+        "Extra Hot"
+      ],
+      "Add-ins": [
+        "Extra Water",
+        "Light Water",
+        "No Water",
+        "Water"
+      ]
+    },
+    "stars": 240,
+    "localImagePath": "/images/chai_latte.jpg",
+    "category": "Hot Tea",
+    "url": "/menu/product/466/hot",
+    "scrapedAt": "2025-11-10T16:19:51.986Z"
+  },
+  {
+    "name": "Gingerbread Chai",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/GingerbreadChai?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 290,
+    "nutritionInfo": {
+      "calories": 290,
+      "sugar_g": 56,
+      "fat_g": 5
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "Steamed Hot",
+        "Warm",
+        "Extra Hot"
+      ],
+      "Toppings": [
+        "Extra Pumpkin Spice Topping",
+        "Light Pumpkin Spice Topping",
+        "No Pumpkin Spice Topping",
+        "Pumpkin Spice Topping"
+      ]
+    },
+    "stars": 290,
+    "localImagePath": "/images/gingerbread_chai.jpg",
+    "category": "Hot Tea",
+    "url": "/menu/product/28521/hot",
+    "scrapedAt": "2025-11-10T16:20:04.575Z"
+  },
+  {
+    "name": "Protein Matcha",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/SBX20250821_ProteinMatchaTeaLatte?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 300,
+    "nutritionInfo": {
+      "calories": 300,
+      "sugar_g": 30,
+      "fat_g": 7
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "Extra Foam",
+        "Foam",
+        "Light Foam",
+        "No Foam"
+      ]
+    },
+    "stars": 300,
+    "localImagePath": "/images/protein_matcha.jpg",
+    "category": "Hot Tea",
+    "url": "/menu/product/28503/hot",
+    "scrapedAt": "2025-11-10T16:20:17.726Z"
+  },
+  {
+    "name": "Sugar-Free Vanilla Protein Matcha",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/SBX20250821_ProteinMatchaTeaLatte?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 240,
+    "nutritionInfo": {
+      "calories": 240,
+      "sugar_g": 3,
+      "fat_g": 7
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "Extra Foam",
+        "Foam",
+        "Light Foam",
+        "No Foam"
+      ]
+    },
+    "stars": 240,
+    "localImagePath": "/images/sugar_free_vanilla_protein_matcha.jpg",
+    "category": "Hot Tea",
+    "url": "/menu/product/28505/hot",
+    "scrapedAt": "2025-11-10T16:20:28.539Z"
+  },
+  {
+    "name": "Matcha Latte",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/SBX20211115_MatchaTeaLatte?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 220,
+    "nutritionInfo": {
+      "calories": 220,
+      "sugar_g": 29,
+      "fat_g": 6
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "Steamed Hot",
+        "Warm",
+        "Extra Hot"
+      ]
+    },
+    "stars": 220,
+    "localImagePath": "/images/matcha_latte.jpg",
+    "category": "Hot Tea",
+    "url": "/menu/product/468/hot",
+    "scrapedAt": "2025-11-10T16:20:41.866Z"
+  },
+  {
+    "name": "London Fog Latte",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/SBX20190624_LondonFogTeaLatte?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 180,
+    "nutritionInfo": {
+      "calories": 180,
+      "sugar_g": 29,
+      "fat_g": 4
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Milk": [
+        "Steamed Hot",
+        "Warm",
+        "Extra Hot"
+      ]
+    },
+    "stars": 180,
+    "localImagePath": "/images/london_fog_latte.jpg",
+    "category": "Hot Tea",
+    "url": "/menu/product/477/hot",
+    "scrapedAt": "2025-11-10T16:20:53.009Z"
+  },
+  {
+    "name": "Honey Citrus Mint Tea",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/HoneyCitrusMintTea?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 130,
+    "nutritionInfo": {
+      "calories": 130,
+      "sugar_g": 30,
+      "fat_g": 0
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {
+      "Juice Options": [
+        "Lemonade",
+        "No Lemonade",
+        "Light Lemonade",
+        "Extra Lemonade"
+      ]
+    },
+    "stars": 130,
+    "localImagePath": "/images/honey_citrus_mint_tea.jpg",
+    "category": "Hot Tea",
+    "url": "/menu/product/2122274/hot",
+    "scrapedAt": "2025-11-10T16:21:05.539Z"
+  },
+  {
+    "name": "Royal English Breakfast Tea",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/RoyalEnglishBreakfastTea?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 0,
+    "nutritionInfo": {
+      "calories": 0,
+      "sugar_g": 0,
+      "fat_g": 0
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {},
+    "stars": 0,
+    "localImagePath": "/images/royal_english_breakfast_tea.jpg",
+    "category": "Hot Tea",
+    "url": "/menu/product/446/hot",
+    "scrapedAt": "2025-11-10T16:21:18.299Z"
+  },
+  {
+    "name": "Emperor's Clouds & Mist® Tea",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/EmperorCloudsAndMistTea?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 0,
+    "nutritionInfo": {
+      "calories": 0,
+      "sugar_g": 0,
+      "fat_g": 0
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {},
+    "stars": 0,
+    "localImagePath": "/images/emperor_s_clouds___mist__tea.jpg",
+    "category": "Hot Tea",
+    "url": "/menu/product/873068751/hot",
+    "scrapedAt": "2025-11-10T16:21:31.301Z"
+  },
+  {
+    "name": "Mint Majesty® Tea",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/MintMajestyTea?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 0,
+    "nutritionInfo": {
+      "calories": 0,
+      "sugar_g": 0,
+      "fat_g": 0
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {},
+    "stars": 0,
+    "localImagePath": "/images/mint_majesty__tea.jpg",
+    "category": "Hot Tea",
+    "url": "/menu/product/873068754/hot",
+    "scrapedAt": "2025-11-10T16:21:45.871Z"
+  },
+  {
+    "name": "Earl Grey Tea",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/SBX20190624_EarlGreyBlackTea?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 0,
+    "nutritionInfo": {
+      "calories": 0,
+      "sugar_g": 0,
+      "fat_g": 0
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {},
+    "stars": 0,
+    "localImagePath": "/images/earl_grey_tea.jpg",
+    "category": "Hot Tea",
+    "url": "/menu/product/450/hot",
+    "scrapedAt": "2025-11-10T16:21:57.753Z"
+  },
+  {
+    "name": "Chamomile Mint Blossom Tea",
+    "description": "",
+    "imageUrl": "https://cloudassets.starbucks.com/is/image/sbuxcorp/ChamomileMintBlossomTea?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85",
+    "calories": 5,
+    "nutritionInfo": {
+      "calories": 5,
+      "sugar_g": 0,
+      "fat_g": 0
+    },
+    "sizes": [
+      "Short",
+      "Tall",
+      "Grande",
+      "Venti"
+    ],
+    "customizations": {},
+    "stars": 5,
+    "localImagePath": "/images/chamomile_mint_blossom_tea.jpg",
+    "category": "Hot Tea",
+    "url": "/menu/product/2123887/hot",
+    "scrapedAt": "2025-11-10T16:22:10.415Z"
+  }
+]

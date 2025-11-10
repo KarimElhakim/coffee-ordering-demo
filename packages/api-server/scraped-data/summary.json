@@ -1,0 +1,10 @@
+{
+  "totalDrinks": 99,
+  "categories": {
+    "Hot Coffee": 33,
+    "Cold Coffee": 36,
+    "Frappuccino® Blended Beverage": 18,
+    "Hot Tea": 12
+  },
+  "scrapedAt": "2025-11-10T16:22:10.920Z"
+}

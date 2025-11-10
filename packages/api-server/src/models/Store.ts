@@ -8,3 +8,4 @@ const storeSchema = new mongoose.Schema({
 
 export const Store = mongoose.model('Store', storeSchema);
 
+

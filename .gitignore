@@ -49,3 +49,7 @@ atlas-dashboard.png
 *.pkl
 *.h5
 
+# Scraped Starbucks data (keep JSON but not images)
+packages/api-server/scraped-data/images/
+packages/api-server/scraper-output.log
+

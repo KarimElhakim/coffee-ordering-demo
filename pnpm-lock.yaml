@@ -344,9 +344,6 @@ importers:
       mongoose:
         specifier: ^8.0.0
         version: 8.19.3
-      playwright:
-        specifier: ^1.40.0
-        version: 1.56.1
       socket.io:
         specifier: ^4.6.0
         version: 4.8.1
@@ -366,6 +363,9 @@ importers:
       '@types/uuid':
         specifier: ^9.0.7
         version: 9.0.8
+      playwright:
+        specifier: ^1.56.1
+        version: 1.56.1
       tsx:
         specifier: ^4.7.0
         version: 4.20.6
